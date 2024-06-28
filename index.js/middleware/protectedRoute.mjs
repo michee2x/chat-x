@@ -3,12 +3,12 @@ import User from "../models/user.model.mjs"
 
 export const protectedRoute = async (req, res, next) => {
 try{
-    console.log("this is the header",req.headers.cookie, "this is the cookie", req.cookies.jwtToken)
-    const cookies = req.cookies.jwtToken
+    console.log("this is the header",req.headers.cookie, "this is the cookie", req.cookies.jwtTok)
+    const cookies = req.headers.authorization.split(' ')[1]
     
     if(!cookies) {
         console.log("no token found")
-    return res.status(401).json({error:`there i no token in your headers ${req.cookies}::;; ${req.headers.authorization}`})}
+    return res.status(401).json({error:`there is no cooi`})}
 
     const decoded =  jwt.verify(cookies, "thi is jwt secret")
 
