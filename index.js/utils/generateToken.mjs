@@ -6,7 +6,7 @@ export const  generateToken = (payload, res) => {
         expiresIn:`15d`
     })
     res.cookie("jwtToken", token.toString(), {
-        maxAge: 9000000,
+        maxAge: 1000*10*16,
         httpOnly:true,
         sameSite:"None",
         secure: true,
