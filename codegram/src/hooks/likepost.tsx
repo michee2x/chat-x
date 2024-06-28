@@ -5,7 +5,7 @@ export const likeUnlike = async (postId: string, setPost: any, userId:any="", fe
   try {
     setLike(true)
     const res = await fetch(
-      `http://localhost:7000/api/post/likepost/${postId}`,
+      `https://chat-x-backend.onrender.com/api/post/likepost/${postId}`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -29,7 +29,7 @@ export const likeUnlike = async (postId: string, setPost: any, userId:any="", fe
 
 export const createpost = async (file: any, setNavigate: any) => {
   try {
-    const res = await fetch("http://localhost:7000/api/post/createpost", {
+    const res = await fetch("https://chat-x-backend.onrender.com/api/post/createpost", {
       method: "POST",
       body: file,
       credentials: "include",
@@ -48,7 +48,7 @@ export const createpost = async (file: any, setNavigate: any) => {
 
 export const deletepost = async (id: string) => {
   try {
-    const res = await fetch(`http://localhost:7000/api/post/deletepost/${id}`, {
+    const res = await fetch(`https://chat-x-backend.onrender.com/api/post/deletepost/${id}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       credentials: "include",
@@ -72,7 +72,7 @@ export const commentpost = async (
   console.log("this is te comment", postId)
   try {
     const res = await fetch(
-      `http://localhost:7000/api/post/commentPost/${postId}`,
+      `https://chat-x-backend.onrender.com/api/post/commentPost/${postId}`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -96,7 +96,7 @@ export const commentpost = async (
 export const getuserpost = async (id: any, setPost: any) => {
   try {
     console.log("this is the iddddssaa", id)
-    const url = `http://localhost:7000/api/post/getuserposts/${id}`;
+    const url = `https://chat-x-backend.onrender.com/api/post/getuserposts/${id}`;
     console.log("in getuserpost hook", id);
     const res = await fetch(url, {
       credentials: "include",
@@ -112,7 +112,7 @@ export const getuserpost = async (id: any, setPost: any) => {
 };
 export const getpost = async (id: any, setPost: any, setComments: any) => {
   try {
-    const url = `http://localhost:7000/api/post/getpost/${id}`;
+    const url = `https://chat-x-backend.onrender.com/api/post/getpost/${id}`;
     console.log("in getuserpost hook", id);
     const res = await fetch(url, {
       credentials: "include",
@@ -130,7 +130,7 @@ export const getpost = async (id: any, setPost: any, setComments: any) => {
 
 export const getSuggestedUsers = async (setSuggestedUsers: any) => {
   try {
-    const url = `http://localhost:7000/api/user/suggestedusers`;
+    const url = `https://chat-x-backend.onrender.com/api/user/suggestedusers`;
     const res = await fetch(url, {
       credentials: "include",
     });
@@ -145,7 +145,7 @@ export const getSuggestedUsers = async (setSuggestedUsers: any) => {
 
 export const logOut = async () => {
   try {
-    const url = `http://localhost:7000/api/auth/logout`;
+    const url = `https://chat-x-backend.onrender.com/api/auth/logout`;
     const res = await fetch(url, {
       method:"POST",
       credentials: "include",
@@ -161,7 +161,7 @@ export const getloggedUser = async (setMainUser:any) => {
   const id = data && JSON.parse(data);
   console.log("this is the id", id.loggedUser._id);
   try {
-    const url = `http://localhost:7000/api/user/userprofile/${id.loggedUser._id}`;
+    const url = `https://chat-x-backend.onrender.com/api/user/userprofile/${id.loggedUser._id}`;
     const res = await fetch(url, {
       credentials: "include",
     });
@@ -176,7 +176,7 @@ export const getloggedUser = async (setMainUser:any) => {
 };
 export const follow_unfollow_user = async (id: any, setSuggestedUsers: any = []) => {
   try {
-    const res = await fetch(`http://localhost:7000/api/user/follow/${id}`, {
+    const res = await fetch(`https://chat-x-backend.onrender.com/api/user/follow/${id}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       credentials: "include",
@@ -191,7 +191,7 @@ export const follow_unfollow_user = async (id: any, setSuggestedUsers: any = [])
 
 export const getUserProfile = async (id: any, setUser: any) => {
   try {
-    const url = `http://localhost:7000/api/user/userprofile/${id}`;
+    const url = `https://chat-x-backend.onrender.com/api/user/userprofile/${id}`;
     const res = await fetch(url, {
       credentials: "include",
     });
@@ -210,7 +210,7 @@ export const getProfile = async (
   setPost:any = []
 ) => {
   try {
-    const url = `http://localhost:7000/api/user/searchprofile`;
+    const url = `https://chat-x-backend.onrender.com/api/user/searchprofile`;
     const res = await fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -239,7 +239,7 @@ export const editProfile = async (
   setRes:any
 ) => {
   try {
-    const url = `http://localhost:7000/api/user/updateProfile`;
+    const url = `https://chat-x-backend.onrender.com/api/user/updateProfile`;
     const res = await fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -263,7 +263,7 @@ export const editProfile = async (
 
 export const getnotifications = async (setNotifications: any) => {
   try {
-    const url = `http://localhost:7000/api/notification/getnotification`;
+    const url = `https://chat-x-backend.onrender.com/api/notification/getnotification`;
     const res = await fetch(url, {
       credentials: "include",
     });
@@ -277,7 +277,7 @@ export const getnotifications = async (setNotifications: any) => {
 };
 export const deletenotification = async (setNotification:any, id:string) => {
   try {
-    const url = `http://localhost:7000/api/notification/deletenotification/${id}`;
+    const url = `https://chat-x-backend.onrender.com/api/notification/deletenotification/${id}`;
     const res = await fetch(url, {
       credentials: "include",
     });
@@ -292,7 +292,7 @@ export const deletenotification = async (setNotification:any, id:string) => {
 };
 export const deleteUserPost = async (id:string) => {
   try {
-    const url = `http://localhost:7000/api/post/deletepost/${id}`;
+    const url = `https://chat-x-backend.onrender.com/api/post/deletepost/${id}`;
     const res = await fetch(url, {
       method:"POST",
       credentials: "include",
@@ -312,7 +312,7 @@ export const deleteUserPost = async (id:string) => {
 };
 export const getFollowingPost = async (setPost:any, setLoading:any) => {
   try {
-    const url = `http://localhost:7000/api/post/getfollowingposts`;
+    const url = `https://chat-x-backend.onrender.com/api/post/getfollowingposts`;
     const res = await fetch(url, {
       credentials: "include",
     });
@@ -330,7 +330,7 @@ export const getFollowingPost = async (setPost:any, setLoading:any) => {
 export const bookMark = async (id:string, setPost:any, setBookMarking:any) => {
   try {
     setBookMarking(true)
-    const url = `http://localhost:7000/api/post/bookmark/${id}`;
+    const url = `https://chat-x-backend.onrender.com/api/post/bookmark/${id}`;
     const res = await fetch(url, {
       headers: { "Content-Type": "application/json" },
       credentials: "include",
@@ -347,7 +347,7 @@ export const bookMark = async (id:string, setPost:any, setBookMarking:any) => {
 };
 export const bookmark = async (setbookmark:any, setNoBookMark:any) => {
   try {
-    const url = "http://localhost:7000/api/post/getbookmarks";
+    const url = "https://chat-x-backend.onrender.com/api/post/getbookmarks";
     const res = await fetch(url, {
       headers: { "Content-Type": "application/json" },
       credentials: "include",
