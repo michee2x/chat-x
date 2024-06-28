@@ -4,7 +4,7 @@ import {BsPerson } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import {
   likeUnlike,
-  bookMark,bookmark
+  bookMark
 } from "../hooks/likepost";
 import { MdDelete } from "react-icons/md";
 import { deletePost } from "../hooks/useDeletePostHook";

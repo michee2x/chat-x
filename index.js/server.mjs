@@ -20,11 +20,11 @@ dotenv.config()
 cloudinary.config({ 
   cloud_name: process.env.cloud_name, 
   api_key: process.env.api_key, 
-  api_secret: process.env 
+  api_secret: process.env.api_secret 
 });
 
 //Multer strorage cofiguration for images and videos
-console.log("this is before")
+console.log("this is before", process.env.api_key, process.env.api_secret, process.env.cloud_name)
 const imageStorage = multer.diskStorage({
   destination:(req, file, cb) => {
     cb(null, './images')
@@ -34,9 +34,9 @@ const imageStorage = multer.diskStorage({
   }
 })
 
-
 //Multer Upload Instances
 const imageUpload = multer({storage:imageStorage})
+
 
 app.use(cookieParser())
 app.use(express.urlencoded({extended:true}))
@@ -44,10 +44,12 @@ app.use(cors({credentials:true, origin:"http://localhost:5173"}))
 app.use("/api/post/createpost",protectedRoute, imageUpload.single("file"), createPost)
 app.use(express.json())
 
+
 app.use("/api/auth", authroute)
 app.use('/api/post', postroute)
 app.use('/api/user', userroute)
 app.use('/api/notification', notificationRoute)
+
 
 app.listen(7000, () => {
     connectMongoDB() 

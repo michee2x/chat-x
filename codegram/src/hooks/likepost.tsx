@@ -184,8 +184,6 @@ export const follow_unfollow_user = async (id: any, setSuggestedUsers: any = [])
     if (!res) throw new Error("there was an error...");
 
     setSuggestedUsers && await getSuggestedUsers(setSuggestedUsers)
-
-    const data = await res.json();
   } catch (error) {
     console.log("error in likeUnlike", error);
   }
@@ -209,8 +207,7 @@ export const getUserProfile = async (id: any, setUser: any) => {
 export const getProfile = async (
   search: string,
   setUser: any = [],
-  setPost:any = [],
-  bool:boolean = false,
+  setPost:any = []
 ) => {
   try {
     const url = `http://localhost:7000/api/user/searchprofile`;
@@ -229,12 +226,6 @@ export const getProfile = async (
     console.log("this is the user profile",data?.foundUser )
     await setUser(data?.foundUser);
     await getuserpost(userId, setPost);
-    /* if(bool && userId){
-      await setUser(data?.foundUser);
-    }
-    if(!bool){
-      await setUser(data?.foundUser);
-    } */
     
   } catch (error) {
     console.log("error in likeUnlike", error);

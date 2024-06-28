@@ -1,6 +1,4 @@
-import React, { useState } from 'react'
 import { Outlet } from 'react-router-dom';
-import Home from './Components/Home';
 import Sidebar from './Components/sidebar';
 import RecomendedUsers from './Components/RecomendedUsers';
 import { SideBarContext } from "./showSideBar";

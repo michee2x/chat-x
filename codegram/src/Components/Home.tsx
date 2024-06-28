@@ -6,7 +6,6 @@ import { fetchData } from "../fetchData";
 import {Navigate } from "react-router-dom";
 import {
   getloggedUser,
-  getSuggestedUsers,
   getFollowingPost
 } from "../hooks/likepost";
 import PostComponent from "./postComponent";
@@ -21,17 +20,12 @@ const Home = () => {
   const loadingRef = useRef<HTMLDivElement>(null)
   const [page, setPage] = useState(1)
   const divRef = useRef<HTMLDivElement>(null)
-  
-const [suggestedUsers, setSuggestedUsers] = useState([]);
 const [status, setStatus] = useState(localStorage.getItem("status")!)
 const loggedINUser = localStorage.getItem("userId")!;
 if (!loggedINUser) {
   return <Navigate to={"/login"} />;
 }
 
-useEffect(() => {
-  getSuggestedUsers(setSuggestedUsers);
-}, []);
 useEffect(() => {
   if(status === "foryou"){
     fetchData(setPost, setLoading, page);
@@ -82,12 +76,6 @@ const Skeletons = () => {
 const setToStorge = (x:string) => {
   localStorage.setItem("status", x)
 }
-const setscrollindex = (x:number) => {
-  localStorage.setItem("clickedLi", x.toString());
-}
-console.log("this is he post", post);
-const url = "https://res.cloudinary.com/dsps3itap/video/upload/v1718250951/fh7y6iwzn3gylxjrlqbs.mp4"
-console.log(url.split("/")[4])
 
   return (
     <>

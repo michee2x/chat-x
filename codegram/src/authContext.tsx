@@ -2,10 +2,8 @@ import {
   PropsWithChildren,
   createContext,
   useContext,
-  useEffect,
   useState,
 } from "react";
-import { getloggedUser } from "./hooks/likepost";
 type ContextType = {
   loggedUser: any;
   setLoggedUser: (theme: any) => void;
@@ -24,10 +22,6 @@ export const AuthContext = () => {
 export const AuthProvider = ({ children }: PropsWithChildren<{}>) => {
 
   const [loggedUser, setLoggedUser] = useState({});
- /*  useEffect(() => {
-   const loggeduser = JSON.parse(localStorage.getItem("userId")!);
-   setLoggedUser(loggeduser)
-  }, []) */
 console.log("loogeddddiddd",loggedUser)
   return (
     <MyContext.Provider value={{ loggedUser, setLoggedUser }}>

@@ -1,15 +1,12 @@
 import {useEffect, useRef, useState} from 'react'
 import {MdArrowBack, MdPerson, MdSearch } from "react-icons/md"
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { getProfile, getuserpost, getloggedUser } from '../hooks/likepost';
 import PostComponent from './postComponent';
-import { SideBarContext } from '../showSideBar';
 import { createdAt } from '../hooks/useCreatedHook';
  import { follow_unfollow_user } from "../hooks/likepost";
 
 const Profile = () => {
-    const id = useParams()
-    const [loading, setLoading] = useState(true)
     const [user, setUser] = useState<any>([]);
     const [searchUsers, setSearchUsers] = useState(false)
     const [mainUser, setMainUser] = useState<any>({})
@@ -23,7 +20,7 @@ const Profile = () => {
     useEffect(() => {
        if(text !== ''){
         const searchUser = async () => {
-         await getProfile(text, setUser, setPost, true);
+         await getProfile(text, setUser, setPost);
        };
        mainUser && searchUser();
        mainUser && searchRef.current?.click()
@@ -190,7 +187,6 @@ console.log("thththth", mainUser)
                         index={index}
                         setPost={setPost}
                         fetchPosts={false}
-                        setLoading={setLoading}
                         userId={user?._id}
                         from={"profile"}
                       />

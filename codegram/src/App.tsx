@@ -1,29 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import {BrowserRouter, Link, Route, Routes} from "react-router-dom"
+import {BrowserRouter,Route, Routes} from "react-router-dom"
 import Post from './Components/Post'
 import Comment from './Components/Comment'
 import Home from './Components/Home'
 import Notifications from './Components/Notifications'
-import RecomendedUsers from './Components/RecomendedUsers'
-import Sidebar from './Components/sidebar'
 import Login from './Components/Login'
 import Signup from './Components/Signup'
-import MainHome from './mainHome'
-import { AuthContext } from './authContext'
-import { useNavigate , Navigate} from 'react-router-dom'
 import Layout from './Layout'
-import { useQuery } from '@tanstack/react-query'
 import Profile from './Components/Profile'
 import EditProfile from './Components/EditProfile'
-import MainNav from './Components/mainNav'
 import BookMark from './Components/bookmark'
 
 function App() {
-  const [count, setCount] = useState(0)
-  const {loggedUser} = AuthContext()
 
   return (
     <>

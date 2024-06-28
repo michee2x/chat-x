@@ -2,12 +2,8 @@ import { useRef, useState } from 'react'
 import {FaUpload} from "react-icons/fa"
 import {Navigate } from 'react-router-dom'
 import { createpost } from '../hooks/likepost'
-import { SideBarContext } from "../showSideBar";
 import { MdCancel } from 'react-icons/md';
 
-type User = {
-            [key:string]:String
-}[]
 
 const Comment = () => {
 const inputFileRef = useRef<HTMLInputElement>(null)

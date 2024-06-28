@@ -14,7 +14,6 @@ const Home = () => {
   const [post, setPost] = useState<any>([]);
   const [comments, setComments] = useState([])
   const [loading, setLoading] = useState(true)
-  const [commentPost, setCommentpost] = useState(false)
   const [commentClicked, setCommentClicked] = useState(false)
 
 
@@ -182,7 +181,7 @@ const Home = () => {
                   no post
                 </div>
               )}
-              {commentPost && (
+              {comments && (
                 <div className="text-2xl absolute bg-gray-900 text-white w-full h-screen grid place-items-center">
                   commentPost
                 </div>

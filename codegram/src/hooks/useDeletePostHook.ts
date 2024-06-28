@@ -1,4 +1,4 @@
-import { Navigate, useNavigate } from "react-router-dom"
+
 import { fetchData } from "../fetchData"
 import { deleteUserPost } from "./likepost"
 

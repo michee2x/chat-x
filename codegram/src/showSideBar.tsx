@@ -2,10 +2,8 @@ import {
   PropsWithChildren,
   createContext,
   useContext,
-  useEffect,
   useState,
 } from "react";
-import { getshowSideBar } from "./hooks/likepost";
 type ContextType = {
   showSideBar: boolean;
   setshowSideBar: (showSideBar: boolean) => void;

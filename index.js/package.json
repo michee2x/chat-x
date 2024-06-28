@@ -2,10 +2,10 @@
   "name": "index",
   "version": "1.0.0",
   "description": "",
-  "main": "data.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.mjs"
+    "start": "node server.mjs",
+    "server":"nodemon server"
   },
   "keywords": [],
   "author": "",
