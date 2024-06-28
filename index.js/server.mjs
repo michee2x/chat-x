@@ -40,7 +40,7 @@ const imageUpload = multer({storage:imageStorage})
 
 app.use(cookieParser())
 app.use(express.urlencoded({extended:true}))
-app.use(cors({credentials:true, origin:"http://localhost:5173"}))
+app.use(cors({credentials:true, origin:"https://chat-x-backend.onrender.com"}))
 app.use("/api/post/createpost",protectedRoute, imageUpload.single("file"), createPost)
 app.use(express.json())
 
