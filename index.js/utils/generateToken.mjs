@@ -9,7 +9,7 @@ export const  generateToken = (payload, res) => {
         maxAge: 9000000,
         httpOnly:false,
         sameSite:"strict",
-        secure:false,
+        secure: true,
     })
 
     } catch (error){
