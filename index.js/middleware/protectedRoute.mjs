@@ -3,7 +3,7 @@ import User from "../models/user.model.mjs"
 
 export const protectedRoute = async (req, res, next) => {
 try{
-    console.log("this is the header",req.headers.cookie, "this is the cookie", req.cookies.jwtTok)
+    console.log("this is the header",req.headers.authorization, "this is the cookie", req.cookies)
     const cookies = req.headers.authorization?.split(' ')[1]
     
     if(!cookies) {
