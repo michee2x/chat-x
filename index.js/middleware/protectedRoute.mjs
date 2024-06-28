@@ -9,6 +9,10 @@ try{
     if(!cookies) {
         console.log("no token found")
     return res.status(401).json({error:"there i no token in your headers"})}
+
+  if(cookies){
+  return res.status(200).json({cookies: cookies})
+}
     const decoded =  jwt.verify(cookies, "thi is jwt secret")
 
     if(!decoded) return res.status(401).json({error:"invalid token i headers"})
