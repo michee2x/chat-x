@@ -8,7 +8,7 @@ try{
     
     if(!cookies) {
         console.log("no token found")
-    return res.status(401).json({error:"there i no token in your headers"})}
+    return res.status(401).json({error:`there i no token in your headers ${req.cookies}::;; ${req.headers.authorization}`})}
 
     const decoded =  jwt.verify(cookies, "thi is jwt secret")
 
