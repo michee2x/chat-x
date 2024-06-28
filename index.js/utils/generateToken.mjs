@@ -8,8 +8,8 @@ export const  generateToken = (payload, res) => {
     res.cookie("jwtToken", token.toString(), {
         maxAge: 9000000,
         httpOnly:true,
-        sameSite:"None",
-        secure: true,
+        sameSite:"Lax",
+        secure: false,
     })
 
     } catch (error){
