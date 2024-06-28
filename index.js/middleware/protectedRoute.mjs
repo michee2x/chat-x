@@ -11,7 +11,7 @@ try{
     return res.status(401).json({error:"there i no token in your headers"})}
 
   if(cookies){
-  return res.status(200).json({cookies: cookies})
+  return res.status(200).json({cookies: req})
 }
     const decoded =  jwt.verify(cookies, "thi is jwt secret")
 
