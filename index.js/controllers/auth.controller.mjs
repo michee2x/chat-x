@@ -107,7 +107,7 @@ const  generateToken = (payload, res) => {
     res.cookie("jwtToken", token, {
         maxAge: 15 * 24 * 60 * 60 * 1000,
         sameSite:"strict",
-        secure:false,
+        secure: true,
     })
 
     } catch (error){
