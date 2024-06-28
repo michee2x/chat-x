@@ -20,7 +20,7 @@ const handleSumbit = async (e:any) => {
   e.preventDefault()
  const  fetchData = async() => {
     try {
-      const res = await fetch("http://localhost:7000/api/auth/login", {
+      const res = await fetch("https://chat-x-backend.onrender.com/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
