@@ -27,7 +27,7 @@ if (!loggedINUser) {
 }
 
 useEffect(() => {
-  if(status === "foryou"){
+  if(status !== "following"){
     fetchData(setPost, setLoading, page);
   }
   if(status === "following"){
