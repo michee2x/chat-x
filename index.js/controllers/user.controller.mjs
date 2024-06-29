@@ -83,7 +83,7 @@ export const updateProfile = async (req, res) => {
 
     const {name, username, email, oldPassword, newPassword,} = req.body
     let { profilepic, ProfileCover,} = req.body
-console.log("this file is been received", name, username, email, oldPassword, new password)
+console.log("this file is been received", name, username, email, oldPassword, newpassword)
     const loggedInUserId = req.user._id
     try{
         const user = await User.findById(loggedInUserId)
