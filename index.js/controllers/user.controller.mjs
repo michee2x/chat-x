@@ -82,7 +82,7 @@ export const follow =  async(req, res) => {
 export const updateProfile = async (req, res) => {
 
     const {name, username, email, oldPassword, newPassword,} = req.body
-    let { profilepic, ProfileCover,} = req.body
+    let { Profilepic, ProfileCover,} = req.body
 console.log("this file is been received", name, username, email, oldPassword, newPassword)
     const loggedInUserId = req.user._id
     try{
@@ -106,13 +106,13 @@ console.log("this file is been received", name, username, email, oldPassword, ne
 
 console.log("it's the to upload")
 
-        if(profilepic){
+        if(Profilepic){
             if(user.profilepic){
                 const userProfId = user.profile.split("/").pop().split(".")[0]
                 await cloudinary.uploader.destroy(userProfId)
             }
-            const uploadedResponse = await cloudinary.uploader.upload(profilepic)
-            profilepic = uploadedResponse.secure_url
+            const uploadedResponse = await cloudinary.uploader.upload(Profilepic)
+            Profilepic = uploadedResponse.secure_url
         }
         if(ProfileCover){
             if(user.profilecover){
