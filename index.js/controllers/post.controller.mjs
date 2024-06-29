@@ -80,18 +80,21 @@ export const DeletePost = async (req, res) => {
         if(comments){
             for(const comment of comments){
                 const fileId = comment?.file?.split("/").pop().split(".")[0]
-console.log(";;;;!");
                 await cloudinary.uploader.destroy(fileId) 
+console.log(";;;;!");
             }
         }
           
 
-            
+       console.log("rrrtttt");    
           
         }
         
 
         await Posts.findByIdAndDelete(id)
+
+
+console.log("bbbnn");
 
         res.json({message:"post deleted successfully"})
     }catch (error) {
