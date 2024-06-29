@@ -27,7 +27,7 @@ cloudinary.config({
 console.log("this is before", process.env.api_key, process.env.api_secret, process.env.cloud_name)
 const imageStorage = multer.diskStorage({
   destination:(req, file, cb) => {
-    cb(null, './images')
+    cb(null, './db')
   },
   filename:(req, file, cb) => {
     cb(null, `${Date.now()}_${file.originalname}`)
