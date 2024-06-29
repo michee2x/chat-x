@@ -23,7 +23,7 @@ const Home = () => {
 const [status, setStatus] = useState(localStorage.getItem("status")! || "foryou")
 const loggedINUser = localStorage.getItem("userId")!;
 if (!loggedINUser) {
-  return <Navigate to={"/"} />;
+  return <Navigate to={"/login"} />;
 }
 
 useEffect(() => {
