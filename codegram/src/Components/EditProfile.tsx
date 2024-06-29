@@ -107,7 +107,7 @@ const values =
           <MdCancel className="text-2xl text-blue-300" />
         </div>
         <div onClick={handleEdit}>
-          <FaAdjust className={`${values && "text-blue-400"} text-xl`} />
+          <FaAdjust className={`${values && "text-blue-400"} text-xl focus:text-blue-600`} />
         </div>
       </div>
       <div className="w-full h-auto grid place-items-center text-lg mb-3 text-blue-300">
