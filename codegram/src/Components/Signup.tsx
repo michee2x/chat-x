@@ -72,7 +72,7 @@ const Signup = () => {
           <div className="display bg-blue-950 w-full h-full">
             <div className="w-full h-full bg-cover absolute lg:hidden">
               <img
-                src="../public/4WExuiHK5CQxYbuNwgjW9UStDrWblt3BmlMV.png"
+                src="https://stock.adobe.com/ng/images/abstract-composition/81746829"
                 alt=""
                 className="w-full h-full bg-contain bg-opacity-90"
               />
