@@ -111,13 +111,8 @@ console.log("it's the to upload")
                 const userProfId = user?.profilepic.split("/").pop().split(".")[0]
                 await cloudinary.uploader.destroy(userProfId)
             }
-            const uploadResult = await new Promise((resolve) => {
-            cloudinary.v2.uploader.upload_stream({ transformation: { width: 500, height:500,crop: "fill" }},(error, uploadResult) => {
-            return resolve(uploadResult);
-            }).end(Profilepic);
-        });
-
-        Profilepic = uploadResult.secure_url
+            const uploadedResponse = await cloudinary.uploader.upload(Profilepic)
+            Profilepic = uploadedResponse.secure_url
 
         }
         if(ProfileCover){
