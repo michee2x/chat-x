@@ -30,7 +30,7 @@ export const createPost = async (req, res) => {
         if(file.mimetype === 'image/jpeg' || file.mimetype === 'image/png'){
             const byteArrayBuffer = fs.readFileSync(req.file?.path);
             const uploadResult = await new Promise((resolve) => {
-            cloudinary.v2.uploader.upload_stream({ transformation: { width: 300, height:300,crop: "fill" }},(error, uploadResult) => {
+            cloudinary.v2.uploader.upload_stream({ transformation: { width: 200, height:200,crop: "fill" }},(error, uploadResult) => {
             return resolve(uploadResult);
             }).end(byteArrayBuffer);
         });
