@@ -108,7 +108,7 @@ console.log("it's the to upload")
 
         if(Profilepic){
             if(user.profilepic){
-                const userProfId = user.profile.split("/").pop().split(".")[0]
+                const userProfId = user.profilepic.split("/").pop().split(".")[0]
                 await cloudinary.uploader.destroy(userProfId)
             }
             const uploadedResponse = await cloudinary.uploader.upload(Profilepic)
@@ -116,7 +116,7 @@ console.log("it's the to upload")
         }
         if(ProfileCover){
             if(user.profilecover){
-                const userCoverId = user.profile.split("/").pop().split(".")[0]
+                const userCoverId = user.profilecover.split("/").pop().split(".")[0]
                 await cloudinary.uploader.destroy(userCoverId)
             }
             const uploadedResponse = await cloudinary.uploader.upload(ProfileCover)
