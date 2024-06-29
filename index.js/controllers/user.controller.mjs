@@ -102,6 +102,8 @@ export const updateProfile = async (req, res) => {
 
         if(!correctPassword) return res.status(200).json({error:"old password is not correct"})
 
+console.log("it's the to upload")
+
         if(profilepic){
             if(user.profilepic){
                 const userProfId = user.profile.split("/").pop().split(".")[0]
