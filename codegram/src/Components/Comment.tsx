@@ -8,6 +8,7 @@ import { MdCancel } from 'react-icons/md';
 const Comment = () => {
 const inputFileRef = useRef<HTMLInputElement>(null)
 const [file, setFile] = useState("")
+const [posting, setPosting] = useState(false)
 const [text, setText] = useState("")
 const [navigate, setNavigate] = useState(false)
 const [inputFile, setInputFile] = useState<any>(null)
@@ -104,9 +105,9 @@ if (navigate) {
       <div
         className={`text-center text-white mt-8 ${file || text ? "bg-blue-600" : "bg-gray-500"} px-6 rounded-xl cursor-pointer mx-auto
        border border-blue-950 w-28 nounderlineb hover:bg-blue-900 `}
-        onClick={ handlePost}
+        onClick={() => {setPosting(true); handlePost}}
       >
-        posts
+        {posting ? "posting" : "post"}
       </div>
     </div>
   );
