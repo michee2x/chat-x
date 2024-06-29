@@ -30,6 +30,7 @@ const settingText = (e:any) => {
 setText(e.target.value)
 }
 const handlePost = async () => {
+  setPosting(true)
   if(file || text){
     const formData = new FormData()
     formData.append("file", inputFile)
@@ -105,7 +106,7 @@ if (navigate) {
       <div
         className={`text-center text-white mt-8 ${file || text ? "bg-blue-600" : "bg-gray-500"} px-6 rounded-xl cursor-pointer mx-auto
        border border-blue-950 w-28 nounderlineb hover:bg-blue-900 `}
-        onClick={() => {setPosting(true); handlePost}}
+        onClick={handlePost}
       >
         {posting ? "posting" : "post"}
       </div>
