@@ -51,7 +51,7 @@ const handleSumbit = async (e:any) => {
   }
 
 if(navigate){
-  return <Navigate to={"/login"}/>
+  return <Navigate to={"/"}/>
 }
 
 const Skeletons = () => {
