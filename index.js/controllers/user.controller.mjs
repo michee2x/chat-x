@@ -129,6 +129,7 @@ export const updateProfile = async (req, res) => {
             profilepic:profilepic || user.profilepic,
             profilecover:ProfileCover || user.profilecover,
         }
+console.log(newUser)
 
         await User.findByIdAndUpdate(req.user._id, newUser)
 
