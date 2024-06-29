@@ -20,7 +20,7 @@ const Home = () => {
   const loadingRef = useRef<HTMLDivElement>(null)
   const [page, setPage] = useState(1)
   const divRef = useRef<HTMLDivElement>(null)
-const [status, setStatus] = useState(localStorage.getItem("status")!)
+const [status, setStatus] = useState(localStorage.getItem("status")! || "foryou")
 const loggedINUser = localStorage.getItem("userId")!;
 if (!loggedINUser) {
   return <Navigate to={"/login"} />;
