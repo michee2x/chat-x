@@ -82,7 +82,7 @@ const setToStorge = (x:string) => {
       {loading ? (
         <div className="h-screen w-screen gap-2 flex items-center flex-col justify-center text-gray-300 bg-black lg:w-full lg:pt-24">
           <Skeletons />
-          <div className="text-gray-800 font-extrabold text-xl">picchat...</div>
+          <div className="text-blue-800 font-extrabold text-xl font-mono">chat-x</div>
         </div>
       ) : (
         <div className="h-screen w-screen relative bg-black lg:w-full">
