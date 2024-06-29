@@ -107,8 +107,8 @@ console.log("this file is been received", name, username, email, oldPassword, ne
 console.log("it's the to upload")
 
         if(Profilepic){
-            if(user.profilepic){
-                const userProfId = user.profilepic.split("/").pop().split(".")[0]
+            if(user?.profilepic){
+                const userProfId = user?.profilepic.split("/").pop().split(".")[0]
                 await cloudinary.uploader.destroy(userProfId)
             }
             const uploadedResponse = await cloudinary.uploader.upload(Profilepic)
