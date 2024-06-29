@@ -130,7 +130,7 @@ console.log("it's the to upload")
             username:username || user.username,
             email:email || user.email,
             password:hashedPassword || user.password,
-            profilepic:profilepic || user.profilepic,
+            profilepic:Profilepic || user.profilepic,
             profilecover:ProfileCover || user.profilecover,
         }
 console.log(newUser)
