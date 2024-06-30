@@ -163,10 +163,10 @@ const PostComponent = ({
               <span>
                 <FaComment
                   className={`text-xl  cursor-pointer`}
-                >
+                />
                
               </span>
-              <span className="text-xs">{e?.Comment.length}</span>
+              <span className="text-xs">1</span>
             </div>
             <div
               className={`w-12 h-full rounded-full cursor-pointer gap-2 ${
