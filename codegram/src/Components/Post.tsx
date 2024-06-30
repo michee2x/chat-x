@@ -138,7 +138,7 @@ const Home = () => {
                 comments?.map((e: any, index) => {
                   return (
                     <ul
-                      className={`mx-auto h-auto rounded-2xl bg-black ${
+                      className={`mx-auto  rounded-2xl h-auto min-h-14 bg-black ${
                         index % 2 == 0
                           ? "border-l-4 border-t-4"
                           : "border-r-4 border-t-4"
@@ -162,14 +162,14 @@ const Home = () => {
                             />
                           )}
                         </div>
-                        <div className="w-full flex-col text-gray-300 min-h-10 flex gap-3">
+                        <div className="w-full flex-col text-gray-300 flex gap-3">
                           <div>{e.text}</div>
 {e.file &&
                           <div>
                             <img
                               src={e.file}
                               alt=""
-                              className="max-h-64 rounded-xl w-full"
+                              className="h-40 rounded-xl w-full"
                             />
                           </div>}
                         </div>
