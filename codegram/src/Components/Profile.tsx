@@ -115,7 +115,7 @@ console.log("thththth", mainUser)
                     src={mainUser?.profilepic}
                     alt=""
                     style={{ bottom: "-3rem" }}
-                    className="w-24 ml-2 z-30 absolute border-2 border-white/90  h-24 rounded-full"
+                    className="w-32 ml-2 z-30 absolute border-2 border-white/90  h-32 rounded-full"
                   />
                 </div>
               ) : (
