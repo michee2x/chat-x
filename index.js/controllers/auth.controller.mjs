@@ -19,10 +19,6 @@ const {name, username, email, password, profilePic} = req.body
     if(existingUser){
         return res.status(400).json({error:{type:"existingUser"}})
     }
-    const existingEmail = await User.findOne({email})
-    if(existingEmail){
-        return res.status(400).json({error:{type:"existingEmail"}})
-    }
     /* const existingPassword = await User.findOne({password})
     if(existingUser){
         return res.status(400).json({error:"that password already exist..."})
