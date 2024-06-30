@@ -82,7 +82,7 @@ const PostComponent = ({
                           </div>
                           <video
                             src={e.file}
-                            className={`w-full h-64 ${
+                            className={`w-full max-h-64 ${
                               from === "bookmark"
                                 ? "rounded-2xl"
                                 : "rounded-tr-2xl rounded-tl-2xl"
