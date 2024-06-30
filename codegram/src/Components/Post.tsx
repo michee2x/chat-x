@@ -89,7 +89,7 @@ const Home = () => {
               </div>
               <div className="flex flex-col text-gray-500">
                 <span>{post?.user?.name}</span>
-                <span>{post?.user?.email}</span>
+                <span>{post?.user?.username}</span>
               </div>
             </div>
 
