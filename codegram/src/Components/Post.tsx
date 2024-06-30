@@ -40,8 +40,8 @@ const Home = () => {
           </div>
         ) : (
           <div className="h-full w-full bg-black">
-            <div className="w-full text-xl flex justify-between items-center h-12 border-b-2 border-gray-500 relative">
-              <div className="w-1/2 items-center flex pl-3 gap-3 h-full">
+            <div className="w-full text-xl flex justify-between fixed z-10 items-center h-12 border-b-2 border-gray-500 relative">
+              <div className="w-1/2 mt-12 items-center flex pl-3 gap-3 h-full">
                 <div
                   className="flex gap-3 items-center"
                   onClick={() => history.back()}
