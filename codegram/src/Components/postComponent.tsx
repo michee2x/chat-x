@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaBookmark, FaHeart, FaPlay } from "react-icons/fa";
+import { FaBookmark, FaHeart, FaComment, FaPlay } from "react-icons/fa";
 import {BsPerson } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import {
@@ -156,6 +156,17 @@ const PostComponent = ({
                 ></span>
               </span>
               <span className="text-xs">{e?.bookmark.length}</span>
+            </div>
+<div
+              className={`w-12 h-full rounded-full cursor-pointer gap-2 flex items-center justify-center text-white`}
+            >
+              <span>
+                <FaComment
+                  className={`text-xl  cursor-pointer`}
+                />
+               
+              </span>
+              <span className="text-xs">{e?.Comment.length}</span>
             </div>
             <div
               className={`w-12 h-full rounded-full cursor-pointer gap-2 ${
