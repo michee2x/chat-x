@@ -70,13 +70,6 @@ const Signup = () => {
         <div className="relative w-full h-full bg-black border-primary mx-auto">
           <div className="camera"></div>
           <div className="display bg-black w-full h-full">
-            <div className="w-full h-full bg-cover absolute lg:hidden">
-              <img
-                src="https://stock.adobe.com/ng/images/abstract-composition/81746829"
-                alt=""
-                className="w-full h-full bg-contain bg-opacity-90"
-              />
-            </div>
             <form
               onSubmit={Signup}
               className="w-screen black bg-opacity-90 h-screen justify-center items-center pt-16 relative flex flex-col gap-5 lg:w-full lg:h-full"
