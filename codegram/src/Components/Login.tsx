@@ -63,13 +63,13 @@ const Skeletons = () => {
       <div className="w-full font-mono flex bg-black h-full lg:w-1/2">
         <div className="relative w-full h-full bg-black border-primary mx-auto">
           <div className="camera absolute"></div>
-          <div className="display bg-blue-950 w-full h-full">
+          <div className="display bg-black w-full h-full">
             <form
               onSubmit={handleSumbit}
               className="w-screen h-screen justify-center items-center pt-16 relative flex flex-col gap-5 lg:w-full lg:h-full"
             >
               <h2 className="card-title text-blue-400 absolute top-10">
-                <i>Login to Chat X</i>
+                <i>Login to Chat-X</i>
               </h2>
               <span
                 className={`absolute top-64 flex ${
