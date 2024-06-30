@@ -169,8 +169,8 @@ console.log("thththth", mainUser)
                 </div>
               </div>
               <div className="w-full justify-end items-center flex gap-3 p-3">
-                <span>{mainUser?.followers?.length} followers</span>
-                <span>{mainUser?.following?.length} following</span>
+                <span>{mainUser?.followers?.length} following</span>
+                <span>{mainUser?.following?.length} followers</span>
               </div>
               <ul
                 className="flex mt-10 wrap w-full h-full flex-col pb-96 gap-3 overflow-y-scroll"
