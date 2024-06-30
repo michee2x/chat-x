@@ -5,6 +5,7 @@ import {editProfile } from "../hooks/likepost";
 import { MdArrowBack, MdCancel } from "react-icons/md";
 
 const EditProfile = () => {
+ const [editing, setEditing] = useState(false)
   const inputFileRef = useRef<HTMLInputElement>(null);
   const inputFileRef2 = useRef<HTMLInputElement>(null);
   const [file, setFile] = useState("");
@@ -50,6 +51,7 @@ const [res, setRes] = useState("username already exist")
   };
 
   const handleEdit = async () => {
+    setEditing(true)
    
     await editProfile(profile, Profilepic, ProfileCover, setNavigate, setRes);
   };
@@ -107,7 +109,7 @@ const values =
           <MdCancel className="text-2xl text-blue-300" />
         </div>
         <div onClick={handleEdit}>
-          <FaAdjust className={`${values && "text-blue-400"} text-xl focus:text-blue-600`} />
+          <span className={`${values && "text-blue-400"} text-xl focus:text-blue-600`}>{editing ? "editing" : "edit"}</span>
         </div>
       </div>
       <div className="w-full h-auto grid place-items-center text-lg mb-3 text-blue-300">
