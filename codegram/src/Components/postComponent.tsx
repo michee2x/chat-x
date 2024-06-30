@@ -113,7 +113,7 @@ const PostComponent = ({
             } px-5 rounded-bl-2xl rounded-br-2xl bg-opacity-60 bg-blue-800 min-h-8
            flex justify-between items-center lg:w-[70%]`}
           >
-            <div className="w-12 h-full rounded-full gap-2 flex items-center justify-center text-white">
+            <div className="w-12 h-full rounded-full gap-2 flex text-xm font-bold items-center justify-center text-white">
               <span
                 onClick={async () => {
                   await likeUnlike(
@@ -139,7 +139,7 @@ const PostComponent = ({
               <span className="text-xs">{e.likes.length}</span>
             </div>
             <div
-              className={`w-12 h-full rounded-full cursor-pointer gap-2 flex items-center justify-center text-white`}
+              className={`w-12 h-full rounded-full cursor-pointer gap-2 flex items-center justify-center text-xm font-bold text-white`}
             >
               <span onClick={() => bookMark(e._id, setPost, setBookMarking)}>
                 <FaBookmark
@@ -158,7 +158,7 @@ const PostComponent = ({
               <span className="text-xs">{e?.bookmark.length}</span>
             </div>
 <div
-              className={`w-12 h-full rounded-full cursor-pointer gap-2 flex items-center justify-center text-white`}
+              className={`w-12 h-full rounded-full cursor-pointer gap-2 flex items-center justify-center text-xm font-bold text-white`}
             >
               <span>
                 <FaComment
@@ -166,7 +166,7 @@ const PostComponent = ({
                 />
                
               </span>
-              <span className="text-xs">1</span>
+              <span className="text-xs">{e?.Comments.length}</span>
             </div>
             <div
               className={`w-12 h-full rounded-full cursor-pointer gap-2 ${
