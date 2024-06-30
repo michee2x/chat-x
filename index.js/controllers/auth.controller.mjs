@@ -16,8 +16,12 @@ export const Signup = async (req, res) => {
 const {name, username, email, password, profilePic} = req.body
 
     const existingUser = await User.findOne({username})
+    const existingEmail = await User.fing({email})
     if(existingUser){
         return res.status(400).json({error:{type:"existingUser"}})
+    }
+    if(existingEmail){
+        return res.status(400).json({error:{type:"existingEmail"}})
     }
     /* const existingPassword = await User.findOne({password})
     if(existingUser){
