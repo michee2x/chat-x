@@ -155,7 +155,7 @@ console.log("thththth", mainUser)
           <div className="w-full h-full flex bg-blue-900 text-gray-300">
             <div className="bg-gray-900 w-full h-full">
               <div className="w-full h-auto flex justify-end pr-3 items-center">
-                <div className="flex gap-3 items-center text-xl text-blue">
+                <div className="flex flex-col gap-2 items-center text-xl text-blue">
                   <b>
                     {!text && loggedUser?.name}
                     {text && mainUser?.name}
