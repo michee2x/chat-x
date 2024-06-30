@@ -74,15 +74,15 @@ const PostComponent = ({
                     <div className="text-md">{e.text}</div>
                     <div className="w-full max-h-64 rounded-tl-2xl rounded-tr-xl h-auto lg:w-[70%]">
                       {e.file?.split("/")[4] === "video" ? (
-                        <div className="w-full relative h-auto">
-                          <div className="w-full h-full grid place-items-center absolute bg-opacity-10 bg-black z-10">
+                        <div className="w-full relative h-64">
+                          <div className="w-full h-full grid place-items-center absolute bg-transparent z-10">
                             <span className="w-14 h-14 bg-blue-700 flex items-center justify-center rounded-full">
                               <FaPlay className="text-[1.5rem]" />
                             </span>
                           </div>
                           <video
                             src={e.file}
-                            className={`w-full max-h-64 ${
+                            className={`w-full h-64 ${
                               from === "bookmark"
                                 ? "rounded-2xl"
                                 : "rounded-tr-2xl rounded-tl-2xl"
