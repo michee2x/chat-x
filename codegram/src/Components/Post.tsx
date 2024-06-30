@@ -163,7 +163,9 @@ const Home = () => {
                           )}
                         </div>
                         <div className="w-full flex-col text-gray-300 flex gap-3">
-                          <div>{e.text}</div>
+                          <div className="flex flex-col gap-2">
+
+<span className="text-xm font-bold">{e?.userid?.name}</span>{e.text}<span></span></div>
 {e.file &&
                           <div>
                             <img
