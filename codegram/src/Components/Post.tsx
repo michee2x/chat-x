@@ -138,7 +138,7 @@ const Home = () => {
                 comments?.map((e: any, index) => {
                   return (
                     <ul
-                      className={`mx-auto max-h-80 rounded-2xl h-auto bg-black ${
+                      className={`mx-auto  min-h-16 max-h-80 h-auto rounded-2xl h-auto bg-black ${
                         index % 2 == 0
                           ? "border-l-4 border-t-4"
                           : "border-r-4 border-t-4"
