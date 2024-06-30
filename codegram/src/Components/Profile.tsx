@@ -163,7 +163,7 @@ console.log("thththth", mainUser)
                   <i className="text-sm">
                     {!text && loggedUser?.email} {text && mainUser?.email}
                   </i>
-                  <span className="text-sm w-full text-blue-600">
+                  <span className="text-sm w-full text-center  text-blue-600">
                     joined {mainUser && `${createdAt(mainUser?.createdAt)}`}
                   </span>
                 </div>
