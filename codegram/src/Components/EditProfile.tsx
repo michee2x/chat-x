@@ -233,7 +233,7 @@ const values =
               <FaUpload className="text-2xl text-gray-400" />
             </div>
           )}
-          {!file && <div>Upload an image</div>}
+          {!file && <div className="text-xm font-bold">profile img</div>}
           <input
             type="file"
             accept="image/*,video/*"
@@ -262,7 +262,7 @@ const values =
               <FaUpload className="text-2xl text-gray-400" />
             </div>
           )}
-          {!file2 && <div>Upload an image</div>}
+          {!file2 && <div className="text-xm font-bold">cover img</div>}
           <input
             type="file"
             accept="image/*,video/*"
