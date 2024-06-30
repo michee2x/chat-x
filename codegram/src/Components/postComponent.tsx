@@ -174,7 +174,7 @@ const PostComponent = ({
               } flex items-center justify-center text-white`}
             >
               <span onClick={() => deletePost(e._id, setPost, setLoading)}>
-                <MdDelete className="text-xl text-red-500" />
+                <MdDelete className="text-sm text-red-500" />
               </span>
             </div>
           </div>
