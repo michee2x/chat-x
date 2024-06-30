@@ -60,8 +60,8 @@ const Skeletons = () => {
 
   return (
     <div className="w-screen z-50 h-screen lg:flex">
-      <div className="w-full font-mono flex bg-blue-900 h-full lg:w-1/2">
-        <div className="relative w-full h-full bg-gray-900 border-primary mx-auto">
+      <div className="w-full font-mono flex bg-black h-full lg:w-1/2">
+        <div className="relative w-full h-full bg-black border-primary mx-auto">
           <div className="camera absolute"></div>
           <div className="display bg-blue-950 w-full h-full">
             <form
@@ -74,7 +74,7 @@ const Skeletons = () => {
               <span
                 className={`absolute top-64 flex ${
                   error?.type ? "block" : "hidden"
-                } items-center gap-3 text-red-700 lg:top-36`}
+                } items-center gap-3 text-blue-700 lg:top-36`}
               >
                 <MdError />{" "}
                 {error.type === "nameError" ? "username" : "password"} not found
