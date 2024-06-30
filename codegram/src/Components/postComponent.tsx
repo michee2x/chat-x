@@ -126,7 +126,7 @@ const PostComponent = ({
                 }}
               >
                 <FaHeart
-                  className={`text-xl ${like ? "hidden" : "block"} ${
+                  className={`text-sm ${like ? "hidden" : "block"} ${
                     e?.likes?.includes(userId) ? "text-pink-700" : "text-white"
                   } cursor-pointer`}
                 />
@@ -143,7 +143,7 @@ const PostComponent = ({
             >
               <span onClick={() => bookMark(e._id, setPost, setBookMarking)}>
                 <FaBookmark
-                  className={`text-xl ${bookmarking ? "hidden" : "block"} ${
+                  className={`text-sm ${bookmarking ? "hidden" : "block"} ${
                     e?.bookmark?.includes(userId)
                       ? "text-blue-700"
                       : "text-white"
@@ -162,7 +162,7 @@ const PostComponent = ({
             >
               <span>
                 <FaComment
-                  className={`text-xl  cursor-pointer`}
+                  className={`text-sm  cursor-pointer`}
                 />
                
               </span>
