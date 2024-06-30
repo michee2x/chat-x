@@ -176,7 +176,7 @@ const Home = () => {
                     </ul>
                   );
                 })}
-              {comments && (
+              {comments.length === 0 && (
                 <div className="text-2xl absolute bg-gray-900 text-white w-full h-screen grid place-items-center">
                   commentPost
                 </div>
