@@ -134,7 +134,7 @@ const Home = () => {
               </span>
             </div>
             <div className="grid relative w-full h-full pb-64 lg:grid-cols-2">
-              {post ? (
+              {
                 comments?.map((e: any, index) => {
                   return (
                     <ul
@@ -175,12 +175,7 @@ const Home = () => {
                       </li>
                     </ul>
                   );
-                })
-              ) : (
-                <div className="text-2xl bg-gray-900 text-white w-full h-full grid place-items-center">
-                  no post
-                </div>
-              )}
+                })}
               {comments && (
                 <div className="text-2xl absolute bg-gray-900 text-white w-full h-screen grid place-items-center">
                   commentPost
