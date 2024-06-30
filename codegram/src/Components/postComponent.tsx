@@ -74,7 +74,7 @@ const PostComponent = ({
                     <div className="text-md">{e.text}</div>
                     <div className="w-full max-h-64 rounded-tl-2xl rounded-tr-xl h-auto lg:w-[70%]">
                       {e.file?.split("/")[4] === "video" ? (
-                        <div className="w-full relative h-64">
+                        <div className="w-full relative h-auto">
                           <div className="w-full h-full grid place-items-center hidden absolute">
                             <span className="w-14 h-14 bg-blue-700 flex items-center justify-center rounded-full z-10">
                               <FaPlay className="text-[1.5rem]" />
