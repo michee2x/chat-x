@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { FaAdjust, FaUpload } from "react-icons/fa";
+import {FaUpload } from "react-icons/fa";
 import { Navigate } from "react-router-dom";
 import {editProfile } from "../hooks/likepost";
 import { MdArrowBack, MdCancel } from "react-icons/md";
