@@ -79,7 +79,7 @@ const Signup = () => {
             </div>
             <form
               onSubmit={Signup}
-              className="w-screen bg-blue-800 bg-opacity-90 h-screen justify-center items-center pt-16 relative flex flex-col gap-5 lg:w-full lg:h-full"
+              className="w-screen black bg-opacity-90 h-screen justify-center items-center pt-16 relative flex flex-col gap-5 lg:w-full lg:h-full"
             >
               <h2 className="card-title text-blue-400 absolute top-10">
                 <i>Sign In to Chat X</i>
