@@ -164,13 +164,14 @@ const Home = () => {
                         </div>
                         <div className="w-full flex-col text-gray-300 min-h-10 flex gap-3">
                           <div>{e.text}</div>
+{e.file &&
                           <div>
                             <img
                               src={e.file}
                               alt=""
                               className="max-h-64 rounded-xl w-full"
                             />
-                          </div>
+                          </div>}
                         </div>
                       </li>
                     </ul>
