@@ -110,6 +110,7 @@ export const CommentPost = async (req, res) => {
         const {text} = req.body
         let {serverFile:file} = req.body
         const userid = req.user._id
+        console.log(id, text, file)
 
         if((!text || !file) && ! id) return res.status(401).json({error:"pls send a post"})
 
@@ -127,6 +128,8 @@ export const CommentPost = async (req, res) => {
         }
 
         await Posts.updateOne({_id:postid}, {$push:{Comments:comment}})
+
+console.log("comment is so successful")
 
         await res.status(200).json({message:post})
 
