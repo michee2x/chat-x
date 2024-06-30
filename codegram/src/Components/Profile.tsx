@@ -88,7 +88,7 @@ console.log("thththth", mainUser)
           />
           <div className="flex text-gray-300 flex-col">
             <b>{loggedUser?.name}</b>
-            <i className="text-sm">{loggedUser?.email}</i>
+            <i className="text-sm">{loggedUser?.username}</i>
           </div>
         </div>
       </div>
@@ -161,7 +161,7 @@ console.log("thththth", mainUser)
                     {text && mainUser?.name}
                   </b>
                   <i className="text-sm">
-                    {!text && loggedUser?.email} {text && mainUser?.email}
+                    {!text && loggedUser?.username} {text && mainUser?.username}
                   </i>
                   <span className="text-sm w-full text-center  text-blue-600">
                     joined {mainUser && `${createdAt(mainUser?.createdAt)}`}
