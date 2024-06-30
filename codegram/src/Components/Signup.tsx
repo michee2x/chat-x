@@ -66,10 +66,10 @@ const Signup = () => {
 
   return (
     <div className="w-screen font-mono h-screen lg:flex">
-      <div className="w-full flex bg-gray-900 h-full lg:w-1/2">
-        <div className="relative w-full h-full bg-gray-900 border-primary mx-auto">
+      <div className="w-full flex bg-black h-full lg:w-1/2">
+        <div className="relative w-full h-full bg-black border-primary mx-auto">
           <div className="camera"></div>
-          <div className="display bg-blue-950 w-full h-full">
+          <div className="display bg-black w-full h-full">
             <div className="w-full h-full bg-cover absolute lg:hidden">
               <img
                 src="https://stock.adobe.com/ng/images/abstract-composition/81746829"
