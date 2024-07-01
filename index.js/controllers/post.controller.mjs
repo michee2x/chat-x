@@ -27,7 +27,7 @@ export const createPost = async (req, res) => {
             file = res.secure_url
             console.log("thi sis the uploaded respnse for the video", res.secure_url)
         }
-        if(file.mimetype === 'image/jpeg' || file.mimetype === 'image/png'){
+        if(file.mimetype === 'image/jpeg' || file.mimetype === 'image/png' || file.mimetype === 'image/gif' || file.mimetype === 'image/webp'){
             const byteArrayBuffer = fs.readFileSync(req.file?.path);
             const uploadResult = await new Promise((resolve) => {
             cloudinary.v2.uploader.upload_stream({ transformation: { width: 500, height:500,crop: "fill" }},(error, uploadResult) => {
