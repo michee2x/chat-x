@@ -80,8 +80,9 @@ export const DeletePost = async (req, res) => {
         if(comments){
 console.log("this is in comment")
             for(const comment of comments){
-                const fileId = comment?.file?.split("/").pop().split(".")[0]
-console.log("this is are the IDs",fileId)
+const IDs = comment.filter((com) => com.file !== "")
+                const fileId = IDs?.file.split("/").pop().split(".")[0]
+console.log("this is are the IDs",fileId, "filtered", IDs)
                 await cloudinary.uploader.destroy(fileId) 
 console.log(";;;;!");
             }
