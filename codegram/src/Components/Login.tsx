@@ -59,7 +59,7 @@ const Skeletons = () => {
 };
 
   return (
-    <div className="w-screen z-50 h-auto lg:flex">
+    <div className="w-auto z-50 h-auto lg:flex">
       <div className="w-full font-mono flex bg-black h-full lg:w-1/2">
         <div className="relative w-full h-full bg-black border-primary mx-auto">
           <div className="camera absolute"></div>
