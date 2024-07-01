@@ -67,7 +67,7 @@ const PostComponent = ({
                   <div>
                     <span className="text-lg text-white">{e.user?.name}</span>
                     <span className="text-xs pl-5 text-gray-400">
-                      {e && `${createdAt(e?.createdAt)}`}
+                      {`${createdAt(e?.createdAt)}` !== "undefined" ? `${createdAt(e?.createdAt)}` : "just now"}
                     </span>
                   </div>
                   <div className="flex flex-col gap-5">
