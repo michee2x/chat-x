@@ -22,10 +22,13 @@ const Home = () => {
   const divRef = useRef<HTMLDivElement>(null)
 const [status, setStatus] = useState(localStorage.getItem("status")! || "foryou")
 const loggedINUser = localStorage.getItem("userId")!;
-if (!loggedINUser) {
-  return <Navigate to={"/login"} />;
-}
 
+useEffect(() => {
+const loggedINUser = localStorage.getItem("userId")!;
+if (loggedINUser === null) {
+  history.push('/login')
+}
+},[])
 useEffect(() => {
   if(status !== "following"){
     fetchData(setPost, setLoading, page);
