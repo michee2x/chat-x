@@ -82,9 +82,9 @@ console.log("this is in comment")
             for(const comment of comments){
 
                 const fileId = comment.file !== "" && comment?.file?.split("/").pop().split(".")[0]
-console.log("this is are the IDs",fileId, "filtered", IDs)
+console.log("this is are the IDs",fileId, "comment", comment)
                 await cloudinary.uploader.destroy(fileId) 
-console.log(";;;;!");
+console.log("vvvvv!");
             }
         }
           
