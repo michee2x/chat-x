@@ -67,7 +67,7 @@ useEffect(() => {
 
 console.log("hi there this is login user", loggedInUser)
 
-if (loggedINUser === null) {
+if (loggedInUser === null) {
   return <Navigate to={'/login'} />
 }
 
