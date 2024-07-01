@@ -3,7 +3,7 @@ import { } from "react-icons/io";
 import {BsPerson} from "react-icons/bs";
 import {MdPerson, MdArrowLeft, MdArrowRight} from "react-icons/md";
 import { fetchData } from "../fetchData";
-import {history } from "react-router-dom";
+import {useHistory } from "react-router-dom";
 import {
   getloggedUser,
   getFollowingPost
@@ -11,6 +11,7 @@ import {
 import PostComponent from "./postComponent";
 
 const Home = () => {
+  const history = useHistory()
   const [post, setPost] = useState<any>([]);
   const [followingPost, setFollowingPost] = useState<any>([])
   const [loading, setLoading] = useState(true)
@@ -25,7 +26,7 @@ const [status, setStatus] = useState(localStorage.getItem("status")! || "foryou"
 useEffect(() => {
 const loggedINUser = localStorage.getItem("userId")!;
 if (loggedINUser === null) {
-  history.push('/login')
+  history.replace('/login')
 }
 },[])
 useEffect(() => {
