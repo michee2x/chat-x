@@ -14,6 +14,7 @@ export const getHome = (req, res) => {
 export const Signup = async (req, res) => {
     try{
 const {name, username, email, password, profilePic} = req.body
+console.log(name, username, email)
 
     const existingUser = await User.findOne({username})
     const existingEmail = await User.fing({email})
@@ -41,6 +42,7 @@ const {name, username, email, password, profilePic} = req.body
     })
 
     newUser.save()
+console.log("the user is saved")
      
     if(newUser) {
          generateToken(newUser._id, res)
