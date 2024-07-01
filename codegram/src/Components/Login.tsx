@@ -66,7 +66,7 @@ const Skeletons = () => {
           <div className="display bg-black w-full h-full">
             <form
               onSubmit={handleSumbit}
-              className="w-screen h-auto justify-center items-center relative flex flex-col gap-5 lg:w-full lg:h-full"
+              className="w-screen max-h-screen h-auto flex-grow justify-center items-center relative flex flex-col gap-5 lg:w-full lg:h-full"
             >
               <h2 className="card-title text-blue-400 absolute top-10">
                 <i>Login to Chat-X</i>
