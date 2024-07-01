@@ -1,6 +1,5 @@
 import { useEffect,useRef, useState } from "react";
 import { } from "react-icons/io";
-import {BsPerson} from "react-icons/bs";
 import {MdPerson, MdArrowLeft, MdArrowRight} from "react-icons/md";
 import { fetchData } from "../fetchData";
 import {Navigate} from "react-router-dom";
