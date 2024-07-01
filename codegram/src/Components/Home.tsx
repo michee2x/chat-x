@@ -11,7 +11,6 @@ import {
 import PostComponent from "./postComponent";
 
 const Home = () => {
-  const history = useHistory()
   const [post, setPost] = useState<any>([]);
   const [followingPost, setFollowingPost] = useState<any>([])
   const [loading, setLoading] = useState(true)
