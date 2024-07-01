@@ -127,7 +127,7 @@ const Skeletons = () => {
               </div>
               <button
                 style={{ width: "55%" }}
-                className=" rounded-3xl text-white bg-blue-800 outline-0 border-0 absolute bottom-10 justify-center flex items-center gap-2 hover:bg-blue-700 focus:outline-none"
+                className=" rounded-3xl text-white bg-blue-800 outline-0 border-0 mt-9 justify-center flex items-center gap-2 hover:bg-blue-700 focus:outline-none"
                 onClick={handleSumbit}
               >
                 <span
