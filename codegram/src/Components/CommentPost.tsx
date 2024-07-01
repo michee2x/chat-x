@@ -58,7 +58,7 @@ const CommentPost = ({commentClicked,setComments, setCommentClicked, postId, set
       <div
         style={{ width: "70%" }}
         className="mx-auto relative mt-8 rounded-2xl flex items-center justify-center flex-col
-       gap-6 h-auto border-2 border-solid cursor-pointer border-gray-600 hover:bg-gray-900"
+       gap-6 h-44 border-2 border-solid cursor-pointer border-gray-600 hover:bg-gray-900"
         onClick={() => inputFileRef.current?.click()}
       >
         {!file && (
