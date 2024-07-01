@@ -21,7 +21,7 @@ const Home = () => {
   const [page, setPage] = useState(1)
   const divRef = useRef<HTMLDivElement>(null)
 const [status, setStatus] = useState(localStorage.getItem("status")! || "foryou")
-const [loggedInUser] = useState(localStorage.getItem("userId")!)
+const [loggedInUser] = useState(localStorage.getItem("userId")! || "")
 
 
 useEffect(() => {
