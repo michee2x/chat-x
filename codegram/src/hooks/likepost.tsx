@@ -151,7 +151,7 @@ export const logOut = async () => {
       credentials: "include",
     });
     if (!res) throw new Error("there was an error...");
-   localStorage.setItem('userId', JSON.stringify(null))
+   localStorage.removeItem('userId')
       
   } catch (error) {
     console.log("error in likeUnlike", error);
