@@ -71,7 +71,7 @@ const PostComponent = ({
                     </span>
                   </div>
                   <div className="flex flex-col gap-5">
-                    <div className="text-md">{e.text.length > 30 ? e.text.slice(0, 30) : e.text}</div>
+                    <div className="text-md">{e.text.length > 100 ? `${e.text.slice(0, 100)}...` : e.text}</div>
                     <div className="w-full max-h-64 rounded-tl-2xl rounded-tr-xl h-auto lg:w-[70%]">
                       {e.file?.split("/")[4] === "video" ? (
                         <div className="w-full relative h-auto">
