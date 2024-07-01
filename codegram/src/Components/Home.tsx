@@ -25,7 +25,7 @@ const [status, setStatus] = useState(localStorage.getItem("status")! || "foryou"
 
 const loggedINUser = localStorage.getItem("userId")!;
 if (loggedINUser === null) {
-  return <Navigate to={'/login'}
+  return <Navigate to={'/login'} />
 }
 useEffect(() => {
   if(status !== "following"){
