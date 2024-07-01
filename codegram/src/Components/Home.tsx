@@ -105,9 +105,11 @@ const setToStorge = (x:string) => {
               <img
                 src={user?.profilepic}
                 alt="img"
-                className="w-6 h-6 rounded-full lg:hidden"
+                className={`w-6 ${user?.profilepic ? "block" : "hidden"}  h-6 rounded-full lg:hidden`}
               />
-              <BsPerson className="hidden lg:block text-white text-xl" />
+              <span className={`p-1 bg-white-600 ${!user?.profilepic ? "block" : "hidden"} rounded-full`}>
+                <MdPerson color="blue" className="text-xl" />
+              </span>
               <b>interest</b>
             </span>
             <span
