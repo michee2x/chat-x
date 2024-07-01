@@ -72,9 +72,9 @@ const Skeletons = () => {
                 <i>Login to Chat-X</i>
               </h2>
               <span
-                className={`absolute top-64 flex ${
+                className={`absolute top-36 flex ${
                   error?.type ? "block" : "hidden"
-                } items-center gap-3 text-blue-700 lg:top-36`}
+                } items-center gap-3 text-blue-700`}
               >
                 <MdError />{" "}
                 {error.type === "nameError" ? "username" : "password"} not found
