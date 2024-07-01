@@ -59,14 +59,14 @@ const Skeletons = () => {
 };
 
   return (
-    <div className="w-screen z-50 h-auto lg:flex">
+    <div className="w-screen z-50 h-screen lg:flex">
       <div className="w-full font-mono flex bg-black h-full lg:w-1/2">
         <div className="relative w-full h-full bg-black border-primary mx-auto">
           <div className="camera absolute"></div>
           <div className="display bg-black w-full h-full">
             <form
               onSubmit={handleSumbit}
-              className="w-screen max-h-screen h-auto flex-grow justify-center items-center relative flex flex-col gap-5 lg:w-full lg:h-full"
+              className="w-screen h-screen justify-center items-center relative flex flex-col gap-5 lg:w-full lg:h-full"
             >
               <h2 className="card-title text-blue-400 absolute top-10">
                 <i>Login to Chat-X</i>
