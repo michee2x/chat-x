@@ -17,7 +17,7 @@ const {name, username, email, password, profilePic} = req.body
 console.log(name, username, email)
 
     const existingUser = await User.findOne({username})
-    const existingEmail = await User.fing({email})
+    const existingEmail = await User.findOne({email})
     if(existingUser){
         return res.status(400).json({error:{type:"existingUser"}})
     }
