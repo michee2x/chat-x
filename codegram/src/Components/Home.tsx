@@ -3,7 +3,7 @@ import { } from "react-icons/io";
 import {BsPerson} from "react-icons/bs";
 import {MdPerson, MdArrowLeft, MdArrowRight} from "react-icons/md";
 import { fetchData } from "../fetchData";
-import {Navigate } from "react-router-dom";
+import {history } from "react-router-dom";
 import {
   getloggedUser,
   getFollowingPost
@@ -21,7 +21,6 @@ const Home = () => {
   const [page, setPage] = useState(1)
   const divRef = useRef<HTMLDivElement>(null)
 const [status, setStatus] = useState(localStorage.getItem("status")! || "foryou")
-const loggedINUser = localStorage.getItem("userId")!;
 
 useEffect(() => {
 const loggedINUser = localStorage.getItem("userId")!;
