@@ -21,11 +21,9 @@ const Home = () => {
   const [page, setPage] = useState(1)
   const divRef = useRef<HTMLDivElement>(null)
 const [status, setStatus] = useState(localStorage.getItem("status")! || "foryou")
+const [loggedInUser] = useState(localStorage.getItem("userId")!)
 
-const loggedINUser = localStorage.getItem("userId")!;
-if (loggedINUser === null) {
-  return <Navigate to={'/login'} />
-}
+
 useEffect(() => {
   if(status !== "following"){
     fetchData(setPost, setLoading, page);
@@ -66,6 +64,12 @@ useEffect(() => {
   };
   scrolltoBottom()
 }, [])
+
+console.log("hi there this is login user", loggedInUser)
+
+if (loggedINUser === null) {
+  return <Navigate to={'/login'} />
+}
 
 const Skeletons = () => {
   return (
