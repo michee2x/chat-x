@@ -111,7 +111,11 @@ const setToStorge = (x:string) => {
               </span>
               <b>interest</b>
             </span>
-       <span className="w-1/3 h-full flex items-center justify-center text-blue-400 text-xm tracking-widest font-bold">🌍hat-x</span>
+       <span className="w-1/3 h-full">🌍<img
+                src={user?.profilepic}
+                alt="img"
+                className="w-full h-full"
+              /></span>
             <span
               className={`w-1/3 flex flex-col items-center ${
                 status === "following" ? "border-b-2 border-blue-500" : ""
