@@ -1,4 +1,4 @@
-import React, { useEffect,useRef, useState } from "react";
+import { useEffect,useRef, useState } from "react";
 import { fetchData } from "../fetchData";
 import { MdPerson } from 'react-icons/md';
 import {Navigate} from "react-router-dom";
