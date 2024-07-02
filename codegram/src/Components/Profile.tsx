@@ -127,7 +127,7 @@ console.log("thththth", mainUser)
               ) : (
                 <span
                   style={{ bottom: "-3rem" }}
-                  className="w-28 h-28 ml-5 absolute rounded-full p-1 text-2xl items-center justify-center flex bg-blue-700 text-white"
+                  className="w-28 h-28 ml-5 absolute rounded-full p-1 text-2xl items-center justify-center border-2 border-white/90 flex bg-black text-white"
                 >
                   <MdPerson size={90} />
                 </span>
