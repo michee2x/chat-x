@@ -36,7 +36,7 @@ const PostComponent = ({
     <>
       <li
         key={index}
-        className="mx-auto border-b-[2px] border-gray-600 mb-6 w-full flex gap-1 bg-black lg:gap-6"
+        className="mx-auto border-b-[2px] border-gray-600 mb-6 w-full flex gap-2 bg-black lg:gap-6"
       >
         <div className="pl-1 pt-1">
           {e.user?.profilepic === "" ? (
@@ -101,7 +101,7 @@ const PostComponent = ({
           <div
             className={`w-full ${
               from === "bookmark" ? "hidden" : "block"
-            } bg-opacity-60 mt-4 min-h-8
+            } bg-opacity-60 min-h-10
            flex justify-between items-center lg:w-[70%]`}
           >
             <div className="w-12 h-full rounded-full gap-2 flex text-xm font-bold items-center justify-center text-white">
