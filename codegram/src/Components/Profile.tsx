@@ -130,7 +130,7 @@ console.log("thththth", mainUser)
                 <div
                   className={`absolute flex ${
                     loggedUserId === mainUser?._id ? "block" : "hidden"
-                  } items-center justify-center mr-8 cursor-pointer border-2 border-white
+                  } items-center justify-center mr-8 cursor-pointer border-2 border-white/90
                w-24 h-8 rounded-xl text-white bottom-5 right-0 bg-blue-600 hover:bg-blue-900`}
                 >
                   editProfile
@@ -145,7 +145,7 @@ console.log("thththth", mainUser)
                 className={`absolute flex ${
                   loggedUserId !== mainUser?._id ? "block" : "hidden"
                 } items-center justify-center mr-8 cursor-pointer
-               w-24 h-6 rounded-xl text-white bottom-5 right-0 border-2 border-white bg-blue-600 hover:bg-blue-900 lg:hidden lg:h-8`}
+               w-24 h-6 rounded-xl text-white bottom-5 right-0 border-2 border-white/90 bg-blue-600 hover:bg-blue-900 lg:hidden lg:h-8`}
               >
                 follow
               </div>
