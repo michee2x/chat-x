@@ -109,7 +109,7 @@ console.log("thththth", mainUser)
                 <div className="w-full h-full bg-gray-800">
 <img
             src="https://i.imgur.com/uiR4C4l.jpeg"
-            alt="cloudinary default cover pic"
+            alt="chat-x default cover pic"
             className="w-full h-full"
           />
 </div>
