@@ -10,7 +10,7 @@ export  const fetchData = async (setPost:any, setLoading:any=true, page:number=0
 
         console.log( data.message)
 
-        await setPost(prev => [...prev, ...data.message])
+        await setPost((prev:any) => [...prev, ...data.message])
         await setLoading(false)
         if(data){
           return data.message
