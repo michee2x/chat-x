@@ -111,9 +111,9 @@ const setToStorge = (x:string) => {
               </span>
               <b>interest</b>
             </span>
-       <span className="w-1/3 h-full">🌍<img
-                src={user?.profilepic}
-                alt="img"
+       <span className="w-1/3 h-full"><img
+                src="https://i.imgur.com/uiR4C4l.jpeg"
+                alt="©️hat-x-logo"
                 className="w-full h-full"
               /></span>
             <span
