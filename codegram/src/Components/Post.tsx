@@ -31,7 +31,7 @@ const ParPost = ({parPostId,setParPostId,id, from}:any) => {
           commentClicked ? "hidden" : ""
         } bg-black lg:w-full`}
       >
-        {!post.length ? (
+        {post.length === 0 ? (
           <div className="w-full h-full grid place-items-center text-2xl">
             <span className="loading loading-dots loading-lg"></span>
           </div>
