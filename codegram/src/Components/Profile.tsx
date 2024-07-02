@@ -108,7 +108,7 @@ console.log("thththth", mainUser)
               ) : (
                 <div className="w-full h-full bg-gray-800">
 <img
-            src="https://asset.cloudinary.com/dsps3itap/bca6874c077fe0894c75828730801c65"
+            src="https://i.imgur.com/uiR4C4l.jpeg"
             alt="cloudinary default cover pic"
             className="w-full h-full"
           />
