@@ -10,6 +10,7 @@ import {
 import PostComponent from "./postComponent";
 
 const Home = () => {
+  const [ParPostId, setParPostId] = useState("")
   const [post, setPost] = useState<any>([]);
   const [followingPost, setFollowingPost] = useState<any>([])
   const [loading, setLoading] = useState(true)
@@ -146,7 +147,7 @@ const setToStorge = (x:string) => {
                         index={index}
                         setPost={setPost}
                         fetchPosts={true}
-                        setLoading={setLoading}
+setParPostId={setParPostId}                      setLoading={setLoading}
                         userId={user?._id}
                         from={"home"}
                         status={status}
