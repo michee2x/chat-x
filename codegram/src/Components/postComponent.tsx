@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { FaBookmark, FaHeart, FaComment, FaPlay } from "react-icons/fa";
 import {BsPerson } from "react-icons/bs";
-import { Link } from "react-router-dom";
 import {
   likeUnlike,
   bookMark
