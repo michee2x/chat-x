@@ -36,8 +36,7 @@ const PostComponent = ({
     <>
       <li
         key={index}
-        className="mx-auto border-1 border-gray-600 mb-6 w-1/2 rounded-2xl flex gap-1 bg-black lg:gap-6"
-        style={{ width: "95%" }}
+        className="mx-auto border-[2px] border-gray-600 mb-6 w-1/2 rounded-2xl flex gap-1 bg-black lg:gap-6"
       >
         <div className="pl-1 pt-1">
           {e.user?.profilepic === "" ? (
