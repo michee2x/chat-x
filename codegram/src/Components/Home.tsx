@@ -8,10 +8,12 @@ import {
 } from "../hooks/likepost";
 import PostComponent from "./postComponent";
 import ParPost from "./Post";
+import {useInView} from "react-intersection-observer"
 
 const Home = () => {
   
-  
+  const {loadingRef, inView, entry} = useInView({
+threshold:0,})
   const [parPostId, setParPostId] = useState("")
   const [post, setPost] = useState<any>([]);
   const [followingPost, setFollowingPost] = useState<any>([])
@@ -21,22 +23,8 @@ const Home = () => {
   const scrollRef2 = useRef<HTMLUListElement>(null);
   const [page, setPage] = useState(1)
   const divRef = useRef<HTMLDivElement>(null)
-const loadingRef = useRef<HTMLDivElement>(null)
 const [status, setStatus] = useState(localStorage.getItem("status")! || "foryou")
 const [loggedInUser] = useState(localStorage.getItem("userId")! || "")
-
-useEffect(() => {
-
-document.addEventListener("scroll", () => {
-if(loadingRef.current){
-const refTop = loadingRef.current.getBoundingClientRect().top
-
-if(refTop > 0){
-setPage(prev => prev + 1)
-}
-}
-})
-}, [])
 useEffect(() => {
   if(status !== "following"){
     fetchData(setPost, setLoading, page);
@@ -78,6 +66,9 @@ console.log("hi there this is login user", loggedInUser)
 
 if (!loggedInUser) {
   return <Navigate to={'/'} />
+}
+if(inView){
+setPage(prev => prev + 1)
 }
 
 const Skeletons = () => {
