@@ -106,7 +106,13 @@ console.log("thththth", mainUser)
                   className="w-full h-full"
                 />
               ) : (
-                <div className="w-full h-full bg-gray-800"></div>
+                <div className="w-full h-full bg-gray-800">
+<img
+            src="https://asset.cloudinary.com/dsps3itap/bca6874c077fe0894c75828730801c65"
+            alt="cloudinary default cover pic"
+            className="w-full h-full"
+          />
+</div>
               )}
               {/* ========================================= */}
               {mainUser?.profilepic ? (
