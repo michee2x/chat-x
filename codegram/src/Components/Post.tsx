@@ -9,8 +9,8 @@ import {createdAt} from "../hooks/useCreatedHook"
 import { IoMdHeart } from "react-icons/io";
 import { MdBookmark } from "react-icons/md";
 
-const Home = () => {
-  const {id, from} = useParams()
+const ParPost = ({id, from}:any) => {
+
   const [post, setPost] = useState<any>([]);
   const [comments, setComments] = useState([])
   const [loading, setLoading] = useState(true)
@@ -205,4 +205,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default ParPost;
