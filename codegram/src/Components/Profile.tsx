@@ -145,7 +145,7 @@ console.log("thththth", mainUser)
                 className={`absolute flex ${
                   loggedUserId !== mainUser?._id ? "block" : "hidden"
                 } items-center justify-center mr-8 cursor-pointer
-               w-24 h-6 rounded-xl text-white bottom-5 right-0 bg-pink-600 hover:bg-blue-900 lg:hidden lg:h-8`}
+               w-24 h-6 rounded-xl text-white bottom-5 right-0 bg-blue-600 hover:bg-blue-900 lg:hidden lg:h-8`}
               >
                 follow
               </div>
