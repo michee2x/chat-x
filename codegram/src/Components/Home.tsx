@@ -11,8 +11,8 @@ import ParPost from "./Post";
 import {useInView} from "react-intersection-observer"
 
 const Home = () => {
-  const reff:React.RefObject<HTMLElement> = useRef<HTMLDivElement>(null)
-  const {reff:loadingRef, inView: boolean} = useInView()
+  
+  const {loadingRef:any, inView: boolean} = useInView()
   const [parPostId, setParPostId] = useState("")
   const [post, setPost] = useState<any>([]);
   const [followingPost, setFollowingPost] = useState<any>([])
