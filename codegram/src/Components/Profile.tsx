@@ -60,7 +60,7 @@ console.log("thththth", mainUser)
           <div className="bg-black/90 h-full w-full rounded-xl flex lg:w-8/12">
             <input
               type="text"
-              placeholder="search..."
+              placeholder="🧐searchuser..."
               onFocus={() => setSearchUsers(true)}
               value={text}
               onChange={(e) => setText(e.target.value)}
