@@ -37,7 +37,7 @@ const PostComponent = ({
       <li
         key={index}
         onClick={() => setParPostId(e?._id)}
-        className="mx-auto border-b-[.9px] border-gray-600 mb-6 w-full flex gap-2 bg-black lg:gap-6"
+        className="mx-auto border-b-[.9px] border-gray-600 mb-1 w-full flex gap-2 bg-black lg:gap-6"
       >
         <div className="pl-1 pt-1">
           {e.user?.profilepic === "" ? (
