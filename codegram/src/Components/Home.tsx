@@ -18,7 +18,7 @@ const Home = () => {
   const scrollRef = useRef<HTMLUListElement>(null);
   const scrollRef2 = useRef<HTMLUListElement>(null);
   const loadingRef = useRef<HTMLDivElement>(null)
-  const [page] = useState(1)
+  const [page, setPage] = useState(1)
   const divRef = useRef<HTMLDivElement>(null)
 const [status, setStatus] = useState(localStorage.getItem("status")! || "foryou")
 const [loggedInUser] = useState(localStorage.getItem("userId")! || "")
@@ -32,10 +32,6 @@ useEffect(() => {
     getFollowingPost(setFollowingPost, setLoading);
   }
   getloggedUser(setUser);
-  if (divRef.current ) {
-    const f = divRef.current.firstChild as HTMLElement
-    f.scrollIntoView({behavior:"smooth"})
-  }
 
 }, [page])
 
@@ -173,6 +169,7 @@ setParPostId={setParPostId}                        setLoading={setLoading}
                   })}
               </ul>
               <div
+                onClick={() = setPage(prev => prev+1)}
                 ref={loadingRef}
                 className={`w-full text-blue-700 flex flex-col gap-2 items-center justify-center h-16`}
               >
