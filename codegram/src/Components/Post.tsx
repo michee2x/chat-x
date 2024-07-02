@@ -9,7 +9,7 @@ import {createdAt} from "../hooks/useCreatedHook"
 import { IoMdHeart } from "react-icons/io";
 import { MdBookmark } from "react-icons/md";
 
-const ParPost = ({setParPostId,id, from}:any) => {
+const ParPost = ({parPostId,setParPostId,id, from}:any) => {
 
   const [post, setPost] = useState<any>([]);
   const [comments, setComments] = useState([])
@@ -24,7 +24,7 @@ const ParPost = ({setParPostId,id, from}:any) => {
       setLoading(false)
     }
     userPost(id)
-  },[])
+  },[parPostId])
 
 
   return (
