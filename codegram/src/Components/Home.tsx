@@ -19,7 +19,6 @@ const Home = () => {
   const [user, setUser] = useState<any>([]);
   const scrollRef = useRef<HTMLUListElement>(null);
   const scrollRef2 = useRef<HTMLUListElement>(null);
-  const loadingRef = useRef<HTMLDivElement>(null)
   const [page, setPage] = useState(1)
   const divRef = useRef<HTMLDivElement>(null)
 const [status, setStatus] = useState(localStorage.getItem("status")! || "foryou")
