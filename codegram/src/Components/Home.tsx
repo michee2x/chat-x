@@ -111,7 +111,7 @@ const setToStorge = (x:string) => {
               </span>
               <b>interest</b>
             </span>
-       <span className="w-1/3 h-full flex items-center justify-center text-white  tracking-widest text-4xl font-bold">CX</span>
+       <span className="w-1/3 h-full flex items-center justify-center text-white  tracking-widest text-[1.9rem]">CX</span>
             <span
               className={`w-1/3 flex flex-col items-center ${
                 status === "following" ? "border-b-2 border-blue-500" : ""
