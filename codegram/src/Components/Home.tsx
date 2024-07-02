@@ -33,7 +33,7 @@ useEffect(() => {
   getloggedUser(setUser);
   if (divRef.current ) {
     const f = divRef.current.firstChild as HTMLElement
-    f.scrollIntoView()
+    f.scrollIntoView({behavior:"smooth"})
   }
 
 }, [page])
