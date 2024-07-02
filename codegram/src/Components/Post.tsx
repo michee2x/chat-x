@@ -44,7 +44,7 @@ const ParPost = ({parPostId,setParPostId,id, from}:any) => {
               <div className="w-1/2 items-center flex pl-3 gap-3 h-full">
                 <div
                   className="flex gap-3 items-center"
-                  onClick={() => history.back()}
+                  onClick={() => setParPostId("")}
                 >
                   <FaArrowLeft className="text-blue-600 text-xl" />{" "}
                   <span className="text-blue-600">{from}</span>
