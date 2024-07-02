@@ -201,7 +201,7 @@ setParPostId={setParPostId}                        setLoading={setLoading}
         </div>
       )}
     <div className={`w-screen ${parPostId ? "block" : "hidden"} h-screen`}>
-<ParPost setParPostId={setParPostId} />
+<ParPost setParPostId={setParPostId} id={parPostId} from={"home"}/>
 </div>
     </>
   );
