@@ -31,7 +31,7 @@ document.addEventListener("scroll", () => {
 if(loadingRef.current){
 const refTop = loadingRef.current.getBoundingClientRect().top
 
-if(refTop <= window.innerHeight){
+if(refTop > 0){
 setPage(prev => prev + 1)
 }
 }
@@ -77,7 +77,7 @@ useEffect(() => {
 console.log("hi there this is login user", loggedInUser)
 
 if (!loggedInUser) {
-  return <Navigate to={'/login'} />
+  return <Navigate to={'/'} />
 }
 
 const Skeletons = () => {
