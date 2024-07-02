@@ -12,7 +12,6 @@ const ParPost = ({parPostId,setParPostId,id, from}:any) => {
 
   const [post, setPost] = useState<any>([]);
   const [comments, setComments] = useState([])
-  const [loading, setLoading] = useState(true)
   const [commentClicked, setCommentClicked] = useState(false)
 
 
