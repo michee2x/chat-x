@@ -19,7 +19,6 @@ const ParPost = ({parPostId,setParPostId,id, from}:any) => {
     console.log("the id",id);
     const userPost = async (id:any) => {
       await getpost(id, setPost, setComments)
-      setLoading(false)
     }
     userPost(id)
   },[parPostId])
