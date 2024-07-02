@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { FaArrowLeft} from "react-icons/fa";
 import { BsPerson} from "react-icons/bs";
 import { getpost } from "../hooks/likepost";
-import { useParams} from "react-router-dom";
 import CommentPost from "./CommentPost";
 import {follow_unfollow_user} from "../hooks/likepost";
 import {createdAt} from "../hooks/useCreatedHook"
