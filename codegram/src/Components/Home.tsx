@@ -1,5 +1,6 @@
 import { useEffect,useRef, useState } from "react";
 import { fetchData } from "../fetchData";
+import { MdPerson } from 'react-icons/md';
 import {Navigate} from "react-router-dom";
 import {
   getloggedUser,
@@ -17,7 +18,7 @@ const Home = () => {
   const scrollRef = useRef<HTMLUListElement>(null);
   const scrollRef2 = useRef<HTMLUListElement>(null);
   const loadingRef = useRef<HTMLDivElement>(null)
-  const [page, setPage] = useState(1)
+  const [page] = useState(1)
   const divRef = useRef<HTMLDivElement>(null)
 const [status, setStatus] = useState(localStorage.getItem("status")! || "foryou")
 const [loggedInUser] = useState(localStorage.getItem("userId")! || "")
