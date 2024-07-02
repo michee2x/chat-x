@@ -27,7 +27,7 @@ const [loggedInUser] = useState(localStorage.getItem("userId")! || "")
 
 useEffect(() => {
 if(inView){
-setPage(prev => prev+1)
+fetchData(setPost, setLoading, page)
 }
 },[inView])
 useEffect(() => {
