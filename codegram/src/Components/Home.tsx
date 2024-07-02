@@ -1,6 +1,4 @@
 import { useEffect,useRef, useState } from "react";
-import { } from "react-icons/io";
-import {MdPerson, MdArrowLeft, MdArrowRight} from "react-icons/md";
 import { fetchData } from "../fetchData";
 import {Navigate} from "react-router-dom";
 import {
@@ -175,27 +173,11 @@ setParPostId={setParPostId}                        setLoading={setLoading}
               </ul>
               <div
                 ref={loadingRef}
-                className={`w-full text-blue-700 flex items-center justify-evenly mb-2 h-10`}
+                className={`w-full text-blue-700 flex flex-col gap-2 items-center justify-center mb-2 h-10`}
               >
-                <div
-                  className={`w-1/2 cursor-pointer ${page === 1 ? "text-gray-600" : "text-blue-700"} h-full flex items-center justify-center`}
-                  onClick={() => {
-                    page === 1 ? "" : setPage(page - 1);
-                  }}
-                >
-                  <span>back</span>
-                  <MdArrowLeft className="text-5xl" />
-                </div>
-                <div
-                  className="w-1/2 cursor-pointer h-full flex items-center justify-center"
-                  onClick={() => {
-                    setPage(page + 1);
-                  }}
-                >
-                  <MdArrowRight className="text-5xl" />
-                  <span>next</span>
-                </div>
-              </div>
+               <span className="loading loading-spinner loading-lg"></span>
+ <span>loading more post</span>
+                 </div>
             </div>
           </div>
         </div>
