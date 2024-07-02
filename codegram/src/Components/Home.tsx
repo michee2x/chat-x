@@ -12,7 +12,7 @@ import {useInView} from "react-intersection-observer"
 
 const Home = () => {
   
-  const {loadingRef, inView} = useInView<any>()
+  const {loadingRef, inView}:any = useInView()
   const [parPostId, setParPostId] = useState("")
   const [post, setPost] = useState<any>([]);
   const [followingPost, setFollowingPost] = useState<any>([])
