@@ -58,8 +58,7 @@ const PostComponent = ({
         </div>
         <div className="w-full h-auto">
           <main className="w-full h-auto flex">
-            <Link
-              to={`/post/${e?._id}/${from}`}
+            <div
               className="w-full"
               onClick={() => storeIndex(index)}
             >
@@ -98,7 +97,7 @@ const PostComponent = ({
                   </div>
                 </div>
               </div>
-            </Link>
+            </div>
           </main>
           <div
             className={`w-full ${
