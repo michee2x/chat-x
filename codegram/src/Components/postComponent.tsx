@@ -81,11 +81,7 @@ const PostComponent = ({
                           </div>
                           <video
                             src={e.file}
-                            className={`w-full max-h-64 ${
-                              from === "bookmark"
-                                ? "rounded-2xl"
-                                : "rounded-tr-2xl rounded-tl-2xl"
-                            }`}
+                            className={`w-full max-h-64 rounded-xl`}
                             typeof="video/mp4"
                           />
                         </div>
@@ -93,11 +89,7 @@ const PostComponent = ({
                         <img
                           src={e.file}
                           alt=""
-                          className={`w-full max-h-64 ${
-                            from === "bookmark"
-                              ? "rounded-2xl"
-                              : "rounded-tr-2xl rounded-tl-2xl"
-                          } h-auto`}
+                          className={`w-full max-h-64 rounded-xl h-auto`}
                         />
                       )}
                     </div>
@@ -109,7 +101,7 @@ const PostComponent = ({
           <div
             className={`w-full ${
               from === "bookmark" ? "hidden" : "block"
-            } rounded-bl-2xl rounded-br-2xl bg-opacity-60 min-h-8
+            } bg-opacity-60 mt-4 min-h-8
            flex justify-between items-center lg:w-[70%]`}
           >
             <div className="w-12 h-full rounded-full gap-2 flex text-xm font-bold items-center justify-center text-white">
