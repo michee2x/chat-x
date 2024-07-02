@@ -8,9 +8,10 @@ import {
   getFollowingPost
 } from "../hooks/likepost";
 import PostComponent from "./postComponent";
+import ParPost from "./Post";
 
 const Home = () => {
-  const [ParPostId, setParPostId] = useState("")
+  const [parPostId, setParPostId] = useState("")
   const [post, setPost] = useState<any>([]);
   const [followingPost, setFollowingPost] = useState<any>([])
   const [loading, setLoading] = useState(true)
@@ -89,7 +90,7 @@ const setToStorge = (x:string) => {
           <div className="text-blue-800 font-extrabold text-xl font-mono">chat-x</div>
         </div>
       ) : (
-        <div className="h-screen w-screen relative bg-black lg:w-full">
+        <div className={`h-screen ${parPostId ? "hidden" : "block"} w-screen relative bg-black lg:w-full`}>
           <div className="w-full z-40 absolute mb-10 text-blue-700 h-16 flex justify-between items-center bg-black border-b-2 border-gray-500 lg:border-0">
             <span
               className={`w-1/3 flex flex-col items-center ${
@@ -164,7 +165,7 @@ setParPostId={setParPostId}                      setLoading={setLoading}
                         index={index}
                         setPost={setPost}
                         fetchPosts={true}
-                        setLoading={setLoading}
+setParPostId={setParPostId}                        setLoading={setLoading}
                         userId={user?._id}
                         from={"home"}
                         status={status}
@@ -199,6 +200,9 @@ setParPostId={setParPostId}                      setLoading={setLoading}
           </div>
         </div>
       )}
+    <div className={`w-screen ${parPostId ? "block" : "hidden"} h-screen`}>
+<ParPost setParPostId={setParPostId} />
+</div>
     </>
   );
 };
