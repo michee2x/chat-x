@@ -64,7 +64,7 @@ const PostComponent = ({
               <div className="flex flex-col items-center rounded-md">
                 <div className="w-full h-auto flex flex-col gap-2 text-gray-300 min-h-24">
                   <div>
-                    <span className="text-lg text-white">{e.user?.name} <i className="text-gray-400 pl-4 text-[12px]">@{e.user?.username}</i></span>
+                    <span className="text-lg text-white">{e.user?.name} <i className="text-gray-400 pl-1 text-[12px]">@{e.user?.username}</i></span>
                     <span className="text-xs pl-5 text-blue-400">
                       {`${createdAt(e?.createdAt)}` !== "undefined" ? `${createdAt(e?.createdAt)}` : "just now"}
                     </span>
