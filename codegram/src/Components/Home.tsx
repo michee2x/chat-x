@@ -174,7 +174,7 @@ setParPostId={setParPostId}                        setLoading={setLoading}
               </ul>
               <div
                 ref={loadingRef}
-                className={`w-full text-blue-700 flex flex-col gap-2 items-center justify-center h-12`}
+                className={`w-full text-blue-700 flex flex-col gap-2 items-center justify-center h-16`}
               >
                <div className="loading loading-spinner loading-sm"></div>
  <span>loading more post</span>
