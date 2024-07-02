@@ -36,7 +36,7 @@ setPage(prev => prev + 1)
 }
 }
 })
-},[])
+})
 useEffect(() => {
   if(status !== "following"){
     fetchData(setPost, setLoading, page);
