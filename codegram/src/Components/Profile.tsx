@@ -57,7 +57,7 @@ console.log("thththth", mainUser)
               <MdArrowBack size={30} className="ml-5" />
             </b>
           </h2>
-          <div className="bg-gray-600 h-full w-full rounded-xl flex lg:w-8/12">
+          <div className="bg-black/90 h-full w-full rounded-xl flex lg:w-8/12">
             <input
               type="text"
               placeholder="search..."
@@ -152,15 +152,15 @@ console.log("thththth", mainUser)
             </div>
           </div>
 
-          <div className="w-full h-full flex bg-blue-900 text-gray-300">
-            <div className="bg-gray-900 w-full h-full">
+          <div className="w-full h-full flex bg-black text-gray-300">
+            <div className="bg-black w-full h-full">
               <div className="w-full h-auto flex justify-end pr-3 items-center">
                 <div className="flex flex-col gap-2 items-center text-xl text-blue">
-                  <b>
+                  <b className="text-right">
                     {!text && loggedUser?.name}
                     {text && mainUser?.name}
                   </b>
-                  <i className="text-sm">
+                  <i className="text-sm text-right">
                     {!text && loggedUser?.username} {text && mainUser?.username}
                   </i>
                   <span className="text-sm w-full text-center  text-blue-600">
