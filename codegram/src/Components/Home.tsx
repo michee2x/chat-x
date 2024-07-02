@@ -94,7 +94,7 @@ const setToStorge = (x:string) => {
               className={`w-1/2 flex flex-col items-center ${
                 status === "foryou" ? "border-b-2 border-blue-500" : ""
               } justify-center 
-              h-full lg:w-1/2`}
+              h-full lg:w-1/3`}
               onClick={async () => {
                 setStatus("foryou");
                 setToStorge("foryou");
@@ -111,8 +111,9 @@ const setToStorge = (x:string) => {
               </span>
               <b>interest</b>
             </span>
+       <span className="w-1/3 h-full flex items-center justify-center text-blue-400 text-xm tracking-wider">🌍hat-x</span>
             <span
-              className={`w-1/2 flex flex-col items-center ${
+              className={`w-1/3 flex flex-col items-center ${
                 status === "following" ? "border-b-2 border-blue-500" : ""
               } justify-center 
               h-full lg:w-1/2`}
