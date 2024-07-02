@@ -26,7 +26,7 @@ const [status, setStatus] = useState(localStorage.getItem("status")! || "foryou"
 const [loggedInUser] = useState(localStorage.getItem("userId")! || "")
 
 useEffect(() => {
-const viewHeight = window.innerHeight
+
 document.addEventListener("scroll", () => {
 if(loadingRef.current){
 const refBottom = loadingRef.current.getBoundingClientRect().bottom
