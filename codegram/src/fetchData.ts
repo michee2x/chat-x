@@ -1,5 +1,5 @@
 
-export  const fetchData = async (setPost:any, setLoading:any=true, page:number=0, setPage:any) => {
+export  const fetchData = async (setPost:any, setLoading:any=true, page:number=0) => {
       try{
         const res = await fetch(`https://chat-x-backend.onrender.com/api/post/getposts?page=${page}`,{
           credentials:'include'
@@ -12,7 +12,6 @@ export  const fetchData = async (setPost:any, setLoading:any=true, page:number=0
 
         await setPost((prev:any) => [...prev, ...data.message])
         await setLoading(false)
-     setPage(prev => prev + 1)
         if(data){
           return data.message
         }
