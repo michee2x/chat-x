@@ -36,7 +36,7 @@ const PostComponent = ({
     <>
       <li
         key={index}
-        className="mx-auto border-b-[2px] border-gray-600 mb-6 w-full flex gap-2 bg-black lg:gap-6"
+        className="mx-auto border-b-[.9px] border-gray-600 mb-6 w-full flex gap-2 bg-black lg:gap-6"
       >
         <div className="pl-1 pt-1">
           {e.user?.profilepic === "" ? (
@@ -70,7 +70,7 @@ const PostComponent = ({
                     </span>
                   </div>
                   <div className="flex flex-col gap-5">
-                    <div className="text-md">{e.text.length > 100 ? `${e.text.slice(0, 100)}...` : e.text}</div>
+                    <div className="text-[13px]">{e.text.length > 100 ? `${e.text.slice(0, 100)}...` : e.text}</div>
                     <div className="w-full max-h-64 rounded-tl-2xl rounded-tr-xl h-auto lg:w-[70%]">
                       {e.file?.split("/")[4] === "video" ? (
                         <div className="w-full max-h-64 relative">
