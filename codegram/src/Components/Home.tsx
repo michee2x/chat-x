@@ -1,4 +1,4 @@
-import { useEffect,useRef, useState } from "react";
+import React, { useEffect,useRef, useState } from "react";
 import { fetchData } from "../fetchData";
 import { MdPerson } from 'react-icons/md';
 import {Navigate} from "react-router-dom";
@@ -11,7 +11,8 @@ import ParPost from "./Post";
 import {useInView} from "react-intersection-observer"
 
 const Home = () => {
-  const {loadingRef:<HTMLDivElement>, inView: boolean} = useInView()
+  const reff:React.RefObject<HTMLElement> = useRef<HTMLDivElement>(null)
+  const {reff:loadingRef, inView: boolean} = useInView()
   const [parPostId, setParPostId] = useState("")
   const [post, setPost] = useState<any>([]);
   const [followingPost, setFollowingPost] = useState<any>([])
