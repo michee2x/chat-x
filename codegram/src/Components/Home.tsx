@@ -12,7 +12,7 @@ import {useInView} from "react-intersection-observer"
 
 const Home = () => {
   
-  const {loadingRef, inView}:any = useInView()
+  const {loadingRef, inView}:any = useInView({threshold:0})
   const [parPostId, setParPostId] = useState("")
   const [post, setPost] = useState<any>([]);
   const [followingPost, setFollowingPost] = useState<any>([])
@@ -27,12 +27,13 @@ const [loggedInUser] = useState(localStorage.getItem("userId")! || "")
 
 useEffect(() => {
 if(inView){
-fetchData(setPost, setLoading, page, setPage)
+fetchData(setPost, setLoading, page)
+setPage(prev => prev + 1)
 }
 },[inView])
 useEffect(() => {
   if(status !== "following"){
-    fetchData(setPost, setLoading, page, setPage);
+    fetchData(setPost, setLoading, page);
   }
   if(status === "following"){
     getFollowingPost(setFollowingPost, setLoading);
