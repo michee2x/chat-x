@@ -169,7 +169,7 @@ setParPostId={setParPostId}                        setLoading={setLoading}
                   })}
               </ul>
               <div
-                onClick={() = setPage(prev => prev+1)}
+                onClick={() => setPage(prev => prev+1)}
                 ref={loadingRef}
                 className={`w-full text-blue-700 flex flex-col gap-2 items-center justify-center h-16`}
               >
