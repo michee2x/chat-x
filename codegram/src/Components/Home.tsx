@@ -27,12 +27,12 @@ const [loggedInUser] = useState(localStorage.getItem("userId")! || "")
 
 useEffect(() => {
 if(inView){
-fetchData(setPost, setLoading, page)
+fetchData(setPost, setLoading, page, setPage)
 }
 },[inView])
 useEffect(() => {
   if(status !== "following"){
-    fetchData(setPost, setLoading, page);
+    fetchData(setPost, setLoading, page, setPage);
   }
   if(status === "following"){
     getFollowingPost(setFollowingPost, setLoading);
