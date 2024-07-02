@@ -1,6 +1,5 @@
 import './App.css'
 import {BrowserRouter,Route, Routes} from "react-router-dom"
-import Post from './Components/Post'
 import Comment from './Components/Comment'
 import Home from './Components/Home'
 import Notifications from './Components/Notifications'
@@ -29,7 +28,6 @@ function App() {
                 <Route path="/notifications" element={<Notifications />} />
                 <Route path="profile" element={<Profile />} />
                 <Route path="/bookmark" element={<BookMark />} />
-                <Route path="/post/:id/:from" element={<Post />} />
               </Route>
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
