@@ -8,8 +8,10 @@ import {
 } from "../hooks/likepost";
 import PostComponent from "./postComponent";
 import ParPost from "./Post";
+import {useInView} from "react-intersection-observer"
 
 const Home = () => {
+  const {loadingRef, inView} = useInView()
   const [parPostId, setParPostId] = useState("")
   const [post, setPost] = useState<any>([]);
   const [followingPost, setFollowingPost] = useState<any>([])
@@ -23,7 +25,11 @@ const Home = () => {
 const [status, setStatus] = useState(localStorage.getItem("status")! || "foryou")
 const [loggedInUser] = useState(localStorage.getItem("userId")! || "")
 
-
+useEffect(() => {
+if(inView){
+setPage(prev => prev+1)
+}
+},[inView])
 useEffect(() => {
   if(status !== "following"){
     fetchData(setPost, setLoading, page);
@@ -169,7 +175,6 @@ setParPostId={setParPostId}                        setLoading={setLoading}
                   })}
               </ul>
               <div
-                onClick={() => setPage(prev => prev+1)}
                 ref={loadingRef}
                 className={`w-full text-blue-700 flex flex-col gap-2 items-center justify-center h-16`}
               >
