@@ -36,7 +36,7 @@ const PostComponent = ({
     <>
       <li
         key={index}
-        className="mx-auto mb-6 w-1/2 rounded-2xl flex gap-1 bg-black lg:gap-6"
+        className="mx-auto border-1 border-gray-600 mb-6 w-1/2 rounded-2xl flex gap-1 bg-black lg:gap-6"
         style={{ width: "95%" }}
       >
         <div className="pl-1 pt-1">
@@ -110,7 +110,7 @@ const PostComponent = ({
           <div
             className={`w-full ${
               from === "bookmark" ? "hidden" : "block"
-            } px-5 rounded-bl-2xl rounded-br-2xl bg-opacity-60 bg-blue-800 min-h-8
+            } px-5 rounded-bl-2xl rounded-br-2xl bg-opacity-60 min-h-8
            flex justify-between items-center lg:w-[70%]`}
           >
             <div className="w-12 h-full rounded-full gap-2 flex text-xm font-bold items-center justify-center text-white">
