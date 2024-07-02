@@ -135,7 +135,7 @@ const setToStorge = (x:string) => {
             
             <div className="w-full h-16 invisible"></div>
             <div
-              className="flex mt-6 wrap pb-3 w-full h-auto flex-col gap-3 overflow-y-scroll"
+              className="flex mt-6 wrap pb-3 w-full h-auto flex-col gap-1 overflow-y-scroll"
               style={{ scrollbarWidth: "thin", msScrollbarTrackColor: "red" }}
             >
               <ul ref={scrollRef} className="w-full h-full">
@@ -176,7 +176,7 @@ setParPostId={setParPostId}                        setLoading={setLoading}
                 ref={loadingRef}
                 className={`w-full text-blue-700 flex flex-col gap-2 items-center justify-center h-16`}
               >
-               <div className="loading loading-spinner loading-sm"></div>
+               <div className="loading loading-spinner loading-md"></div>
  <span>loading more post</span>
                  </div>
             </div>
