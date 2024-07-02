@@ -29,14 +29,14 @@ useEffect(() => {
 
 document.addEventListener("scroll", () => {
 if(loadingRef.current){
-const refBottom = loadingRef.current.getBoundingClientRect().bottom
+const refBottom = loadingRef.current.getBoundingClientRect().top
 
 if(refBottom > 0){
 setPage(prev => prev + 1)
 }
 }
 })
-},[])
+})
 useEffect(() => {
   if(status !== "following"){
     fetchData(setPost, setLoading, page);
