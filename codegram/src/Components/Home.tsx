@@ -29,9 +29,9 @@ useEffect(() => {
 
 document.addEventListener("scroll", () => {
 if(loadingRef.current){
-const refBottom = loadingRef.current.getBoundingClientRect().top
+const refBottom = loadingRef.current.getBoundingClientRect().bottom
 
-if(refBottom > 0){
+if(refBottom < 0){
 setPage(prev => prev + 1)
 }
 }
