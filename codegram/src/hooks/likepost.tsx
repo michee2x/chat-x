@@ -13,7 +13,8 @@ export const likeUnlike = async (postId: string, setPost:any, setLike:any, post:
       }
     );
     if (!res.ok) throw new Error("there was an error...");
- const data = await res.json()
+ const data = await res.json() 
+console.log("this is the Xbox data", data)
  const postupdate = data.updatedpost
  const postArray = [...post]
 postArray[index] = postupdate
