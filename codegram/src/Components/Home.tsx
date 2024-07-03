@@ -47,9 +47,7 @@ useEffect(() => {
   });
 
 
-if(inView){
-setPage(page + 1)
-}
+
 
 useEffect(() => {
   const scrolltoBottom = () => {
