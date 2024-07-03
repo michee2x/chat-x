@@ -188,14 +188,16 @@ console.log("thththth", mainUser)
                 <div className={`${post.length ? "block" : "hidden"}`}>
                   {post.map((e: any, index) => {
                     return (
-                      <PostComponent
-                        e={e}
-                        index={index}
-                        setPost={setPost}
-                        fetchPosts={false}
-                        userId={user?._id}
-                        from={"profile"}
-                      />
+                      
+                <PostComponent
+                  e={e}
+                  index={index}
+                  setPost={setPost}
+                  setParPost={setParPost} 
+                 
+                  user={user}
+                  post={post}
+                />
                     );
                   })}
                 </div>
