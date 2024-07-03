@@ -14,7 +14,6 @@ const PostComponent = ({
   index,
   e,
   setPost,
-  fetchPosts,
   setLoading,
   post,
   setParPost,
@@ -107,17 +106,15 @@ const PostComponent = ({
           >
             <div className="w-12 h-full rounded-full gap-2 flex text-xm font-bold items-center justify-center text-white">
               <span
-                onClick={async () => {
+                onClick={async () => 
                   await likeUnlike(
                     `${e._id}`,
                     setPost,
-                    e.user._id,
-                    fetchPosts,
                     setLike,
                     post,
                     index
-                  ); await fetchData(setPost)
-                }}
+                  )
+                }
               >
                 <FaHeart
                   className={`text-sm ${like ? "hidden" : "block"} ${
