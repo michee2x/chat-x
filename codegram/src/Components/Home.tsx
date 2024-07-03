@@ -157,7 +157,7 @@ const setToStorge = (x:string) => {
                         fetchPosts={true}
 post={post}
 setParPost={setParPost}                      setLoading={setLoading}
-                        userId={user?._id}
+                        user={user}
                         from={"home"}
                         status={status}
                       />
@@ -175,7 +175,7 @@ setParPost={setParPost}                      setLoading={setLoading}
                         fetchPosts={true} 
 post={post}   
 setParPost={setParPost}                      setLoading={setLoading}
-                        userId={user?._id}
+                        user={user}
                         from={"home"}
                         status={status}
                       />
