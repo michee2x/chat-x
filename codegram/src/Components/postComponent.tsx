@@ -15,6 +15,7 @@ const PostComponent = ({
   setPost,
   fetchPosts,
   setLoading,
+  post,
   setParPost,
   setParPostId,
   userId,
@@ -37,7 +38,7 @@ const PostComponent = ({
     <>
       <li
         key={index}
-        onClick={() => {setParPostId(e?._id); setParPost}}
+        onClick={() => {setParPostId(e?._id); setParPost(post[index])}}
         className="mx-auto border-b-[.9px] border-gray-600 mb-1 w-full flex gap-2 bg-black lg:gap-6"
       >
         <div className="pl-1 pt-1">
