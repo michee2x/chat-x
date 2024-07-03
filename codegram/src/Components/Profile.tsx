@@ -5,8 +5,10 @@ import { getProfile, getuserpost, getloggedUser } from '../hooks/likepost';
 import PostComponent from './postComponent';
 import { createdAt } from '../hooks/useCreatedHook';
  import { follow_unfollow_user } from "../hooks/likepost";
+import ParPost from "./Post";
 
 const Profile = () => {
+const [parPost, setParPost] = useState<any>({})
     const [user, setUser] = useState<any>([]);
     const [searchUsers, setSearchUsers] = useState(false)
     const [mainUser, setMainUser] = useState<any>({})
