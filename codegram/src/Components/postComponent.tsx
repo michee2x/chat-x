@@ -113,7 +113,8 @@ const PostComponent = ({
                     setPost,
                     e.user._id,
                     fetchPosts,
-                    setLike
+                    setLike,
+                    post
                   ); await fetchData(setPost)
                 }}
               >
