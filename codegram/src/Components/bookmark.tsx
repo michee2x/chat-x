@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import PostComponent from './postComponent'
 import { bookmark, getloggedUser} from '../hooks/likepost'
 import { MdArrowBack, MdBookmark } from 'react-icons/md'
+import ParPost from "./Post";
 
 const BookMark = () => {
 const [parPost, setParPost] = useState<any>({})
