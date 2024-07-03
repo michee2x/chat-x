@@ -48,7 +48,6 @@ useEffect(() => {
 
 useEffect (() => {
 if(inView){
-fetchData(setPost, setLoading, page)
 setPage(page + 1)
 }
 },[inView])
