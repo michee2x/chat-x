@@ -56,18 +56,8 @@ const [parPost, setParPost] = useState<any>({})
                   setLoading={setLoading}
                   from={"bookmark"}
                   user={user}
+                  post={bookMark}
                 />
-                                      <PostComponent
-                        e={e}
-                        index={index}
-                        setPost={setPost}
-                        
-post={post}
-setParPost={setParPost}                      setLoading={setLoading}
-                        user={user}
-                        from={"home"}
-                        status={status}
-                      />
               );
             })}
           </ul>
