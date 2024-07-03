@@ -80,9 +80,6 @@ console.log("hi there this is login user", loggedInUser)
 if (!loggedInUser) {
   return <Navigate to={'/'} />
 }
-if(inView){
-setPage(prev => prev + 1)
-}
 
 const Skeletons = () => {
   return (
