@@ -4,6 +4,7 @@ import { bookmark, getloggedUser} from '../hooks/likepost'
 import { MdArrowBack, MdBookmark } from 'react-icons/md'
 
 const BookMark = () => {
+  const [user, setUser] = useState<any>([]);
 const [parPost, setParPost] = useState<any>({})
     const [bookMark, setbookmark] = useState([])
     const [loading, setLoading] = useState(true)
