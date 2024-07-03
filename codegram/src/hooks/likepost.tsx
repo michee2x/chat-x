@@ -13,6 +13,8 @@ export const likeUnlike = async (postId: string, setPost:any,userId:any="",fetch
       }
     );
     if (!res.ok) throw new Error("there was an error...");
+ const data = await res.json()
+ const post = data.updatedpost
 
 if(fetchPosts){
 await fetchData(setPost)
