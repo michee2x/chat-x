@@ -147,7 +147,8 @@ console.log("comment is so successful")
 export const likeunlikepost =  async(req, res) => {
     try{
         const {id} = req.params
-        const postid = id.toString()
+        const postid = id
+        console.log("this is the bookmark idddddf", postid)
         
         const post = await Posts.findById(postid)
         const loggedInUser = await User.findById(req.user._id)
