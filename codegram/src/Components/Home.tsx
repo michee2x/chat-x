@@ -13,6 +13,7 @@ import {useInView} from "react-intersection-observer"
 
 
 const Home = () => {
+const [parPost, setParPost] = useState<any>({})
  
   const [parPostId, setParPostId] = useState("")
   const [post, setPost] = useState<any>([]);
@@ -156,7 +157,9 @@ const setToStorge = (x:string) => {
                         index={index}
                         setPost={setPost}
                         fetchPosts={true}
-setParPostId={setParPostId}                      setLoading={setLoading}
+setParPostId={setParPostId}
+parPost={parPost}
+setParPost={setParPost}                      setLoading={setLoading}
                         userId={user?._id}
                         from={"home"}
                         status={status}
@@ -173,7 +176,9 @@ setParPostId={setParPostId}                      setLoading={setLoading}
                         index={index}
                         setPost={setPost}
                         fetchPosts={true}
-setParPostId={setParPostId}                        setLoading={setLoading}
+setParPostId={setParPostId}  
+parPost={parPost}   
+setParPost={setParPost}                      setLoading={setLoading}
                         userId={user?._id}
                         from={"home"}
                         status={status}
