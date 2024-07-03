@@ -268,12 +268,19 @@ export const bookMarkPost = async (req, res) => {
         }
         if(loggedInUser.bookmark?.includes(id)){
             await User.findByIdAndUpdate(loggedInUserId, {$pull:{bookmark:id}})
+const updatedpost = await Posts.findById(postid).populate({path:"user"}) 
+ console.log("laladadasasa++++++++--", updatedpost)
+
+      res.status(200).json({updatedpost: updatedpost})
+
         }else{
             await User.findByIdAndUpdate(loggedInUserId, {$push:{bookmark:id}})
+const updatedpost = await Posts.findById(postid).populate({path:"user"}) 
+console.log("laladadasasa++++++++--", updatedpost)
+           res.status(200).json({updatedpost: updatedpost})
 
         }
-const updatedpost = await Posts.findById(postid).populate({path:"user"}) 
-           res.status(200).json({updatedpost: updatedpost})   
+   
 
     }catch(error){
         console.log("error in bookmark constroller", error)
