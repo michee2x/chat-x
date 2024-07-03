@@ -116,7 +116,7 @@ const setToStorge = (x:string) => {
                 src={user?.profilepic}
                 alt="img"
                 className={`w-9 border-[1.2px] border-blue-500 ${user?.profilepic ? "block" : "hidden"}  h-9 rounded-full lg:hidden`} 
-                        onClick={() => setshowSideBar(true)}
+                        onClick={() => {status === "foryou" ? setshowSideBar(true) : ""}}
               />
               <span className={`p-1 bg-white ${!user?.profilepic ? "block" : "hidden"} rounded-full`} 
 onClick={() => setshowSideBar(true)}
