@@ -17,7 +17,7 @@ const PostComponent = ({
   setLoading,
   post,
   setParPost,
-  userId,
+  user,
   from,
   status
 }: any) => {
@@ -118,7 +118,7 @@ const PostComponent = ({
               >
                 <FaHeart
                   className={`text-sm ${like ? "hidden" : "block"} ${
-                    e?.likes?.includes(userId) ? "text-pink-700" : "text-white"
+                    e?.likes?.includes(user._id) ? "text-pink-700" : "text-white"
                   } cursor-pointer`}
                 />
                 <span
@@ -135,7 +135,7 @@ const PostComponent = ({
               <span onClick={() => bookMark(e._id, setPost, setBookMarking)}>
                 <FaBookmark
                   className={`text-sm ${bookmarking ? "hidden" : "block"} ${
-                    e?.bookmark?.includes(userId)
+                    e?.bookmark?.includes(user?._id)
                       ? "text-blue-700"
                       : "text-white"
                   } cursor-pointer`}
@@ -161,7 +161,7 @@ const PostComponent = ({
             </div>
             <div
               className={`w-12 h-full rounded-full cursor-pointer gap-2 ${
-                e?.user?._id === userId ? "block" : "hidden"
+                e?.user?._id === user._id ? "block" : "hidden"
               } flex items-center justify-center text-white`}
             >
               <span onClick={() => deletePost(e._id, setPost, setLoading)}>
