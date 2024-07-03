@@ -182,7 +182,7 @@ export const likeunlikepost =  async(req, res) => {
 export const getAllPost = async(req, res) => {
     let {page} = req.query
     page = parseInt(page) || 1
-    const skip = (page - 1) * 20
+    const skip = (page - 1) * 10
     try{
         const posts = await Posts.find().skip(skip).limit(20).sort({createdAt:-1}).populate({path:"user", select:"-password"}, ).
 populate({path:"Comments.userid"})
