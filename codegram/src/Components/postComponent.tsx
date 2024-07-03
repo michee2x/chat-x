@@ -37,7 +37,6 @@ const PostComponent = ({
     <>
       <li
         key={index}
-        onClick={() => {setParPost(post[index])}}
         className="mx-auto border-b-[.9px] border-gray-600 mb-1 w-full flex gap-2 bg-black lg:gap-6"
       >
         <div className="pl-1 pt-1">
@@ -57,7 +56,7 @@ const PostComponent = ({
           )}
         </div>
         <div className="w-full h-auto">
-          <main className="w-full h-auto flex">
+          <main onClick={() => {setParPost(post[index])}} className="w-full h-auto flex">
             <div
               className="w-full"
               onClick={() => storeIndex(index)}
