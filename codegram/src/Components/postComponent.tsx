@@ -8,7 +8,6 @@ import {
 import { MdDelete } from "react-icons/md";
 import { deletePost } from "../hooks/useDeletePostHook";
 import { createdAt } from "../hooks/useCreatedHook";
-import {fetchData} from "../fetchData"
 
 const PostComponent = ({
   index,
