@@ -11,10 +11,10 @@ const Layout = () => {
       <div className="flex relative overflow-y-hidden w-screen h-screen">
         <Sidebar/>
         <div
-          className="w-16 h-16 z-40 rounded-lg bg-black border-4 border-white fixed grid place-items-center lg:hidden"
-          style={{ top: "50%", left: "-5.5%" }}
+          className="w-14 h-14 z-40 rounded-lg bg-black border-4 border-white fixed grid place-items-center lg:hidden"
+          style={{ top: "50%", left: "-2.5%" }}
           onClick={() => setshowSideBar(true)}
-        ><MdMenu className="text-[2rem] text-white/80" /></div>
+        ><MdMenu className="text-[3rem] text-white/80" /></div>
         <div onClick={() => setshowSideBar(false)} className={`w-screen absolute ${showSideBar ? "block bg-black" : "hidden"} h-screen bg-transparent z-40`}></div>
       
         <div className="bg-gray-300" style={{ width: "70%" }}>
