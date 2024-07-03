@@ -6,7 +6,7 @@ import { suggestedUsers } from "../controllers/user.controller.mjs";
 
 const router = express.Router()
 
-router.get("/getposts", getAllPost)
+router.get("/getposts",protectedRoute, getAllPost)
 router.get("/getfollowingposts",protectedRoute, fetchFollowing)
 router.post("/deletepost/:id",protectedRoute, DeletePost)
 router.post("/commentpost/:id",protectedRoute, CommentPost)
