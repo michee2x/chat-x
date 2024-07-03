@@ -165,13 +165,16 @@ export const likeunlikepost =  async(req, res) => {
 
             const newNotification = new Notification(notification)
             await newNotification.save()
-            return const updatedpost = await Posts.findById(postid)
+            const updatedpost = await Posts.findById(postid).populate({path:"user"}) 
+console.log("this is the likedpodt", updatedpost)
             
             return res.status(200).json(updatedpost)
         }
         else{
             await Posts.findByIdAndUpdate(post._id, {$pull:{likes:req.user._id}})
-const updatedpost = await Posts.findById(postid)
+const updatedpost = await Posts.findById(postid).populate({path:"user"})
+        .populate({path:"Comments.userid"})
+console.log("this is the likedpodt", updatedpost)
             
             return res.status(200).json(updatedpost)
         }
