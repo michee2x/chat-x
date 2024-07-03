@@ -1,5 +1,4 @@
 
-import { fetchData } from "../fetchData";
 
 export const likeUnlike = async (postId: string, setPost:any, setLike:any, post:any, index: number) => {
   try {
