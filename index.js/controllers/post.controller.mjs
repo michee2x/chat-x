@@ -273,8 +273,7 @@ export const bookMarkPost = async (req, res) => {
 
         }
 const updatedpost = await Posts.findById(postid).populate({path:"user"}) 
-            
-return res.status(200).json({updatedpost: updatedpost})   
+           res.status(200).json({updatedpost: updatedpost})   
 
     }catch(error){
         console.log("error in bookmark constroller", error)
