@@ -339,8 +339,10 @@ export const bookMark = async (id:string, setPost:any, setBookMarking:any) => {
     if (!res) throw new Error("there was an error...");
 
     const data = await res.json();
-    console.log("this is the bookmark", data)
-    await fetchData(setPost);
+    const postupdate = data.updatedpost
+    const postArray = [...post]
+    postArray[index] = postupdate
+    setPost(postArray)
     setBookMarking(false)
   } catch (error) {
     console.log("error in likeUnlike", error);
