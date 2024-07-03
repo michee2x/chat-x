@@ -19,13 +19,6 @@ export const likeUnlike = async (postId: string, setPost:any,userId:any="",fetch
 postArray[index] = postupdate
 setPost(postArray)
 
-if(fetchPosts){
-await fetchData(setPost)
-}
-if(!fetchPosts){
-await getuserpost(userId, setPost)
-}
-
 setLike(false)
     
   } catch (error) {
