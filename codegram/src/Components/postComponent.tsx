@@ -109,10 +109,7 @@ const PostComponent = ({
                 onClick={async () => {
                   await likeUnlike(
                     `${e._id}`,
-                    setPost,
-                    e.user._id,
-                    fetchPosts,
-                    setLike
+                    setPost
                   );
                 }}
               >
