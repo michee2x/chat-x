@@ -11,7 +11,7 @@ const Layout = () => {
       <div className="flex relative overflow-y-hidden w-screen h-screen">
         <Sidebar/>
         <div
-          className="w-14 h-14 z-40 rounded-full bg-blue-600 border-2 border-white fixed grid place-items-center lg:hidden"
+          className="w-14 hidden h-14 z-40 rounded-full bg-blue-600 border-2 border-white fixed grid place-items-center lg:hidden"
           style={{ top: "10%", left: "1.2%" }}
           onClick={() => setshowSideBar(true)}
         ><MdMenu className="text-[2rem] text-white/80" /></div>
