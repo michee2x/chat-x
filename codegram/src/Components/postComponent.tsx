@@ -131,7 +131,7 @@ const PostComponent = ({
             <div
               className={`w-12 h-full rounded-full cursor-pointer gap-2 flex items-center justify-center text-xm font-bold text-white`}
             >
-              <span onClick={() => bookMark(e._id, setPost, setBookMarking)}>
+              <span onClick={() => bookMark(e._id, setPost, setBookMarking, index, post)}>
                 <FaBookmark
                   className={`text-sm ${bookmarking ? "hidden" : "block"} ${
                     e?.bookmark?.includes(user?._id)
