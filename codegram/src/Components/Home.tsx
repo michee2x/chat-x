@@ -46,11 +46,10 @@ useEffect(() => {
     triggerOnce: false,
   });
 
-useEffect(() => {
+
 if(inView){
 setPage(page + 1)
 }
-}, [inView])
 
 useEffect(() => {
   const scrolltoBottom = () => {
