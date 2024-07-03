@@ -1,7 +1,7 @@
 
 import { fetchData } from "../fetchData";
 
-export const likeUnlike = async (postId: string, setPost:any) => {
+export const likeUnlike = async (postId: string, setPost:any, setLike:any) => {
   try {
     setLike(true)
     const res = await fetch(
