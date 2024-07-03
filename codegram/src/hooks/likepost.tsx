@@ -1,7 +1,7 @@
 
 import { fetchData } from "../fetchData";
 
-export const likeUnlike = async (postId: string, setPost: any, userId:any="", fetchPosts:boolean, setLike:any) => {
+export const likeUnlike = async (postId: string, setPost:any) => {
   try {
     setLike(true)
     const res = await fetch(
@@ -16,7 +16,6 @@ export const likeUnlike = async (postId: string, setPost: any, userId:any="", fe
     
 
     await fetchData(setPost);
-    setLike(false)
     
   } catch (error) {
     console.log("error in likeUnlike", error);
