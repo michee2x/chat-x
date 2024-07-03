@@ -97,7 +97,7 @@ const setToStorge = (x:string) => {
           <div className="text-blue-800 font-extrabold text-xl font-mono">chat-x</div>
         </div>
       ) : (
-        <div className={`h-screen ${parPost ? "hidden" : "block"} w-screen relative bg-black lg:w-full`}>
+        <div className={`h-screen ${Object.keys(parPost) === 0 ? "hidden" : "block"} w-screen relative bg-black lg:w-full`}>
           <div className="w-full z-40 absolute mb-10 text-blue-700 h-16 flex justify-between items-center bg-black border-b-2 border-gray-500 lg:border-0">
             <span
               className={`w-1/3 flex flex-col items-center ${
@@ -193,7 +193,7 @@ setParPost={setParPost}                      setLoading={setLoading}
           </div>
         </div>
       )}
-    <div className={`w-screen ${parPost ? "block" : "hidden"} h-screen`}>
+    <div className={`w-screen ${Object.keys(parPost) === 0 ? "block" : "hidden"} h-screen`}>
 <ParPost setParPost={setParPost} parPost={parPost} id={parPost?._id} from={"home"}/>
 </div>
     </>
