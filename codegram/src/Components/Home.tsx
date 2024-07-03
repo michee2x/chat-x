@@ -14,6 +14,7 @@ import { SideBarContext } from "../showSideBar";
 
 
 const Home = () => {
+  const { showSideBar, setshowSideBar } = SideBarContext();
 const [parPost, setParPost] = useState<any>({})
   const [post, setPost] = useState<any>([]);
   const [followingPost, setFollowingPost] = useState<any>([])
