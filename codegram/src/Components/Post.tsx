@@ -7,7 +7,7 @@ import {createdAt} from "../hooks/useCreatedHook"
 import { IoMdHeart } from "react-icons/io";
 import { MdBookmark } from "react-icons/md";
 
-const ParPost = ({setParPost,parPost,setParPostId,id, from}:any) => {
+const ParPost = ({setParPost,parPost,id, from}:any) => {
 
   const [comments, setComments] = useState([])
   const [commentClicked, setCommentClicked] = useState(false)
@@ -29,7 +29,7 @@ const ParPost = ({setParPost,parPost,setParPostId,id, from}:any) => {
               <div className="w-1/2 items-center flex pl-3 gap-3 h-full">
                 <div
                   className="flex gap-3 items-center"
-                  onClick={() => {setParPostId("");setParPost([])}}
+                  onClick={() => {setParPost({})}}
                 >
                   <FaArrowLeft className="text-blue-600 text-xl" />{" "}
                   <span className="text-blue-600">{from}</span>
