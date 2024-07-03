@@ -13,7 +13,6 @@ const PostComponent = ({
   index,
   e,
   setPost,
-  fetchPosts,
   setLoading,
   post,
   setParPost,
@@ -109,7 +108,7 @@ const PostComponent = ({
                 onClick={async () => {
                   await likeUnlike(
                     `${e._id}`,
-                    setPost
+                    setPost,setLike
                   );
                 }}
               >
