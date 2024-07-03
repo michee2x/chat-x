@@ -22,7 +22,8 @@ const [parPost, setParPost] = useState<any>({})
     }
 
   return (
-    <div className="w-screen h-screen bg-black overflow-y-scroll lg:w-full">
+<>
+    <div className={`w-screen ${Object.keys(parPost).length === 0 ? "block" : "hidden"} h-screen bg-black overflow-y-scroll lg:w-full`}>
       <div className="w-full px-3 h-12 flex justify-between items-center bg-gray-900">
         <MdArrowBack className="text-2xl text-blue-800" onClick={goBack} />
         <span className="flex items-center w-auto h-full justify-between text-blue-500 gap-3">
@@ -69,7 +70,10 @@ const [parPost, setParPost] = useState<any>({})
         </>
       )}
     </div>
-  );
+    <div className={`w-screen ${Object.keys(parPost).length === 0 ? "hidden" : "block"} h-screen`}>
+<ParPost setParPost={setParPost} parPost={parPost} id={parPost?._id} from={"home"}/>
+</div>
+ </> );
 }
 
 export default BookMark
