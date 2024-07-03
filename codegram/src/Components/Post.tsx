@@ -8,21 +8,10 @@ import {createdAt} from "../hooks/useCreatedHook"
 import { IoMdHeart } from "react-icons/io";
 import { MdBookmark } from "react-icons/md";
 
-const ParPost = ({parPostId,setParPostId,id, from}:any) => {
+const ParPost = ({setParPost,parPost, parPostId,setParPostId,id, from}:any) => {
 
-  const [post, setPost] = useState<any>([]);
   const [comments, setComments] = useState([])
   const [commentClicked, setCommentClicked] = useState(false)
-
-
-  useEffect(() => {
-    console.log("the id",id);
-    const userPost = async (id:any) => {
-      await getpost(id, setPost, setComments)
-    }
-    userPost(id)
-  },[parPostId])
-
 
   return (
     <>
@@ -31,7 +20,7 @@ const ParPost = ({parPostId,setParPostId,id, from}:any) => {
           commentClicked ? "hidden" : ""
         } bg-black lg:w-full`}
       >
-        {post.length === 0 ? (
+        {parPost.length === 0 ? (
           <div className="w-full h-full grid place-items-center text-2xl">
             <span className="loading loading-dots loading-lg"></span>
           </div>
@@ -41,7 +30,7 @@ const ParPost = ({parPostId,setParPostId,id, from}:any) => {
               <div className="w-1/2 items-center flex pl-3 gap-3 h-full">
                 <div
                   className="flex gap-3 items-center"
-                  onClick={() => {setParPostId("");setPost([])}}
+                  onClick={() => {setParPostId("");setParPost([])}}
                 >
                   <FaArrowLeft className="text-blue-600 text-xl" />{" "}
                   <span className="text-blue-600">{from}</span>
@@ -52,7 +41,7 @@ const ParPost = ({parPostId,setParPostId,id, from}:any) => {
                   className="w-24 text-sm h-6 grid place-items-center rounded-xl text-center
              cursor-pointer bg-blue-500 hover:bg-blue-800 text-white"
                   onClick={async () => {
-                    await follow_unfollow_user(post?.user?._id);
+                    await follow_unfollow_user(parPost?.user?._id);
                   }}
                 >
                   follow
@@ -69,7 +58,7 @@ const ParPost = ({parPostId,setParPostId,id, from}:any) => {
 
             <div className="flex gap-3 items-center">
               <div className="pt-3 px-2 pb-1">
-                {!post?.user?.profilepic ? (
+                {!parPost?.user?.profilepic ? (
                   <span
                     className="flex justify-center items-center
                rounded-full w-12 h-12 bg-blue-900"
@@ -78,27 +67,27 @@ const ParPost = ({parPostId,setParPostId,id, from}:any) => {
                   </span>
                 ) : (
                   <img
-                    src={post?.user?.profilepic}
+                    src={parPost?.user?.profilepic}
                     alt="img"
                     className="w-14 h-14 rounded-full border-2 border-blue-900"
                   />
                 )}
               </div>
               <div className="flex flex-col text-gray-500">
-                <span>{post?.user?.name}</span>
-                <span>{post?.user?.username}</span>
+                <span>{parPost?.user?.name}</span>
+                <span>{parPost?.user?.username}</span>
               </div>
             </div>
 
             <div className="w-full mt-5 h-auto lg:flex flex-row-reverse gap-5">
               <div className="text-gray-300 mx-auto h-auto p-4 lg:w-1/2">
-                {post ? post?.text : ""}
+                {parPost ? parPost?.text : ""}
               </div>
 
               <div className="mx-auto h-auto w-[95%] lg:w-[100%]">
-                {post.file?.split("/")[4] === "video" ? (
+                {parPost.file?.split("/")[4] === "video" ? (
                   <video
-                    src={post?.file}
+                    src={parPost?.file}
                     className="w-full h-full bg-cover rounded-2xl"
                     autoPlay
                     typeof="video/mp4"
@@ -106,7 +95,7 @@ const ParPost = ({parPostId,setParPostId,id, from}:any) => {
                   />
                 ) : (
                   <img
-                    src={post?.file}
+                    src={parPost?.file}
                     alt=""
                     className="w-full bg-cover rounded-2xl h-auto"
                   />
@@ -114,18 +103,18 @@ const ParPost = ({parPostId,setParPostId,id, from}:any) => {
               </div>
             </div>
             <div className="text-gray-500 flex flex-col gap-3 px-3 mt-2">
-              <span>created {post && `${createdAt(post?.user?.createdAt)}`}</span>
+              <span>created {parPost && `${createdAt(parPost?.user?.createdAt)}`}</span>
               <span className="flex pb-2 gap-4 text-md w-full border-b-2 border-gray-700 items-center">
                 <span className="flex text-gray-400 gap-1 items-center">
                   <MdBookmark />
-                  {post && post.bookmark?.length}
+                  {parPost && parPost.bookmark?.length}
                 </span>{" "}
                 Bookmarks
               </span>
               <span className="flex pb-2 gap-4 text-md w-full items-center">
                 <span className="flex text-gray-400 gap-1 items-center">
                   <IoMdHeart />
-                  {post && post.likes?.length}
+                  {parPost && parPost.likes?.length}
                 </span>{" "}
                 likes
               </span>
@@ -193,7 +182,7 @@ const ParPost = ({parPostId,setParPostId,id, from}:any) => {
         <CommentPost
           commentClicked={commentClicked}
           setComments={setComments}
-          setPost={setPost}
+          setPost={setParPost}
           setCommentClicked={setCommentClicked}
           postId={id}
         />
