@@ -113,7 +113,7 @@ const PostComponent = ({
                     e.user._id,
                     fetchPosts,
                     setLike
-                  );
+                  ); await fetchData(setPost)
                 }}
               >
                 <FaHeart
