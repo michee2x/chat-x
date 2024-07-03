@@ -1,14 +1,13 @@
-import { useEffect, useState } from "react";
+import {useState } from "react";
 import { FaArrowLeft} from "react-icons/fa";
 import { BsPerson} from "react-icons/bs";
-import { getpost } from "../hooks/likepost";
 import CommentPost from "./CommentPost";
 import {follow_unfollow_user} from "../hooks/likepost";
 import {createdAt} from "../hooks/useCreatedHook"
 import { IoMdHeart } from "react-icons/io";
 import { MdBookmark } from "react-icons/md";
 
-const ParPost = ({setParPost,parPost, parPostId,setParPostId,id, from}:any) => {
+const ParPost = ({setParPost,parPost,setParPostId,id, from}:any) => {
 
   const [comments, setComments] = useState([])
   const [commentClicked, setCommentClicked] = useState(false)
