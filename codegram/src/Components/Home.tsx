@@ -193,7 +193,7 @@ setParPost={setParPost}                      setLoading={setLoading}
           </div>
         </div>
       )}
-    <div className={`transition-all duration-200 ${Object.keys(parPost).length === 0 ? "hidden opacity-0 h-0 w-0" : "block opacity-100 h-screen  w-screen"} h-screen`}>
+    <div className={`transition-all  duration-1000 ${Object.keys(parPost).length === 0 ? "hidden opacity-0 h-0 w-0" : "block opacity-100 h-screen  w-screen"} h-screen`}>
 <ParPost setParPost={setParPost} parPost={parPost} id={parPost?._id} from={"home"}/>
 </div>
     </>
