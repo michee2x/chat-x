@@ -17,7 +17,6 @@ const PostComponent = ({
   post,
   setParPost,
   user,
-  from,
   status
 }: any) => {
   const [like, setLike] = useState(false);
