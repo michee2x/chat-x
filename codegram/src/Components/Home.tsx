@@ -9,6 +9,7 @@ import {
 import PostComponent from "./postComponent";
 import ParPost from "./Post";
 import {useInView} from "react-intersection-observer"
+import { SideBarContext } from "../showSideBar";
 
 
 
