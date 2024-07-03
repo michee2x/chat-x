@@ -121,6 +121,7 @@ const setToStorge = (x:string) => {
               <span className={`p-1 bg-white-600 ${!user?.profilepic ? "block" : "hidden"} rounded-full`} 
 onClick={() => setshowSideBar(true)}
 >
+            <span className="p-1 bg-white rounded-full">
                 <MdPerson color="blue" className="text-[1.4rem]" />
               </span>
               <b className="text-sm">interest</b>
@@ -140,7 +141,7 @@ onClick={() => setshowSideBar(true)}
               <span className="p-1 bg-blue-600 rounded-full">
                 <MdPerson color="white" className="text-[1.4rem]" />
               </span>
-              <b className="text-xm">following</b>
+              <b className="text-sm">following</b>
             </span>
           </div>
 
