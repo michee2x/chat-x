@@ -16,6 +16,7 @@ export const likeUnlike = async (postId: string, setPost:any, setLike:any) => {
     
 
     await fetchData(setPost);
+    setLike(false)
     
   } catch (error) {
     console.log("error in likeUnlike", error);
