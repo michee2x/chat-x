@@ -165,12 +165,15 @@ export const likeunlikepost =  async(req, res) => {
 
             const newNotification = new Notification(notification)
             await newNotification.save()
-            return res.status(200).json({message:`you just liked ${postUser.name}'s post`})
+            return const updatedpost = await Posts.findById(postid)
+            
+            return res.status(200).json(updatedpost)
         }
         else{
             await Posts.findByIdAndUpdate(post._id, {$pull:{likes:req.user._id}})
+const updatedpost = await Posts.findById(postid)
             
-            return res.status(200).json({message:`you just unliked ${postUser.name}'s post`})
+            return res.status(200).json(updatedpost)
         }
 
     }catch(error) {
