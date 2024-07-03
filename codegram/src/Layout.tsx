@@ -11,8 +11,8 @@ const Layout = () => {
       <div className="flex relative overflow-y-hidden w-screen h-screen">
         <Sidebar/>
         <div
-          className="w-14 h-14 z-40 rounded-full bg-blue-400 border-2 border-white fixed grid place-items-center lg:hidden"
-          style={{ top: "5%", left: "1.2%" }}
+          className="w-14 h-14 z-40 rounded-full bg-blue-600 border-2 border-white fixed grid place-items-center lg:hidden"
+          style={{ top: "10%", left: "1.2%" }}
           onClick={() => setshowSideBar(true)}
         ><MdMenu className="text-[2rem] text-white/80" /></div>
         <div onClick={() => setshowSideBar(false)} className={`w-screen absolute ${showSideBar ? "block bg-black" : "hidden"} h-screen bg-transparent z-40`}></div>
