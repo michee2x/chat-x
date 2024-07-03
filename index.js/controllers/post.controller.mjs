@@ -184,7 +184,7 @@ export const getAllPost = async(req, res) => {
     page = parseInt(page) || 1
     const skip = (page - 1) * 3
     try{
-        const posts = await Posts.find().skip(skip).limit(20).sort({createdAt:-1}).populate({path:"user", select:"-password"}, ).
+        const posts = await Posts.find().skip(skip).limit(6).sort({createdAt:-1}).populate({path:"user", select:"-password"}, ).
 populate({path:"Comments.userid"})
         if(!posts) return res.status(404).json({error:"Error Loading post..."})
 
