@@ -10,10 +10,7 @@ import PostComponent from "./postComponent";
 import ParPost from "./Post";
 import {useInView} from "react-intersection-observer"
 
-type ListItem = {
-  id: number;
-  content: string;
-};
+
 
 const Home = () => {
  
@@ -44,40 +41,16 @@ useEffect(() => {
   setStatus(statusState)
 },[])
 
-  const { ref: loadingRef } = useInView({
+  const { ref: loadingRef, inView } = useInView({
     threshold: 0,
     triggerOnce: false,
   });
 
-  const handleIntersection = useCallback(() => {
-    if (loading || !loadingRef.current) return;
-    if (loadingRef.current && loadingRef.current.isIntersecting) {
-      setPage(prev => prev + 1)
-    }
-  }, [loading, loadingRef]);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          handleIntersection();
-        }
-      },
-      {
-        root: null,
-        rootMargin: '200px',
-        threshold: 0,
-      }
-    );
-
-    if (scrollRef.current) {
-      observer.observe(scrollRef.current.lastElementChild as HTMLElement);
-    }
-
-    return () => {
-      observer.disconnect();
-    };
-  }, [handleIntersection]);
+useEffect(() => {
+if(inView){
+setPage(page + 1)
+}
+}, [inView])
 
 useEffect(() => {
   const scrolltoBottom = () => {
