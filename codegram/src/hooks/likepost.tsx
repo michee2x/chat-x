@@ -13,13 +13,9 @@ export const likeUnlike = async (postId: string, setPost: any, userId:any="", fe
       }
     );
     if (!res.ok) throw new Error("there was an error...");
-    console.log("should i fetch all the posts",fetchPosts);
-    if(fetchPosts){
-      await fetchData(setPost);
-    }
-    if(!fetchPosts){
-      await getuserpost(userId, setPost);
-    }
+    
+
+    await fetchData(setPost);
     setLike(false)
     
   } catch (error) {
