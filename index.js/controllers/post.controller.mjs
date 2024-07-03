@@ -166,14 +166,14 @@ export const likeunlikepost =  async(req, res) => {
 
             const newNotification = new Notification(notification)
             await newNotification.save()
-            const updatedpost = await Posts.findById(postid).populate({path:"user"}) 
+            const updatedpost = await Posts.findById(postid).populate({path:"user Comments"}) 
 console.log("this is the likedpodt", updatedpost)
             
             return res.status(200).json({updatedpost: updatedpost})
         }
         else{
             await Posts.findByIdAndUpdate(post._id, {$pull:{likes:req.user._id}})
-const updatedpost = await Posts.findById(postid).populate({path:"user"})
+const updatedpost = await Posts.findById(postid).populate({path:"user Comments"})
         .populate({path:"Comments.userid"})
 console.log("this is the likedpodt", updatedpost)
             
@@ -191,7 +191,7 @@ export const getAllPost = async(req, res) => {
     page = parseInt(page) || 1
     const skip = (page - 1) * 10
     try{
-        const posts = await Posts.find().skip(skip).limit(10).sort({createdAt:-1}).populate({path:"user", select:"-password"}, ).
+        const posts = await Posts.find().skip(skip).limit(10).sort({createdAt:-1}).populate({path:"user Comments", select:"-password"}, ).
 populate({path:"Comments.userid"})
         if(!posts) return res.status(404).json({error:"Error Loading post..."})
 
@@ -269,14 +269,14 @@ export const bookMarkPost = async (req, res) => {
         }
         if(loggedInUser.bookmark?.includes(id)){
             await User.findByIdAndUpdate(loggedInUserId, {$pull:{bookmark:id}})
-const updatedpost = await Posts.findById(id).populate({path:"user"}) 
+const updatedpost = await Posts.findById(id).populate({path:"user Comments"}) 
  console.log("laladadasasa++++++++--", updatedpost)
 
       res.status(200).json({updatedpost: updatedpost})
 
         }else{
             await User.findByIdAndUpdate(loggedInUserId, {$push:{bookmark:id}})
-const updatedpost = await Posts.findById(id).populate({path:"user"}) 
+const updatedpost = await Posts.findById(id).populate({path:"user Comments"}) 
 console.log("laladadasasa++++++++--", updatedpost)
            res.status(200).json({updatedpost: updatedpost})
 
