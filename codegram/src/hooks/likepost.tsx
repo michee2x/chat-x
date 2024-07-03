@@ -328,7 +328,7 @@ export const getFollowingPost = async (setPost:any, setLoading:any) => {
     console.log("error in likeUnlike", error);
   }
 };
-export const bookMark = async (id:string, setPost:any, setBookMarking:any) => {
+export const bookMark = async (id:string, setPost:any, setBookMarking:any, index: number, post:any) => {
   try {
     setBookMarking(true)
     const url = `https://chat-x-backend.onrender.com/api/post/bookmark/${id}`;
