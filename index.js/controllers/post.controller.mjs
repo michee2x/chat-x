@@ -270,12 +270,11 @@ export const bookMarkPost = async (req, res) => {
             await User.findByIdAndUpdate(loggedInUserId, {$pull:{bookmark:id}})
         }else{
             await User.findByIdAndUpdate(loggedInUserId, {$push:{bookmark:id}})
+
         }
-
-        const post = await Posts.findById(id)
-        const bookmarks = post.bookmark?.length
-
-        res.status(200).json({bookmarks})
+const updatedpost = await Posts.findById(postid).populate({path:"user"}) 
+            
+return res.status(200).json({updatedpost: updatedpost})   
 
     }catch(error){
         console.log("error in bookmark constroller", error)
