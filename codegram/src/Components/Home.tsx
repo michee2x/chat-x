@@ -123,7 +123,7 @@ onClick={() => setshowSideBar(true)}
 >
                 <MdPerson color="blue" className="text-[1.33rem]" />
               </span>
-              <b>interest</b>
+              <b className="text-xs">interest</b>
             </span>
        <span className="w-1/3 h-full flex items-center justify-center text-white  tracking-widest text-white/80 text-[1.5rem]">CX</span>
             <span
@@ -138,9 +138,9 @@ onClick={() => setshowSideBar(true)}
               }}
             >
               <span className="p-1 bg-blue-600 rounded-full">
-                <MdPerson color="white" className="text-xl" />
+                <MdPerson color="white" className="text-[1.4rem]" />
               </span>
-              <b>following</b>
+              <b className="text-xm">following</b>
             </span>
           </div>
 
