@@ -41,7 +41,7 @@ useEffect(() => {
 },[])
 
   const { ref: loadingRef, inView } = useInView({
-    threshold: 1,
+    threshold: 0,
     triggerOnce: false,
   });
 
