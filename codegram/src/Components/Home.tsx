@@ -14,7 +14,6 @@ import { SideBarContext } from "../showSideBar";
 
 
 const Home = () => {
-const [lastScrollTop, setLastScrollTop] = useState(0);
 const [scrollingDown, setScrollingDown] = useState(false);
   const {setshowSideBar } = SideBarContext();
 const [parPost, setParPost] = useState<any>({})
@@ -29,21 +28,25 @@ const [parPost, setParPost] = useState<any>({})
 const [status, setStatus] = useState(localStorage.getItem("status")! || "foryou")
 const [loggedInUser] = useState(localStorage.getItem("userId")! || "")
 useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-      if (currentScrollTop > lastScrollTop) {
-        setScrollingDown(true);
-      } else {
-        setScrollingDown(false);
+const handleScroll = () => {
+    setScrollingDown(true)
+  };
+    const ulElement = scrollRef.current;
+    if (ulElement) {
+      ulElement.addEventListener('scroll', handleScroll);
+    }
+    
+    // Clean up the event listener when component unmounts
+    return () => {
+      if (ulElement) {
+        ulElement.removeEventListener('scroll', handleScroll);
       }
-
-      setLastScrollTop(currentScrollTop);
     };
+  }, []);
+setTimeout(() => {
+scrollingDown ? setScrollingDown(false) : ""
+},2000)
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollTop]);
 useEffect(() => {
   if(status !== "following"){
     fetchData(setPost, setLoading, page);
