@@ -120,7 +120,7 @@ const ParPost = ({setParPost,parPost,id, from}:any) => {
             </div>
             <div className="grid relative w-full h-full pb-64 lg:grid-cols-2">
               {
-                comments?.map((e: any, index) => {
+                parPost?.comments?.map((e: any, index) => {
                   return (
                     <ul
                       className={`mx-auto  rounded-2xl ${e.file ? "h-64" : "h-14"}  bg-black ${
