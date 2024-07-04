@@ -8,8 +8,6 @@ import { IoMdHeart } from "react-icons/io";
 import { MdBookmark } from "react-icons/md";
 
 const ParPost = ({setParPost,parPost,id, from}:any) => {
-
-  const [comments, setComments] = useState([])
   const [commentClicked, setCommentClicked] = useState(false)
 
   return (
