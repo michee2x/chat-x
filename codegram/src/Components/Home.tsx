@@ -104,7 +104,7 @@ if (!loggedInUser) {
 
 const Skeletons = () => {
   return (
-    <span className="loading loading-spinner loading-lg"></span>
+    <span className="loading loading-spinner loading-xl"></span>
   );
 }
 
@@ -117,7 +117,7 @@ const setToStorge = (x:string) => {
       {loading ? (
         <div className="h-screen w-screen gap-2 flex items-center flex-col justify-center text-gray-300 bg-black lg:w-full lg:pt-24">
           <Skeletons />
-          <div className="text-blue-800 font-extrabold text-xl font-mono">chat-x</div>
+          <div className="text-blue-800 font-extrabold text-3xl font-mono">chat-x</div>
         </div>
       ) : (
         <div className={`h-screen ${Object.keys(parPost).length === 0 ? "block" : "hidden"} w-screen relative bg-black lg:w-full`}>
