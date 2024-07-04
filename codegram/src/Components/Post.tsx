@@ -10,7 +10,7 @@ import { MdBookmark } from "react-icons/md";
 const ParPost = ({setParPost,parPost,id, from}:any) => {
 const [comment, setComment] = useState([])
   const [commentClicked, setCommentClicked] = useState(false)
-console.log(id)
+console.log(id, comment)
   return (
     <>
       <div
