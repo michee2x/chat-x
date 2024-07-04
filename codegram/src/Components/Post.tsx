@@ -163,7 +163,7 @@ console.log(id, comment)
                     </ul>
                   );
                 })}
-              {parPost?.Comments.length === 0 && (
+              {parPost?.Comments?.length === 0 && (
                 <div className="text-2xl absolute bg-gray-900 text-white w-full h-screen grid place-items-center">
                  leave a comment
                 </div>
