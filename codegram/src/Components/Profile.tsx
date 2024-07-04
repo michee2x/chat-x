@@ -6,6 +6,7 @@ import PostComponent from './postComponent';
 import { createdAt } from '../hooks/useCreatedHook';
  import { follow_unfollow_user } from "../hooks/likepost";
 import ParPost from "./Post";
+import { SideBarContext } from "../showSideBar";
 
 const Profile = () => {
 const [parPost, setParPost] = useState<any>({})
