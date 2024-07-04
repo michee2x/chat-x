@@ -59,7 +59,7 @@ console.log("thththth", mainUser)
                 setText("");
               }}
             >
-              <MdArrowBack size={30} className="ml-5" />
+              <MdArrowBack size={30} className="ml-5 pl-4" />
             </b>
           </h2>
           <div className="bg-black/90 h-full w-full rounded-xl flex lg:w-8/12">
