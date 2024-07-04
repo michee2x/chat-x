@@ -178,7 +178,7 @@ const ParPost = ({setParPost,parPost,id, from}:any) => {
       >
         <CommentPost
           commentClicked={commentClicked}
-          setComments={setComments}
+          setComments={parPost?.Comments}
           setPost={setParPost}
           setCommentClicked={setCommentClicked}
           postId={id}
