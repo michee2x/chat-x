@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import { FaUpload } from "react-icons/fa";
 import { commentpost} from "../hooks/likepost";
 
-const CommentPost = ({commentClicked, setCommentClicked, postId, setPost} : any) => {
+const CommentPost = ({commentClicked, setComment setCommentClicked, postId, setPost} : any) => {
   const inputFileRef = useRef<HTMLInputElement>(null);
   const [file, setFile] = useState("");
   const [serverFile, setServerFile] = useState<any>(null)
@@ -98,7 +98,7 @@ const CommentPost = ({commentClicked, setCommentClicked, postId, setPost} : any)
         className="text-center mt-8 text-blue-600 px-6 rounded-xl cursor-pointer mx-auto
        border border-blue-950 w-28 nounderlineb hover:bg-blue-900"
         onClick={() => {
-          commentpost(text, serverFile, postId, setPost);
+          commentpost(text, serverFile, postId, setPost, setComment);
           setCommentClicked(!commentClicked);
         }}
       >
