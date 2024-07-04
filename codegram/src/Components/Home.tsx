@@ -33,12 +33,12 @@ useEffect(() => {
       const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
       if (currentScrollTop > lastScrollTop) {
-        setScrollingDown(true)
+        setScrollingDown(true);
       } else {
-        setScrollingDown(false)
+        setScrollingDown(false);
       }
 
-      setLastScrollTop(currentScrollTop <= 0 ? 0 : currentScrollTop);
+      setLastScrollTop(currentScrollTop);
     };
 
     window.addEventListener('scroll', handleScroll);
