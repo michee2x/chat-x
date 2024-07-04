@@ -114,7 +114,7 @@ const PostComponent = ({
               >
                 <FaHeart
                   className={`text-sm ${like ? "hidden" : "block"} ${
-                    e?.likes?.includes(user._id) ? "text-pink-700" : "text-white"
+                    (e?.likes?.includes(user._id) || like) ? "text-pink-700" : "text-white"
                   } cursor-pointer`}
                 />
                 <span
