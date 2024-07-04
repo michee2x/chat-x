@@ -116,7 +116,7 @@ console.log(like)
                   } cursor-pointer`}
                 />
               </span>
-              <span className="text-xs">{(like && e?.likes?.includes(user._id) === false) ? e.likes.length + 1 : (like && e?.likes?.includes(user._id) === false) ?  e.likes.length - 1 : e.likes.length}</span>
+              <span className="text-xs">{(like && e?.likes?.includes(user._id) === false) ? e.likes.length + 1 : (like && e?.likes?.includes(user._id) === true) ?  e.likes.length - 1 : e.likes.length}</span>
             </div>
             <div
               className={`w-12 h-full rounded-full cursor-pointer gap-2 flex items-center justify-center text-xm font-bold text-white`}
