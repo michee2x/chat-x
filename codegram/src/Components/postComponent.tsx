@@ -118,7 +118,7 @@ console.log(like)
                   } cursor-pointer`}
                 />
               </span>
-              <span className="text-xs">{(liking && like) ? e.likes.length + 1 : e.likes.length -1}</span>
+              <span className="text-xs">{liking ? e.likes.length + 1 : e.likes.length -1}</span>
             </div>
             <div
               className={`w-12 h-full rounded-full cursor-pointer gap-2 flex items-center justify-center text-xm font-bold text-white`}
