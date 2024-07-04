@@ -3,6 +3,7 @@ import {FaUpload} from "react-icons/fa"
 import {Navigate } from 'react-router-dom'
 import { createpost } from '../hooks/likepost'
 import { MdCancel } from 'react-icons/md';
+import { SideBarContext } from "../showSideBar";
 
 
 const Comment = () => {
