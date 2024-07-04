@@ -99,7 +99,7 @@ useEffect(() => {
 console.log("hi there this is login user", loggedInUser)
 
 if (!loggedInUser) {
-  return <Navigate to={'/'} />
+  return <Navigate to={'/login'} />
 }
 
 const Skeletons = () => {
