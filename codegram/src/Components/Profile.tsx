@@ -50,7 +50,7 @@ console.log("thththth", mainUser)
             <b onClick={() => setshowSideBar(true)}
               className={` ${searchUsers ? "hidden" : "block"} lg:block`}
             >
-              <MdMenu className="text-2xl"/>
+              <MdMenu className="text-2xl pl-4"/>
             </b>{" "}
             <b
               className={`${searchUsers ? "block" : "hidden"} cursor-pointer`}
