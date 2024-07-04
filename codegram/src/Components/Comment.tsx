@@ -1,9 +1,8 @@
 import { useRef, useState } from 'react'
 import {FaUpload} from "react-icons/fa"
-import {MdMenu} from "react-icons/md"
 import {Navigate } from 'react-router-dom'
 import { createpost } from '../hooks/likepost'
-import { MdCancel } from 'react-icons/md';
+import { MdCancel, MdMenu } from 'react-icons/md';
 import { SideBarContext } from "../showSideBar";
 
 
