@@ -20,7 +20,6 @@ const PostComponent = ({
   status
 }: any) => {
   const [like, setLike] = useState(false);
-const [liking, setLiking] = useState(false);
   const [bookmarking, setBookMarking] = useState(false);
 
   const storeIndex = (index: number) => {
@@ -99,8 +98,7 @@ console.log(like)
           </main>
           <div
             className={`w-full bg-opacity-60 min-h-10
-           flex justify-between items-center lg:w-[70%]`} onClick={() => setLiking(prev => !prev)}
-          >
+           flex justify-between items-center lg:w-[70%]`}>
             <div className="w-12 h-full rounded-full gap-2 flex text-xm font-bold items-center justify-center text-white">
               <span
                 onClick={async () => 
@@ -118,7 +116,7 @@ console.log(like)
                   } cursor-pointer`}
                 />
               </span>
-              <span className="text-xs">{like ? e.likes.length + 1 ? e.likes.length}</span>
+              <span className="text-xs">{like ? e.likes.length + 1 : e.likes.length}</span>
             </div>
             <div
               className={`w-12 h-full rounded-full cursor-pointer gap-2 flex items-center justify-center text-xm font-bold text-white`}
