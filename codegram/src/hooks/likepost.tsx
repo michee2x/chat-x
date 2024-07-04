@@ -66,7 +66,7 @@ export const commentpost = async (
   serverFile: any,
   postId: string,
   setPost: any,
- setComment
+ setComment: any
 ) => {
   console.log("this is te comment", postId)
   try {
