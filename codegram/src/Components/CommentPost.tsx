@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import { FaUpload } from "react-icons/fa";
 import { commentpost} from "../hooks/likepost";
 
-const CommentPost = ({commentClicked, setComment setCommentClicked, postId, setPost} : any) => {
+const CommentPost = ({commentClicked, setComment, setCommentClicked, postId, setPost} : any) => {
   const inputFileRef = useRef<HTMLInputElement>(null);
   const [file, setFile] = useState("");
   const [serverFile, setServerFile] = useState<any>(null)
