@@ -20,7 +20,6 @@ const PostComponent = ({
   status
 }: any) => {
   const [like, setLike] = useState(false);
-const [liking, setLiking] = useState(false);
   const [bookmarking, setBookMarking] = useState(false);
 
   const storeIndex = (index: number) => {
@@ -104,26 +103,21 @@ const [liking, setLiking] = useState(false);
             <div className="w-12 h-full rounded-full gap-2 flex text-xm font-bold items-center justify-center text-white"  onClick={() => setLiking(true)}>
               <span
                 onClick={async () => 
-                 {setLiking(true);await likeUnlike(
+                 await likeUnlike(
                     `${e._id}`,
                     setPost,
                     setLike,
                     post,
                     index
-                  )}
+                  )
                 }
               >
                 <FaHeart
-                  className={`text-sm ${like ? "hidden" : "block"} ${liking ? "text-pink-700" : e?.likes?.includes(user._id) ? "text-pink-700" : "text-white"
+                  className={`text-sm ${like ? "text-pink-700" : e?.likes?.includes(user._id) ? "text-pink-700" : "text-white"
                   } cursor-pointer`}
                 />
-                <span
-                  className={`loading ${
-                    like ? "block" : "hidden"
-                  } loading-spinner loading-sm`}
-                ></span>
               </span>
-              <span className="text-xs">{liking ? e.likes.length + 1 : e.likes.length}</span>
+              <span className="text-xs">{like ? e.likes.length + 1 : e.likes.length}</span>
             </div>
             <div
               className={`w-12 h-full rounded-full cursor-pointer gap-2 flex items-center justify-center text-xm font-bold text-white`}
