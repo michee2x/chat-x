@@ -114,11 +114,11 @@ console.log(like)
                 }
               >
                 <FaHeart
-                  className={`text-sm ${liking ? "text-pink-700" : e?.likes?.includes(user._id) ? "text-pink-700" : "text-white"
+                  className={`text-sm ${liking && like ? "text-pink-700" : e?.likes?.includes(user._id) ? "text-pink-700" : "text-white"
                   } cursor-pointer`}
                 />
               </span>
-              <span className="text-xs">{like ? e.likes.length + 1 : !liking && like ? e.likes.length - 1 : e.likes.length}</span>
+              <span className="text-xs">{liking && like ? e.likes.length + 1 : !liking && like ? e.likes.length - 1 : e.likes.length}</span>
             </div>
             <div
               className={`w-12 h-full rounded-full cursor-pointer gap-2 flex items-center justify-center text-xm font-bold text-white`}
