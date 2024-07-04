@@ -17,9 +17,8 @@ console.log("this is the Xbox data", data)
  const postupdate = data.updatedpost
  const postArray = [...post]
 postArray[index] = postupdate
-setPost(postArray)
-
 setLike(false)
+setPost(postArray)
     
   } catch (error) {
     console.log("error in likeUnlike", error);
