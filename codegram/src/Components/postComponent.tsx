@@ -31,7 +31,7 @@ const [liking, setLiking] = useState(false);
       localStorage.setItem("clickedLi2", index?.toString());
     }
   };
-
+console.log(like)
   return (
     <>
       <li
