@@ -50,7 +50,7 @@ console.log("thththth", mainUser)
             <b onClick={() => setshowSideBar(true)}
               className={` ${searchUsers ? "hidden" : "block"} lg:block`}
             >
-              <MdMenu className="text-2xl pl-4"/>
+              <MdMenu className="text-2xl ml-5 "/>
             </b>{" "}
             <b
               className={`${searchUsers ? "block" : "hidden"} cursor-pointer`}
@@ -59,7 +59,7 @@ console.log("thththth", mainUser)
                 setText("");
               }}
             >
-              <MdArrowBack size={30} className="ml-5 pl-4" />
+              <MdArrowBack size={30} className="ml-5" />
             </b>
           </h2>
           <div className="bg-black/90 h-full w-full rounded-xl flex lg:w-8/12">
