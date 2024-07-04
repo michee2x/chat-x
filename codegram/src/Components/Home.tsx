@@ -14,6 +14,8 @@ import { SideBarContext } from "../showSideBar";
 
 
 const Home = () => {
+const [lastScrollTop, setLastScrollTop] = useState(0);
+const [scrollingDown, setScrollingDown] = useState(false);
   const {setshowSideBar } = SideBarContext();
 const [parPost, setParPost] = useState<any>({})
   const [post, setPost] = useState<any>([]);
@@ -26,6 +28,25 @@ const [parPost, setParPost] = useState<any>({})
   const divRef = useRef<HTMLDivElement>(null)
 const [status, setStatus] = useState(localStorage.getItem("status")! || "foryou")
 const [loggedInUser] = useState(localStorage.getItem("userId")! || "")
+🤓🤓🤓🤓🤓🤓🤓🥰🥰🥰
+useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (currentScrollTop > lastScrollTop) {
+        setScrollingDown(true)
+      } else {
+        setScrollingDown(false)
+      }
+
+      setLastScrollTop(currentScrollTop <= 0 ? 0 : currentScrollTop);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollTop]);
+
+🙄🙄🙄👼👼😜😜😜🙄🙄🙄
 useEffect(() => {
   if(status !== "following"){
     fetchData(setPost, setLoading, page);
