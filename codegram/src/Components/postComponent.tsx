@@ -20,6 +20,7 @@ const PostComponent = ({
   status
 }: any) => {
   const [like, setLike] = useState(false);
+const [liking, setLiking] = useState(false);
   const [bookmarking, setBookMarking] = useState(false);
 
   const storeIndex = (index: number) => {
@@ -98,7 +99,7 @@ const PostComponent = ({
           </main>
           <div
             className={`w-full bg-opacity-60 min-h-10
-           flex justify-between items-center lg:w-[70%]`}
+           flex justify-between items-center lg:w-[70%]`} onClick={() => setLiking(true)}
           >
             <div className="w-12 h-full rounded-full gap-2 flex text-xm font-bold items-center justify-center text-white">
               <span
@@ -113,11 +114,11 @@ const PostComponent = ({
                 }
               >
                 <FaHeart
-                  className={`text-sm ${like ? "text-pink-700" : e?.likes?.includes(user._id) ? "text-pink-700" : "text-white"
+                  className={`text-sm ${liking ? "text-pink-700" : e?.likes?.includes(user._id) ? "text-pink-700" : "text-white"
                   } cursor-pointer`}
                 />
               </span>
-              <span className="text-xs">{like ? e.likes.length + 1 : e.likes.length}</span>
+              <span className="text-xs">{liking ? e.likes.length + 1 : e.likes.length -1}</span>
             </div>
             <div
               className={`w-12 h-full rounded-full cursor-pointer gap-2 flex items-center justify-center text-xm font-bold text-white`}
