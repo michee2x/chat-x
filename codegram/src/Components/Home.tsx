@@ -42,7 +42,7 @@ const handleScroll = () => {
         ulElement.removeEventListener('scroll', handleScroll);
       }
     };
-  });
+  }, []);
 setTimeout(() => {
 scrollingDown ? setScrollingDown(false) : ""
 },2000)
