@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react'
 import {FaUpload} from "react-icons/fa"
+import {MdMenu} from "react-icons/md"
 import {Navigate } from 'react-router-dom'
 import { createpost } from '../hooks/likepost'
 import { MdCancel } from 'react-icons/md';
@@ -7,6 +8,7 @@ import { SideBarContext } from "../showSideBar";
 
 
 const Comment = () => {
+  const {setshowSideBar } = SideBarContext();
 const inputFileRef = useRef<HTMLInputElement>(null)
 const [file, setFile] = useState("")
 const [posting, setPosting] = useState(false)
@@ -51,6 +53,7 @@ if (navigate) {
   return (
     <div className="w-screen relative h-screen bg-black overflow-y-scroll lg:w-full">
       <div className="w-full relative text-gray-600 h-20 flex items-center justify-center">
+<div className={`absolute ${(file || text) : "hidden" : "block"} cursor-pointer left-6`} onClick={() => setshowSideBar(true)}><MdMenu className='text-2xl text-blue-300 hover:text-blue-500'/></div>
         Create a post...
         {(file || text) && (
           <div className="absolute cursor-pointer right-6" onClick={() => {setFile("");setText("")}}>
@@ -82,7 +85,7 @@ if (navigate) {
             <FaUpload className="text-2xl text-gray-400" />
           </div>
         )}
-        {!file && <div>Upload an image</div>}
+        {!file && <div>Upload a file</div>}
         <input
           type="file"
           accept="image/*,video/*"
