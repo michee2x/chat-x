@@ -28,7 +28,6 @@ const [parPost, setParPost] = useState<any>({})
   const divRef = useRef<HTMLDivElement>(null)
 const [status, setStatus] = useState(localStorage.getItem("status")! || "foryou")
 const [loggedInUser] = useState(localStorage.getItem("userId")! || "")
-🤓🤓🤓🤓🤓🤓🤓🥰🥰🥰
 useEffect(() => {
     const handleScroll = () => {
       const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -45,8 +44,6 @@ useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollTop]);
-
-🙄🙄🙄👼👼😜😜😜🙄🙄🙄
 useEffect(() => {
   if(status !== "following"){
     fetchData(setPost, setLoading, page);
