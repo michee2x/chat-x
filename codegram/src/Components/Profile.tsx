@@ -9,6 +9,7 @@ import ParPost from "./Post";
 import { SideBarContext } from "../showSideBar";
 
 const Profile = () => {
+  const {setshowSideBar } = SideBarContext();
 const [parPost, setParPost] = useState<any>({})
     const [user, setUser] = useState<any>([]);
     const [searchUsers, setSearchUsers] = useState(false)
@@ -46,7 +47,7 @@ console.log("thththth", mainUser)
       <div className="w-full h-16 flex justify-between items-center">
         <div className=" items-center w-full text-gray-300 flex gap-5 h-10">
           <h2 className="w-24 items-center text-sm font-tahoma text-center lg:xl">
-            <b
+            <b onClick={() => setshowSideBar(true)}
               className={` ${searchUsers ? "hidden" : "block"} lg:block`}
             >
               <MdMenu className="text-2xl"/>
