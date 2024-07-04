@@ -66,6 +66,7 @@ export const commentpost = async (
   serverFile: any,
   postId: string,
   setPost: any,
+ setComment
 ) => {
   console.log("this is te comment", postId)
   try {
@@ -85,7 +86,7 @@ export const commentpost = async (
 
     const data = await res.json();
     console.log(data);
-    await getpost(postId, setPost);
+    await getpost(postId, setPost, setComment);
   } catch (error) {
     console.log("error in likeUnlike", error);
   }
@@ -108,7 +109,7 @@ export const getuserpost = async (id: any, setPost: any) => {
     console.log("error in likeUnlike", error);
   }
 };
-export const getpost = async (id: any, setPost: any) => {
+export const getpost = async (id: any, setPost: any, setComment:any) => {
   try {
     const url = `https://chat-x-backend.onrender.com/api/post/getpost/${id}`;
     console.log("in getuserpost hook", id);
@@ -118,7 +119,8 @@ export const getpost = async (id: any, setPost: any) => {
     if (!res) throw new Error("there was an error...");
 
     const data = await res.json();
-    await setPost(data)
+    await setPost(data) 
+    await setComment(data.Comments)
   } catch (error) {
     console.log("error in likeUnlike", error);
   }
