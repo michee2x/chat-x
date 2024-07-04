@@ -1,5 +1,5 @@
 import {useEffect, useRef, useState} from 'react'
-import {MdArrowBack, MdPerson, MdSearch } from "react-icons/md"
+import {MdArrowBack, MdMenu, MdPerson, MdSearch } from "react-icons/md"
 import { Link } from 'react-router-dom';
 import { getProfile, getuserpost, getloggedUser } from '../hooks/likepost';
 import PostComponent from './postComponent';
@@ -46,9 +46,9 @@ console.log("thththth", mainUser)
         <div className=" items-center w-full text-gray-300 flex gap-5 h-10">
           <h2 className="w-24 items-center text-sm font-tahoma text-center lg:xl">
             <b
-              className={`hidden ${searchUsers ? "hidden" : "block"} lg:block`}
+              className={` ${searchUsers ? "hidden" : "block"} lg:block`}
             >
-              profile
+              <MdMenu className="text-2xl"/>
             </b>{" "}
             <b
               className={`${searchUsers ? "block" : "hidden"} cursor-pointer`}
