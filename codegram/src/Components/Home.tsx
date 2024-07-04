@@ -121,7 +121,7 @@ const setToStorge = (x:string) => {
         </div>
       ) : (
         <div className={`h-screen ${Object.keys(parPost).length === 0 ? "block" : "hidden"} w-screen relative bg-black lg:w-full`}>
-          <div className="w-full z-40 absolute mb-10 text-blue-700 h-16 flex justify-between items-center bg-black border-b-2 border-gray-500 lg:border-0">
+          <div className={`w-full z-40 ${scrollingDown ? "hidden" : "block"} absolute mb-10 text-blue-700 h-16 flex justify-between items-center bg-black border-b-2 border-gray-500 lg:border-0`}>
             <span
               className={`w-1/3 flex flex-col items-center ${
                 status === "foryou" ? "border-b-2 border-blue-500" : ""
