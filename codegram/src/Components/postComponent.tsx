@@ -20,6 +20,7 @@ const PostComponent = ({
   status
 }: any) => {
   const [like, setLike] = useState(false);
+const [liking, setLiking] = useState(false);
   const [bookmarking, setBookMarking] = useState(false);
 
   const storeIndex = (index: number) => {
@@ -103,18 +104,18 @@ const PostComponent = ({
             <div className="w-12 h-full rounded-full gap-2 flex text-xm font-bold items-center justify-center text-white">
               <span
                 onClick={async () => 
-                  await likeUnlike(
+                 { await likeUnlike(
                     `${e._id}`,
                     setPost,
                     setLike,
                     post,
                     index
-                  )
+                  ); setLiking(true)}
                 }
               >
                 <FaHeart
                   className={`text-sm ${like ? "hidden" : "block"} ${
-                    (e?.likes?.includes(user._id) || like) ? "text-pink-700" : "text-white"
+                    (e?.likes?.includes(user._id) || liking) ? "text-pink-700" : "text-white"
                   } cursor-pointer`}
                 />
                 <span
