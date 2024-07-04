@@ -100,7 +100,7 @@ const PostComponent = ({
             className={`w-full bg-opacity-60 min-h-10
            flex justify-between items-center lg:w-[70%]`}
           >
-            <div className="w-12 h-full rounded-full gap-2 flex text-xm font-bold items-center justify-center text-white"  onClick={() => setLiking(true)}>
+            <div className="w-12 h-full rounded-full gap-2 flex text-xm font-bold items-center justify-center text-white">
               <span
                 onClick={async () => 
                  await likeUnlike(
