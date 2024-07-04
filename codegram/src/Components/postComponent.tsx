@@ -112,7 +112,7 @@ console.log(like)
                 }
               >
                 <FaHeart
-                  className={`text-sm ${like ? "text-pink-700" : e?.likes?.includes(user._id) ? "text-pink-700" : "text-white"
+                  className={`text-sm ${(like && e?.likes?.includes(user._id) === false) ? "text-pink-700" : (like && e?.likes?.includes(user._id) === true) ? "text-white" : e?.likes?.includes(user._id) ? "text-pink-700" : "text-white"
                   } cursor-pointer`}
                 />
               </span>
