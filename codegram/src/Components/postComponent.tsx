@@ -114,8 +114,7 @@ const [liking, setLiking] = useState(false);
                 }
               >
                 <FaHeart
-                  className={`text-sm ${like ? "hidden" : "block"} ${
-                    (e?.likes?.includes(user._id) || liking) ? "text-pink-700" : "text-white"
+                  className={`text-sm ${like ? "hidden" : "block"} ${liking ? "text-pink-700" : e?.likes?.includes(user._id) ? "text-pink-700" : "text-white"
                   } cursor-pointer`}
                 />
                 <span
@@ -124,7 +123,7 @@ const [liking, setLiking] = useState(false);
                   } loading-spinner loading-sm`}
                 ></span>
               </span>
-              <span className="text-xs">{e.likes.length}</span>
+              <span className="text-xs">{liking ? e.likes.length + 1 : e.likes.length}</span>
             </div>
             <div
               className={`w-12 h-full rounded-full cursor-pointer gap-2 flex items-center justify-center text-xm font-bold text-white`}
