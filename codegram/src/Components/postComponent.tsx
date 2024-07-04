@@ -101,16 +101,16 @@ const [liking, setLiking] = useState(false);
             className={`w-full bg-opacity-60 min-h-10
            flex justify-between items-center lg:w-[70%]`}
           >
-            <div className="w-12 h-full rounded-full gap-2 flex text-xm font-bold items-center justify-center text-white">
+            <div className="w-12 h-full rounded-full gap-2 flex text-xm font-bold items-center justify-center text-white"  onClick={() => setLiking(true)}>
               <span
                 onClick={async () => 
-                 { await likeUnlike(
+                 {setLiking(true);await likeUnlike(
                     `${e._id}`,
                     setPost,
                     setLike,
                     post,
                     index
-                  ); setLiking(true)}
+                  )}
                 }
               >
                 <FaHeart
