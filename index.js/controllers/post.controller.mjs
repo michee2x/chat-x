@@ -212,7 +212,7 @@ export const getUserPost = async (req, res) => {
         .populate({path:"Comments.userid"})
 
         if(!userPost) return res.status(404).json({error:"userpost not found..."})
-
+console.log("the the user use post",userPost)
         res.status(200).json(userPost)
 
     } catch (error){
@@ -224,7 +224,7 @@ export const getPost = async (req, res) => {
     try{
         const id = req.params.id.toString()
 
-        const userPost = await Posts.findById(id).populate({path:"user"})
+        const userPost = await Posts.findById(id).populate({path:"user Comments"})
         .populate({path:"Comments.userid"})
 
         if(!userPost) return res.status(404).json({error:"userpost not found..."})
