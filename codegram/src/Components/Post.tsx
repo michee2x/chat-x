@@ -1,7 +1,7 @@
 import {useState } from "react";
 import { FaArrowLeft} from "react-icons/fa";
 import { BsPerson} from "react-icons/bs";
-import CommentPost from "./CommentPost";
+//import CommentPost from "./CommentPost";
 import {follow_unfollow_user} from "../hooks/likepost";
 import {createdAt} from "../hooks/useCreatedHook"
 import { IoMdHeart } from "react-icons/io";
@@ -176,12 +176,12 @@ const ParPost = ({setParPost,parPost,id, from}:any) => {
           commentClicked ? "block" : "hidden"
         } bg-black lg:w-full`}
       >
-        <CommentPost
+        {/*<CommentPost
           commentClicked={commentClicked}
           setPost={setParPost}
           setCommentClicked={setCommentClicked}
           postId={id}
-        />
+        />*/}
       </div>
     </>
   );
