@@ -8,6 +8,7 @@ import { IoMdHeart } from "react-icons/io";
 import { MdBookmark } from "react-icons/md";
 
 const ParPost = ({setParPost,parPost,id, from}:any) => {
+const [comment, setComment] = useState([])
   const [commentClicked, setCommentClicked] = useState(false)
 console.log(id)
   return (
@@ -179,7 +180,7 @@ console.log(id)
         <CommentPost
           commentClicked={commentClicked}
           setPost={setParPost}
-          setCommentClicked={setCommentClicked}
+         setComment = {setComment} setCommentClicked={setCommentClicked}
           postId={id}
         />
       </div>
