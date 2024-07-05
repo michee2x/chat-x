@@ -152,7 +152,7 @@ const setToStorge = (x:string) => {
                 className={`w-9 border-[1.2px] border-blue-500 ${user?.profilepic ? "block" : "hidden"}  h-9 rounded-full lg:hidden`} 
                         onClick={() => {status === "foryou" ? setshowSideBar(true) : ""}}
               />
-              <span className={`p-1 bg-white ${!user?.profilepic ? "block" : "hidden"} rounded-full`} 
+              <span className={`w-9 h-9 flex items-center justify-center bg-white ${!user?.profilepic ? "block" : "hidden"} rounded-full`} 
 onClick={() => setshowSideBar(true)}
 >
                 <MdPerson color="blue" className="text-[1.4rem]" />
