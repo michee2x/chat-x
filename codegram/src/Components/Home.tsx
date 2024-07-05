@@ -226,7 +226,7 @@ setParPost={setParPost}                      setLoading={setLoading}
                 className={`w-full text-blue-700 flex flex-col gap-2 items-center justify-center h-16`}
               >
                <div className="loading loading-spinner loading-md"></div>
- <span>loading more post</span>
+ <span>loading posts</span>
                  </div>
             </div>
           </div>
