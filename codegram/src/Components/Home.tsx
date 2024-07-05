@@ -104,7 +104,7 @@ if (!loggedInUser) {
 
 const Skeletons = () => {
   return (
-    <span className="loading loading-spinner loading-2xl"></span>
+    <div className="w-full h-full absolute"><video /></div>
   );
 }
 
