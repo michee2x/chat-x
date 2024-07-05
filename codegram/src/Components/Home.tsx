@@ -109,8 +109,9 @@ const setToStorge = (x:string) => {
     <>
       {loading || true ? (
         <div className="h-screen bg-gradient-to-tr from-gray-900 via-gray-900 to-blue-900 relative w-screen gap-2 flex items-center flex-col justify-center text-gray-300 bg-black lg:w-full lg:pt-24">
-                                          <progress className="progress progress-primary w-56" value={0} max="100"></progress>
-          <div className="py-5 text-white font-extrabold text-[3rem] font-mono">chat-x</div>
+ <div className="py-5 text-white font-extrabold text-[3rem] font-mono">chat-x</div>
+                                          <progress className="progress progress-primary w-56" value={30} max="100"></progress>
+         
         </div>
       ) : (
         <div className={`h-screen ${Object.keys(parPost).length === 0 ? "block" : "hidden"} w-screen relative bg-black lg:w-full`}>
