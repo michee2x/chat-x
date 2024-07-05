@@ -33,7 +33,7 @@ const progressor = () => {
 
   setInterval(() => {
    setPercent(prev => prev + 1)
-}, percent > 50 ? 100 : 800)
+}, percent > 50 ? 10 : 40)
 
 }
 
