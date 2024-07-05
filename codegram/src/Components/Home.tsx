@@ -223,7 +223,7 @@ setParPost={setParPost}                      setLoading={setLoading}
               </ul>
               <div
                 ref={loadingRef}
-                className={`w-full text-blue-700 flex flex-col gap-2 items-center justify-center h-16`}
+                className={`w-full text-white flex flex-col gap-2 items-center justify-center h-16`}
               >
                <div className="loading loading-spinner loading-md"></div>
  <span>loading posts</span>
