@@ -68,7 +68,7 @@ const Skeletons = () => {
               onSubmit={handleSumbit}
               className="w-screen h-screen justify-center items-center relative flex flex-col gap-5 lg:w-full lg:h-full"
             >
-              <h2 className="card-title text-blue-400 w-full text-center">
+              <h2 className="card-title text-blue-400">
                 <i>Login to Chat-X</i>
               </h2>
               <span
