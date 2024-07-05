@@ -105,12 +105,21 @@ if (!loggedInUser) {
 const setToStorge = (x:string) => {
   localStorage.setItem("status", x)
 }
+const progressor = () => {
+  let percent = 0
+
+  setInterval(() => {
+   percent += 1
+}, percent > 50 ? 100 : 800)
+
+ return percent
+}
   return (
     <>
       {loading || true ? (
         <div className="h-screen bg-gradient-to-tr from-gray-900 via-gray-900 to-blue-900 relative w-screen gap-2 flex items-center flex-col justify-center text-gray-300 bg-black lg:w-full lg:pt-24">
  <div className="py-5 text-white font-extrabold text-[3rem] font-mono">chat-x</div>
-                                          <progress className="progress progress-primary w-56" value={30} max="100"></progress>
+                                          <progress className="progress progress-primary w-56" value={progressor} max="100"></progress>
          
         </div>
       ) : (
