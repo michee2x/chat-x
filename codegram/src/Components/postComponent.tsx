@@ -138,11 +138,11 @@ console.log(like)
               <span className="text-xs">{e?.bookmark.length}</span>
             </div>
 <div
-              className={`w-12 h-full rounded-full cursor-pointer gap-2 flex items-center justify-center text-xm font-bold text-white`}
+              className={`w-12 h-full rounded-full cursor-pointer gap-2 flex items-center justify-center text-xm font-bold`}
             >
               <span>
                 <FaComment
-                  className={`text-sm  cursor-pointer`}
+                  className={`text-sm text-white border-[1px] border-white cursor-pointer`}
                 />
                
               </span>
