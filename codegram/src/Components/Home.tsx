@@ -105,17 +105,14 @@ if (!loggedInUser) {
 const setToStorge = (x:string) => {
   localStorage.setItem("status", x)
 }
-
   return (
     <>
       {loading ? (
-        <div className="h-screen relative w-screen gap-2 flex items-center flex-col justify-center text-gray-300 bg-black lg:w-full lg:pt-24">
-                           <img
-            src="https://i.imgur.com/uiR4C4l.jpeg"
-            alt="chat-x default cover pic"
-            className="w-full bg-cover h-full"
-          />
-          <div className="w-full h-16 text-center py-5 absolute text-blue-800 font-extrabold text-3xl font-mono">chat-x</div>
+        <div className="h-screen bg-gradient-to-t from-blue-900 via-purple-900 to-blue-800 relative w-screen gap-2 flex items-center flex-col justify-center text-gray-300 bg-black lg:w-full lg:pt-24">
+                                          <span
+                  className={`loading loading-spinner loading-sm`}
+                ></span>
+          <div className="py-5 text-blue-800 font-extrabold text-3xl font-mono">chat-x</div>
         </div>
       ) : (
         <div className={`h-screen ${Object.keys(parPost).length === 0 ? "block" : "hidden"} w-screen relative bg-black lg:w-full`}>
