@@ -108,7 +108,7 @@ const setToStorge = (x:string) => {
   return (
     <>
       {loading ? (
-        <div className="h-screen bg-gradient-to-b from-white to-gray-900 relative w-screen gap-2 flex items-center flex-col justify-center text-gray-300 bg-black lg:w-full lg:pt-24">
+        <div className="h-screen bg-gradient-to-tr from-gray-900 via-gray-900 to-blue-900 relative w-screen gap-2 flex items-center flex-col justify-center text-gray-300 bg-black lg:w-full lg:pt-24">
                                           <span
                   className={`loading loading-spinner loading-2xl`}
                 ></span>
