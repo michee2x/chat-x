@@ -33,12 +33,12 @@ const progressor = () => {
 
  const intervalID = setInterval(() => {
    setPercent(prev => prev + 1)
-}, !loading ? 15 : 6)
+}, !loading ? 20 : 1)
 
 if(!loading){
 setTimeout (() => {
 clearInterval(intervalID)
-},150)
+},200)
 }
 
 }
