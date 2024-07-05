@@ -14,6 +14,7 @@ import { SideBarContext } from "../showSideBar";
 
 
 const Home = () => {
+const [percent, setPercent] = useState(0)
 const [scrollingDown, setScrollingDown] = useState(false);
   const {setshowSideBar } = SideBarContext();
 const [parPost, setParPost] = useState<any>({})
@@ -27,6 +28,17 @@ const [parPost, setParPost] = useState<any>({})
   const divRef = useRef<HTMLDivElement>(null)
 const [status, setStatus] = useState(localStorage.getItem("status")! || "foryou")
 const [loggedInUser] = useState(localStorage.getItem("userId")! || "")
+useEffect(() => {
+const progressor = () => {
+
+  setInterval(() => {
+   setPercent(prev => prev + 1)
+}, percent > 50 ? 100 : 800)
+
+}
+
+progressor()
+}, [])
 useEffect(() => {
 const handleScroll = () => {
     setScrollingDown(true)
@@ -105,21 +117,13 @@ if (!loggedInUser) {
 const setToStorge = (x:string) => {
   localStorage.setItem("status", x)
 }
-const progressor = () => {
-  let percent = 0
 
-  setInterval(() => {
-   percent += 1
-}, percent > 50 ? 100 : 800)
-
- return percent
-}
   return (
     <>
       {loading || true ? (
         <div className="h-screen bg-gradient-to-tr from-gray-900 via-gray-900 to-blue-900 relative w-screen gap-2 flex items-center flex-col justify-center text-gray-300 bg-black lg:w-full lg:pt-24">
  <div className="py-5 text-white font-extrabold text-[3rem] font-mono">chat-x</div>
-                                          <progress className="progress progress-primary w-56" value={progressor} max="100"></progress>
+                                          <progress className="progress progress-primary w-56" value={percent} max="100"></progress>
          
         </div>
       ) : (
