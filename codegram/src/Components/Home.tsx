@@ -31,9 +31,15 @@ const [loggedInUser] = useState(localStorage.getItem("userId")! || "")
 useEffect(() => {
 const progressor = () => {
 
-  setInterval(() => {
+ const intervalID = setInterval(() => {
    setPercent(prev => prev + 1)
-}, percent > 50 || !loading ? 10 : 2)
+}, !loading ? 10 : 5)
+
+if(!loading){
+setTimeout (() => {
+clearInterval(intervalID)
+},100)
+}
 
 }
 
