@@ -112,7 +112,7 @@ const setToStorge = (x:string) => {
                                           <span
                   className={`loading loading-spinner loading-2xl`}
                 ></span>
-          <div className="py-5 text-white font-extrabold text-3xl font-mono">chat-x</div>
+          <div className="py-5 text-white font-extrabold text-[7rem] font-mono">chat-x</div>
         </div>
       ) : (
         <div className={`h-screen ${Object.keys(parPost).length === 0 ? "block" : "hidden"} w-screen relative bg-black lg:w-full`}>
