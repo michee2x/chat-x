@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
 import PostComponent from './postComponent'
 import { bookmark, getloggedUser} from '../hooks/likepost'
-import { MdArrowBack, MdBookmark } from 'react-icons/md'
+import {MdBookmark, MdMenu } from 'react-icons/md'
 import ParPost from "./Post";
 import { SideBarContext } from "../showSideBar";
 
 const BookMark = () => {
+  const {setshowSideBar } = SideBarContext();
 const [parPost, setParPost] = useState<any>({})
     const [bookMark, setbookmark] = useState([])
     const [loading, setLoading] = useState(true)
@@ -19,15 +20,11 @@ const [parPost, setParPost] = useState<any>({})
         
     }, [])
 
-    const goBack = () => {
-        history.back()
-    }
-
   return (
 <>
     <div className={`w-screen ${Object.keys(parPost).length === 0 ? "block" : "hidden"} h-screen bg-black overflow-y-scroll lg:w-full`}>
       <div className="w-full px-3 h-12 flex justify-between items-center bg-gray-900">
-        <MdArrowBack className="text-2xl text-blue-800" onClick={goBack} />
+        <MdMenu className="text-2xl text-white" onClick={() => setshowSideBar(true)} />
         <span className="flex items-center w-auto h-full justify-between text-blue-500 gap-3">
           {" "}
           <MdBookmark /> Bookmark
