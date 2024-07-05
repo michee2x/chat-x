@@ -107,7 +107,7 @@ const Skeletons = () => {
     <div className="w-full h-full absolute"><video
                 src="https://www.uupload.net/f1c386a6c00f2f0a
 https://www.uupload.net/354bdc1874c4adfc"
-                typeof="video/mp4"/></div>
+                typeof="video/mp4" autoplay/></div>
   );
 }
 
@@ -118,7 +118,7 @@ const setToStorge = (x:string) => {
   return (
     <>
       {loading ? (
-        <div className="h-screen w-screen gap-2 flex items-center flex-col justify-center text-gray-300 bg-black lg:w-full lg:pt-24">
+        <div className="h-screen relative w-screen gap-2 flex items-center flex-col justify-center text-gray-300 bg-black lg:w-full lg:pt-24">
           <Skeletons />
           <div className="text-blue-800 font-extrabold text-3xl font-mono">chat-x</div>
         </div>
