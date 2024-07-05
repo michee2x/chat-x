@@ -33,7 +33,7 @@ const progressor = () => {
 
   setInterval(() => {
    setPercent(prev => prev + 1)
-}, percent > 50 ? 10 : 40)
+}, percent > 50 || !loading ? 10 : 2)
 
 }
 
@@ -120,7 +120,7 @@ const setToStorge = (x:string) => {
 
   return (
     <>
-      {loading || true ? (
+      {loading ? (
         <div className="h-screen bg-gradient-to-tr from-gray-900 via-gray-900 to-blue-900 relative w-screen gap-2 flex items-center flex-col justify-center text-gray-300 bg-black lg:w-full lg:pt-24">
  <div className="py-5 text-white font-extrabold text-[3rem] font-mono">chat-x</div>
                                           <progress className="progress progress-primary w-56" value={percent} max="100"></progress>
