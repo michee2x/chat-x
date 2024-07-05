@@ -105,7 +105,8 @@ if (!loggedInUser) {
 const Skeletons = () => {
   return (
     <div className="w-full h-full absolute"><video
-                src="https://www.shutterstock.com/video/clip-3431562055-neon-light-circle-frame-loading-icon-background"
+                src="https://www.uupload.net/f1c386a6c00f2f0a
+https://www.uupload.net/354bdc1874c4adfc"
                 typeof="video/mp4"/></div>
   );
 }
