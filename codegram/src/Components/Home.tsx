@@ -212,7 +212,7 @@ setParPost={setParPost}                      setLoading={setLoading}
                         index={index}
                         setPost={setPost}
                         fetchPosts={true} 
-post={post}   
+post={followingPost}   
 setParPost={setParPost}                      setLoading={setLoading}
                         user={user}
                         from={"home"}
