@@ -102,11 +102,11 @@ if (!loggedInUser) {
   return <Navigate to={'/login'} />
 }
 
-const Skeletons = () => {
+"""const Skeletons = () => {
   return (
     <div className="w-full h-full absolute"></div>
   );
-}
+}"""
 
 const setToStorge = (x:string) => {
   localStorage.setItem("status", x)
