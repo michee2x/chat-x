@@ -109,7 +109,9 @@ const setToStorge = (x:string) => {
     <>
       {loading || true ? (
         <div className="h-screen bg-gradient-to-tr from-gray-900 via-gray-900 to-blue-900 relative w-screen gap-2 flex items-center flex-col justify-center text-gray-300 bg-black lg:w-full lg:pt-24">
-                                          <div class="radial-progress text-primary" style="--value:70;" role="progressbar">70</div>
+                                          <div className="radial-progress text-primary" style={{ "--value": 70 }} role="progressbar">
+  70%
+</div>
           <div className="py-5 text-white font-extrabold text-[3rem] font-mono">chat-x</div>
         </div>
       ) : (
