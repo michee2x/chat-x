@@ -171,7 +171,7 @@ onClick={() => setshowSideBar(true)}
                 await getFollowingPost(setFollowingPost, setLoading);
               }}
             >
-              <span className="p-1 bg-blue-600 rounded-full">
+              <span className="w-9 h-9 bg-blue-600 rounded-full">
                 <MdPerson color="white" className="text-[1.4rem]" />
               </span>
               <b className="text-sm text-white">following</b>
