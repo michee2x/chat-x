@@ -136,7 +136,7 @@ const setToStorge = (x:string) => {
         <div className={`h-screen ${Object.keys(parPost).length === 0 ? "block" : "hidden"} w-screen relative bg-black lg:w-full`}>
           <div className={`w-full z-40 ${scrollingDown ? "hidden" : "block"} absolute mb-10 text-blue-700 h-16 flex justify-between items-center bg-black border-b-2 border-gray-500 lg:border-0`}>
             <span
-              className={`w-1/3 flex flex-col items-center ${
+              className={`w-1/3 relative flex flex-col items-center ${
                 status === "foryou" ? "border-b-2 border-blue-500" : ""
               } justify-center 
               h-full lg:w-1/3`}
@@ -146,6 +146,7 @@ const setToStorge = (x:string) => {
                 await fetchData(setPost, setLoading);
               }}
             >
+<div className={`w-full h-full ${status == "foryou" ? "hidden" : "block"} absolute bg-transparent z-10`}></div>
               <img
                 src={user?.profilepic}
                 alt="img"
