@@ -110,13 +110,12 @@ const setToStorge = (x:string) => {
     <>
       {loading ? (
         <div className="h-screen relative w-screen gap-2 flex items-center flex-col justify-center text-gray-300 bg-black lg:w-full lg:pt-24">
-                            <video
-                    src="https://www.uupload.net/f1c386a6c00f2f0a
-https://www.uupload.net/354bdc1874c4adfc"
-                    className="w-screen h-screen absolute"
-                    typeof="video/mp4"
-                  />
-          <div className="text-blue-800 font-extrabold text-3xl font-mono">chat-x</div>
+                           <img
+            src="https://i.imgur.com/uiR4C4l.jpeg"
+            alt="chat-x default cover pic"
+            className="w-full bg-cover h-full"
+          />
+          <div className="w-full h-16 text-center py-5 absolute text-blue-800 font-extrabold text-3xl font-mono">chat-x</div>
         </div>
       ) : (
         <div className={`h-screen ${Object.keys(parPost).length === 0 ? "block" : "hidden"} w-screen relative bg-black lg:w-full`}>
