@@ -74,11 +74,11 @@ const Signup = () => {
               onSubmit={Signup}
               className="w-screen black bg-opacity-90 h-screen justify-center items-center pt-16 relative flex flex-col gap-5 lg:w-full lg:h-full"
             >
-              <h2 className="card-title text-blue-400 absolute top-10">
+              <h2 className="card-title text-blue-400 mb-5">
                 <i>Sign In to Chat X</i>
               </h2>
               <span
-                className={`absolute top-32 flex ${
+                className={`mb-5 flex ${
                   error?.type ? "block" : "hidden"
                 } items-center gap-3 text-blue-300 text-lg lg:top-28`}
               >
@@ -166,13 +166,13 @@ const Signup = () => {
               </label>
 
               <div className="w-full button2 h-10 mb-6 grid place-items-center py-4">
-                <Link to={"/login"} className="no-underline text-white">
+                <Link to={"/login"} className="no-underline text-white mb-3">
                   Already have an Account? Login
                 </Link>
               </div>
               <button
                 style={{ width: "55%" }}
-                className=" rounded-3xl text-white bg-blue-500 outline-0 border-0 absolute bottom-10 justify-center flex items-center gap-2 hover:bg-blue-700 focus:outline-none"
+                className=" rounded-3xl text-white bg-blue-500 outline-0 border-0  justify-center flex items-center gap-2 hover:bg-blue-700 focus:outline-none"
                 onClick={Signup}
               >
                 <span
