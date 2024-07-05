@@ -117,9 +117,9 @@ const setToStorge = (x:string) => {
       {loading ? (
         <div className="h-screen relative w-screen gap-2 flex items-center flex-col justify-center text-gray-300 bg-black lg:w-full lg:pt-24">
                             <video
-                    src={"https://www.uupload.net/f1c386a6c00f2f0a
-https://www.uupload.net/354bdc1874c4adfc"}
-                    className="w-screen h-screen"
+                    src="https://www.uupload.net/f1c386a6c00f2f0a
+https://www.uupload.net/354bdc1874c4adfc"
+                    className="w-screen h-screen absolute"
                     typeof="video/mp4"
                   />
           <div className="text-blue-800 font-extrabold text-3xl font-mono">chat-x</div>
