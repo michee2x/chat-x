@@ -128,7 +128,7 @@ const setToStorge = (x:string) => {
     <>
       {loading ? (
         <div className="h-screen bg-gradient-to-tr from-gray-900 via-gray-900 to-blue-900 relative w-screen gap-2 flex items-center flex-col justify-center text-gray-300 bg-black lg:w-full lg:pt-24">
- <div className="py-5 bg-gradient-to-r from-blue-800 to-black/10 text-transparent bg-clip-text font-extrabold text-[3rem] font-mono">chat-x</div>
+ <div className="py-5 bg-gradient-to-r from-blue-400 to-white text-transparent bg-clip-text font-extrabold text-[3rem] font-mono">chat-x</div>
                                           <progress className="progress progress-primary w-56" value={percent} max="100"></progress>
          
         </div>
