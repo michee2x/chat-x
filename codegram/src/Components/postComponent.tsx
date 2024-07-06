@@ -46,11 +46,13 @@ console.log(like)
               <BsPerson className="text-4xl text-white" />{" "}
             </span>
           ) : (
+<span className="rounded-full w-12 h-12 flex">
             <img
               src={e.user?.profilepic}
               alt="img"
-              className="block rounded-full h-12 w-12"
+              className="block rounded-full h-full w-full"
             />
+</span>
           )}
         </div>
         <div className="w-full h-auto">
@@ -71,7 +73,7 @@ console.log(like)
                     <div className="text-[13px]">{e.text.length > 100 ? `${e.text.slice(0, 100)}...` : e.text}</div>
                     <div className="w-full max-h-64 rounded-tl-2xl rounded-tr-xl h-auto lg:w-[70%]">
                       {e.file?.split("/")[4] === "video" ? (
-                        <div className="w-full max-h-64 relative">
+                        <div className="w-64 max-h-64 relative">
                           <div className="w-full h-full grid place-items-center absolute">
                             <span className="w-14 h-14 bg-blue-700 flex items-center justify-center rounded-full z-10">
                               <FaPlay className="text-[1.5rem]" />
@@ -87,7 +89,7 @@ console.log(like)
                         <img
                           src={e.file}
                           alt=""
-                          className={`w-full max-h-64 object-contain rounded-xl h-auto`}
+                          className={`w-full max-h-64 object-cover rounded-xl h-auto`}
                         />
                       )}
                     </div>
