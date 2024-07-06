@@ -53,7 +53,7 @@ console.log(id, comment)
                 </span>
               </div>
             </div>
-<div >
+<div className="w-full h-screen bg-black">
             <div className="flex gap-3 items-center">
               <div className="pt-3 px-2 pb-1">
                 {!parPost?.user?.profilepic ? (
@@ -164,14 +164,7 @@ console.log(id, comment)
                     </ul>
                   );
                 })}
-              {parPost?.Comments?.length === 0 && (
-                <div className="text-2xl absolute bg-gray-900 text-white w-full h-screen grid place-items-center">
-                 leave a comment
-                </div>
-              )}
-            </div>
-          </div>
-        )}
+            
       </div>
       <div
         className={`h-auto w-screen ${
