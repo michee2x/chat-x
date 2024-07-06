@@ -54,7 +54,7 @@ console.log(like)
           )}
         </div>
         <div className="w-full h-auto">
-          <main onClick={() => {setParPost(post[index])}} className="w-full h-auto flex">
+          <main onClick={() => {setParPost(post[index])}} className="w-full pl-2 h-auto flex">
             <div
               className="w-full"
               onClick={() => storeIndex(index)}
