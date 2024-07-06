@@ -53,7 +53,7 @@ console.log(id, comment)
                 </span>
               </div>
             </div>
-<div className="w-full h-screen bg-black">
+<div className="w-full h-auto bg-black">
             <div className="flex gap-3 items-center">
               <div className="pt-3 px-2 pb-1">
                 {!parPost?.user?.profilepic ? (
