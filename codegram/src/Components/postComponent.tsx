@@ -55,7 +55,7 @@ e?.user?.username === post[index+1]?.user?.username ? "block" : "hidden"
             <img
               src={e.user?.profilepic}
               alt="img"
-              className="block rounded-full h-full w-full"
+              className="block rounded-full z-10 h-full w-full"
             />
 </span>
           )}
