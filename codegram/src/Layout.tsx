@@ -13,7 +13,7 @@ const Layout = () => {
         <div
           className="w-14 h-14 z-40 rounded-full bg-gradient-to-tr from-blue-600 via-blue-600 to-blue-300 bottom-8 right-4 border-2 border-white fixed grid place-items-center lg:hidden"
           onClick={() => setshowSideBar(true)}
-        ><FaPlus className="text-[2rem] text-white/80" /></div>
+        ><FaPlus className={`text-[2rem] text-white/80 transition-all duration-500 ${showSideBar ? "rotate-180" : "rotate-270"}`} /></div>
         <div onClick={() => setshowSideBar(false)} className={`w-screen absolute ${showSideBar ? "block bg-black" : "hidden"} h-screen bg-transparent z-40`}></div>
       
         <div className="bg-gray-300" style={{ width: "70%" }}>
