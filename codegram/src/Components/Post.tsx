@@ -164,7 +164,7 @@ console.log(id, comment)
                     </ul>
                   );
                 })}
-            
+         </div>   
       </div>
       <div
         className={`h-auto w-screen ${
