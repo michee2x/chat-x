@@ -87,7 +87,7 @@ console.log(like)
                         <img
                           src={e.file}
                           alt=""
-                          className={`w-full max-h-64 rounded-xl h-auto`}
+                          className={`w-full max-h-64 object-cover rounded-xl h-auto`}
                         />
                       )}
                     </div>
