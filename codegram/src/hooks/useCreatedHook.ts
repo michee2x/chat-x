@@ -12,7 +12,7 @@ export const createdAt = (timeStamp:string) => {
         w:604800,
         d:86400,
         h:3600,
-        m:60,
+        min:60,
         s:1
     }
 
