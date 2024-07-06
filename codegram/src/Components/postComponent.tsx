@@ -65,7 +65,7 @@ console.log(like)
                 <div className="w-full h-auto flex flex-col gap-2 text-gray-300 min-h-24">
                   <div>
                     <span><b className="text-lg text-white">{e.user?.name}</b> <i className="text-gray-400 pl-1 text-[12px]">@{e.user?.username}</i></span>
-                    <span className="text-xs pl-5 text-blue-400">
+                    <span className="text-xs whitespace-no-wrap pl-5 text-blue-400">
                       {`${createdAt(e?.createdAt)}` !== "undefined" ? `${createdAt(e?.createdAt)}` : "just now"}
                     </span>
                   </div>
