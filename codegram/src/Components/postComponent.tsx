@@ -42,7 +42,7 @@ e?.user?.username === post[index+1]?.user?.username ? "border-b-0" : "border-b-[
         <div className="pl-1 w-auto h-full pt-1">
 <div className={`border-[.9px] ${
 e?.user?.username === post[index+1]?.user?.username ? "block" : "hidden"
-} absolute h-full left-[9%] border-white/80`}></div>
+} absolute h-full left-[8%] border-white/50`}></div>
           {e.user?.profilepic === "" ? (
             <span
               className="flex justify-center items-center
