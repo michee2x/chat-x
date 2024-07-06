@@ -118,7 +118,7 @@ console.log(id, comment)
               </span>
             </div>
 </div>
-            <div className={`grid relative w-full ${parPost?.Comments?.length === 0 ? "hidden" : "block"} h-auto  pb-64 lg:grid-cols-2`}>
+            <div className={`flex flex-col relative w-full ${parPost?.Comments?.length === 0 ? "hidden" : "block"} h-auto  pb-64 lg:grid-cols-2`}>
               {
                 parPost?.Comments?.map((e: any, index: number) => {
                   return (
