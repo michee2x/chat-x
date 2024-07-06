@@ -123,7 +123,7 @@ console.log(id, comment)
                 parPost?.Comments?.map((e: any, index: number) => {
                   return (
                     <ul
-                      className={`mx-auto  rounded-2xl ${e.file ? "h-64" : "h-14"}  bg-black ${
+                      className={`mx-auto  rounded-2xl ${e.file ? "min-h-64" : "min-h-14"}  bg-black ${
                         index % 2 == 0
                           ? "border-l-4 border-t-4"
                           : "border-r-4 border-t-4"
