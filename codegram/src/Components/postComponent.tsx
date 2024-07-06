@@ -80,8 +80,8 @@ e?.user?.username === post[index+1]?.user?.username ? "block" : "hidden"
                       {e.file?.split("/")[4] === "video" ? (
                         <div className="w-64 max-h-64 relative">
                           <div className="w-full h-full grid place-items-center absolute">
-                            <span className="w-14 h-14 bg-blue-700 flex items-center justify-center rounded-full z-10">
-                              <FaPlay className="text-[1.5rem]" />
+                            <span className="w-12 h-12 bg-blue-500 grid place-items-center rounded-full z-10">
+                              <FaPlay className="text-[1rem]" />
                             </span>
                           </div>
                           <video
