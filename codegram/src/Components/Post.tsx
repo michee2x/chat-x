@@ -53,7 +53,7 @@ console.log(id, comment)
                 </span>
               </div>
             </div>
-
+<div >
             <div className="flex gap-3 items-center">
               <div className="pt-3 px-2 pb-1">
                 {!parPost?.user?.profilepic ? (
@@ -117,6 +117,7 @@ console.log(id, comment)
                 likes
               </span>
             </div>
+</div>
             <div className="grid relative w-full h-full pb-64 lg:grid-cols-2">
               {
                 parPost?.Comments?.map((e: any, index: number) => {
