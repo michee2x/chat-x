@@ -40,7 +40,7 @@ e?.user?.username === post[index+1]?.user?.username ? "border-b-0" : "border-b-[
 } border-gray-600 mb-1 w-full flex gap-2 bg-black lg:gap-6`}
       >
         <div className="pl-1 w-auto h-full pt-1">
-<div className={`border-[1.5px] ${
+<div className={`border-[1px] ${
 e?.user?.username === post[index+1]?.user?.username ? "block" : "hidden"
 } absolute h-full left-[8%] border-gray-700`}></div>
           {e.user?.profilepic === "" ? (
@@ -48,7 +48,7 @@ e?.user?.username === post[index+1]?.user?.username ? "block" : "hidden"
               className="flex justify-center items-center
                rounded-full w-12 h-12 z-10 bg-blue-900"
             >
-              <BsPerson className="text-4xl text-white" />{" "}
+              <BsPerson className="text-4xl z-10 text-white" />{" "}
             </span>
           ) : (
 <span className="rounded-full w-12 h-12 flex">
