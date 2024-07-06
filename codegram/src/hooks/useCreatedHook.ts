@@ -7,13 +7,13 @@ export const createdAt = (timeStamp:string) => {
 
 
     let intervals:any = {
-        y:31536000,
-        m:2592000,
-        w:604800,
-        d:86400,
-        h:3600,
+        yr:31536000,
+        mth:2592000,
+        wk:604800,
+        day:86400,
+        hr:3600,
         min:60,
-        s:1
+        sec:1
     }
 
     for (let i in intervals){
