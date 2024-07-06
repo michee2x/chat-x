@@ -35,7 +35,9 @@ console.log(like)
     <>
       <li
         key={index}
-        className="mx-auto border-b-[.9px] border-gray-600 mb-1 w-full flex gap-2 bg-black lg:gap-6"
+        className={`mx-auto ${
+e.user?.username === post[index+1].user?.username ? "border-b-0" : "border-b-[.9px]"
+} border-gray-600 mb-1 w-full flex gap-2 bg-black lg:gap-6`}
       >
         <div className="pl-1 pt-1">
           {e.user?.profilepic === "" ? (
