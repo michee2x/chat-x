@@ -35,11 +35,11 @@ console.log(like)
     <>
       <li
         key={index}
-        className={`mx-auto ${
+        className={`mx-auto relative ${
 e?.user?.username === post[index+1]?.user?.username ? "border-b-0" : "border-b-[.9px]"
 } border-gray-600 mb-1 w-full flex gap-2 bg-black lg:gap-6`}
       >
-        <div className="pl-1 relative w-auto h-full pt-1">
+        <div className="pl-1 w-auto h-full pt-1">
 <div className="border-[1.5px] absolute h-full mx-auto"></div>
           {e.user?.profilepic === "" ? (
             <span
