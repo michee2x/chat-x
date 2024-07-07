@@ -17,7 +17,7 @@ const [cp,setCp] = useState(false)
 const [Profilepic, setProfilePic] = useState<any>(null);
 const [ProfileCover, setProfileCover] = useState<any>(null);
 const [navigate, setNavigate] = useState(false);
-const [res, setRes] = useState("username already exist")
+const [res, setRes] = useState("")
 
   const handleFileChange = (e: any) => {
     const Inputfile = e.target.files[0];
@@ -79,6 +79,14 @@ const values =
   profile.newPassword ||
   profile.oldPassword;
 
+if(res){
+ 
+setTimeout(() => {
+  setRes("")
+}, 3000)
+
+}
+
   return (
     <div className="w-screen h-screen overflow-y-scroll bg-gray-950 lg:w-full lg:bg-black">
       <div className="w-full relative justify-between px-12 text-gray-600 h-20 flex items-center">
@@ -109,7 +117,7 @@ const values =
           <MdCancel className="text-2xl text-blue-300" />
         </div>
         <div onClick={handleEdit}>
-          <span className={`${values && "text-blue-400"} text-xl focus:text-blue-600`}>{editing ? "editing" : "edit"}</span>
+          <span className={`${values && "text-blue-400"} text-xl focus:text-blue-600`}>{editing && !res ? "editing" : "edit"}</span>
         </div>
       </div>
       <div className="w-full h-auto grid place-items-center text-lg mb-3 text-blue-300">
