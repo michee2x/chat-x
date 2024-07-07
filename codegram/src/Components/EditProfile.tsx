@@ -1,11 +1,10 @@
 import { useRef, useState} from "react";
 import {FaUpload } from "react-icons/fa";
 import { Navigate } from "react-router-dom";
-import {editProfile, getloggedUser } from "../hooks/likepost";
+import {editProfile } from "../hooks/likepost";
 import { MdArrowBack, MdCancel } from "react-icons/md";
 
 const EditProfile = () => {
-  const [user, setUser] = useState<any>([])
 const [cp,setCp] = useState(false)
  const [editing, setEditing] = useState(false)
   const inputFileRef = useRef<HTMLInputElement>(null);
