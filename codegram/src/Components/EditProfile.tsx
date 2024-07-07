@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState} from "react";
 import {FaUpload } from "react-icons/fa";
 import { Navigate } from "react-router-dom";
 import {editProfile, getloggedUser } from "../hooks/likepost";
