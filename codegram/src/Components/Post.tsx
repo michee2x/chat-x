@@ -95,7 +95,7 @@ console.log(id, comment)
                   <img
                     src={parPost?.file}
                     alt=""
-                    className="w-full bg-cover rounded-2xl h-auto"
+                    className="w-full object-cover rounded-2xl h-auto"
                   />
                 )}
               </div>
