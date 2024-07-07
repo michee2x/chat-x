@@ -46,18 +46,7 @@ console.log("the user is saved")
      
     if(newUser) {
          generateToken(newUser._id, res)
-        
-      
-
-        res.status(200).json({
-            _id:newUser._id,
-            name:newUser.name,
-            username:newUser.username,
-            profilePic:newUser.profilePic,
-            email:newUser.email,
-            followers:newUser.followers,
-            following:newUser.following,
-            profilecover:newUser.profilecover
+         res.json({loggedUser: newUser})
         })
     } else {
         return res.status(400).json({
