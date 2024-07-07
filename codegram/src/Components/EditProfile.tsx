@@ -1,10 +1,11 @@
-import { useRef, useState} from "react";
+import { useRef, useState, useEffect} from "react";
 import {FaUpload } from "react-icons/fa";
 import { Navigate } from "react-router-dom";
-import {editProfile } from "../hooks/likepost";
+import {editProfile, getloggedUser } from "../hooks/likepost";
 import { MdArrowBack, MdCancel } from "react-icons/md";
 
 const EditProfile = () => {
+const [user, setUser] = useState({})
 const [cp,setCp] = useState(false)
  const [editing, setEditing] = useState(false)
   const inputFileRef = useRef<HTMLInputElement>(null);
@@ -18,6 +19,10 @@ const [Profilepic, setProfilePic] = useState<any>(null);
 const [ProfileCover, setProfileCover] = useState<any>(null);
 const [navigate, setNavigate] = useState(false);
 const [res, setRes] = useState("")
+
+useEffect(() => {
+  getloggedUser(setUser)
+}, [])
 
   const handleFileChange = (e: any) => {
     const Inputfile = e.target.files[0];
@@ -132,7 +137,7 @@ setTimeout(() => {
             <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z" />
           </svg>
           <input
-            value={profile.name}
+            value={profile.name ? profile.name : user.name}
             onChange={(e) => setProfile({ ...profile, name: e.target.value })}
             type="text"
             spellCheck="false"
@@ -150,7 +155,7 @@ setTimeout(() => {
             <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z" />
           </svg>
           <input
-            value={profile.username}
+            value={profile.username ? profile.username : user.username}
             onChange={(e) =>
               setProfile({ ...profile, username: e.target.value })
             }
@@ -171,7 +176,7 @@ setTimeout(() => {
             <path d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
           </svg>
           <input
-            value={profile.email}
+            value={profile.email ? profile.email : user.email}
             onChange={(e) => setProfile({ ...profile, email: e.target.value })}
             type="email"
             className="grow text-white"
