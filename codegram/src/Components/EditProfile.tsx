@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import {FaUpload } from "react-icons/fa";
 import { Navigate } from "react-router-dom";
 import {editProfile, getloggedUser } from "../hooks/likepost";
@@ -21,7 +21,7 @@ const [navigate, setNavigate] = useState(false);
 const [res, setRes] = useState("username already exist")
 
   useEffect(() => {
-    const presets = () => {
+    const presets = async () => {
      await getloggedUser(setUser)
      await setProfile({
     name:user?.name, username:user?.username, email:user?. email, oldPassword:"", newPassword:""
