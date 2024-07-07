@@ -20,17 +20,6 @@ const [ProfileCover, setProfileCover] = useState<any>(null);
 const [navigate, setNavigate] = useState(false);
 const [res, setRes] = useState("username already exist")
 
-  useEffect(() => {
-    const presets = async () => {
-     await getloggedUser(setUser)
-     await setProfile({
-    name:user?.name, username:user?.username, email:user?. email, oldPassword:"", newPassword:""
-  })
-}
-
-   presets()
-  }, [])
-
   const handleFileChange = (e: any) => {
     const Inputfile = e.target.files[0];
     if (Inputfile) {
