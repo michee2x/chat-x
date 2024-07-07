@@ -19,6 +19,9 @@ const [ProfileCover, setProfileCover] = useState<any>(null);
 const [navigate, setNavigate] = useState(false);
 const [res, setRes] = useState("username already exist")
 
+  useEffect(() => {
+    getloggedUser(setUser)
+  }, [])
 
   const handleFileChange = (e: any) => {
     const Inputfile = e.target.files[0];
