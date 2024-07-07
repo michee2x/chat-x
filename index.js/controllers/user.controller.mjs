@@ -86,6 +86,7 @@ export const updateProfile = async (req, res) => {
 console.log("this file is been received", name, username, email, oldPassword, newPassword)
     const loggedInUserId = req.user._id
     try{
+      let hashedPassword = ""
         const user = await User.findById(loggedInUserId)
         const nameExist = await User.find({name:name})
         const usernameExist = await User.find({username:username})
@@ -102,7 +103,7 @@ console.log("this file is been received", name, username, email, oldPassword, ne
 
         }
 
-        if(!correctPassword) return res.status(200).json({error:"old password is not correct"})
+        if(oldPassword && !correctPassword) return res.status(200).json({error:"old password is not correct"})
 
 console.log("it's the to upload")
 
@@ -123,8 +124,12 @@ console.log("it's the to upload")
             const uploadedResponse = await cloudinary.uploader.upload(ProfileCover)
             ProfileCover = uploadedResponse.secure_url
         }
+
+   if(oldPassword){
         const salt = await bcrypt.genSalt(10)
-        const hashedPassword = await bcrypt.hash(newPassword, salt)
+        const hashedPass = await bcrypt.hash(newPassword, salt)
+       hashedPassword = hashedPass
+}
         const newUser = {
             _id:user._id,
             name:name || user.name,
