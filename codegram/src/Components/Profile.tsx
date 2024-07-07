@@ -266,7 +266,7 @@ console.log("thththth", mainUser)
       }
     </div>
     <div className={`w-screen ${Object.keys(parPost).length === 0 ? "hidden" : "block"} h-screen`}>
-<ParPost setParPost={setParPost} parPost={parPost} id={parPost?._id} from={"home"}/>
+<ParPost setParPost={setParPost} parPost={parPost} id={parPost?._id} from={"profile"}/>
 </div>
  </> );
 }
