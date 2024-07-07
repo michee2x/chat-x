@@ -5,6 +5,7 @@ import {editProfile, getloggedUser } from "../hooks/likepost";
 import { MdArrowBack, MdCancel } from "react-icons/md";
 
 const EditProfile = () => {
+  const [user, setUser] = useState<any>([])
 const [cp,setCp] = useState(false)
  const [editing, setEditing] = useState(false)
   const inputFileRef = useRef<HTMLInputElement>(null);
@@ -20,7 +21,14 @@ const [navigate, setNavigate] = useState(false);
 const [res, setRes] = useState("username already exist")
 
   useEffect(() => {
-    getloggedUser(setUser)
+    const presets = () => {
+     await getloggedUser(setUser)
+     await setProfile({
+    name:user?.name, username:user?.username, email:user?. email, oldPassword:"", newPassword:""
+  })
+}
+
+   presets()
   }, [])
 
   const handleFileChange = (e: any) => {
