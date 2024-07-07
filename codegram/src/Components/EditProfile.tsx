@@ -65,10 +65,6 @@ const moveBack = () => {
    history.back()
 }
 
-setTimeout(() => {
-    setRes("")
-}, 5000)
-
 const values =
   file ||
   file2 ||
@@ -125,7 +121,7 @@ setTimeout(() => {
       </div>
 
       <div className="flex px-10 h-auto flex-col w-full gap-3 lg:px-24 justify-center">
- <div className="border-2 rounded-xl border-blue-600 w-full h-12 grid place-items-center text-blue-600" onClick={() => setCp(prev =>  !prev)}>{cp ? "keep old password" : "change password"}</div>
+ <div className="border-2 rounded-xl border-blue-600 w-full h-12 grid place-items-center text-blue-600" onClick={() => setCp(prev =>  !prev)}>{cp ? "keep profile info" : "change profile info"}</div>
         <label className={`input input-bordered bg-black border-2 border-blue-600 flex items-center gap-2 lg:bg-opacity-100 ${cp ? "block" : "hidden"}`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
