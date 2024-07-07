@@ -71,7 +71,7 @@ const [parPost, setParPost] = useState<any>({})
       )}
     </div>
     <div className={`w-screen ${Object.keys(parPost).length === 0 ? "hidden" : "block"} h-screen`}>
-<ParPost setParPost={setParPost} parPost={parPost} id={parPost?._id} from={"home"}/>
+<ParPost setParPost={setParPost} parPost={parPost} id={parPost?._id} from={"bookmark"}/>
 </div>
  </> );
 }
