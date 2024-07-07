@@ -89,6 +89,13 @@ useEffect(() => {
 useEffect (() => {
 if(inView){
 setPage(page + 1)
+if(inView && post.length === 15){
+   if(scrollRef){
+      const firstChild = scrollRef.current.children[0] as HTMLElement     firstChild.scrollIntoView({behavior:"smooth"})
+   setPost([])
+}
+
+}
 }
 },[inView])
 
