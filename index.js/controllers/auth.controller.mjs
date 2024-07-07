@@ -46,8 +46,7 @@ console.log("the user is saved")
      
     if(newUser) {
          generateToken(newUser._id, res)
-         res.json({loggedUser: newUser})
-        })
+         return res.json({loggedUser: newUser})
     } else {
         return res.status(400).json({
             error:"Invalid user data"
