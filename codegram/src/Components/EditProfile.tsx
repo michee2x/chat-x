@@ -23,7 +23,7 @@ const [res, setRes] = useState("")
 
 useEffect(() => {
   getloggedUser(setUser)
-}, [typing])
+}, [typing, cp])
 
   const handleFileChange = (e: any) => {
     const Inputfile = e.target.files[0];
