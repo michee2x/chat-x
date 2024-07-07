@@ -5,6 +5,7 @@ import {editProfile } from "../hooks/likepost";
 import { MdArrowBack, MdCancel } from "react-icons/md";
 
 const EditProfile = () => {
+const [cp,setCp] = useState(false)
  const [editing, setEditing] = useState(false)
   const inputFileRef = useRef<HTMLInputElement>(null);
   const inputFileRef2 = useRef<HTMLInputElement>(null);
@@ -173,7 +174,8 @@ const values =
             placeholder="email"
           />
         </label>
-        <label className="input input-bordered bg-black border-2 border-blue-600 flex items-center gap-2 lg:bg-opacity-100">
+   <div className="border-2 rounded-xl border-blue-600 w-full h-16 grid place-items-center text-blue-600" onClick={() => setCp(prev =>  !prev)}>{cp ? "keep old password" : "change password"}</div>
+        <label className={`input input-bordered bg-black border-2 border-blue-600 flex items-center gap-2 lg:bg-opacity-100 ${cp ? "block" : "hidden"}`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 16 16"
@@ -196,7 +198,7 @@ const values =
             placeholder="oldpassword"
           />
         </label>
-        <label className="input input-bordered bg-black border-2 border-blue-600 flex items-center gap-2 lg:bg-opacity-100">
+        <label className={`input input-bordered bg-black border-2 border-blue-600 flex items-center gap-2 lg:bg-opacity-100 ${cp ? "block" : "hidden"}`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 16 16"
