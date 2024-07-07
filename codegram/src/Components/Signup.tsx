@@ -58,7 +58,7 @@ const Signup = () => {
   };
   
   if(navigate){
-    return <Navigate to={"/login"} />
+    return <Navigate to={"/"} />
   }
   const Skeletons = () => {
     return <span className="loading loading-spinner loading-sm"></span>;
