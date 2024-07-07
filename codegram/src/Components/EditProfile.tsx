@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import {FaUpload } from "react-icons/fa";
 import { Navigate } from "react-router-dom";
-import {editProfile } from "../hooks/likepost";
+import {editProfile, getloggedUser } from "../hooks/likepost";
 import { MdArrowBack, MdCancel } from "react-icons/md";
 
 const EditProfile = () => {
