@@ -1,5 +1,5 @@
 import express from "express";
-import {getUserProfile, updateProfile, follow, suggestedUsers, searchProfile, getUserById} from "../controllers/user.controller.mjs"
+import {getUserProfile, updateProfile, follow, suggestedUsers, searchProfile} from "../controllers/user.controller.mjs"
 import { protectedRoute} from "../middleware/protectedRoute.mjs";
 
 
