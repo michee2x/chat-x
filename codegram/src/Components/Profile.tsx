@@ -1,6 +1,6 @@
 import {useEffect, useRef, useState} from 'react'
 import {MdArrowBack, MdMenu, MdPerson, MdSearch, MdCancel } from "react-icons/md"
-import { Link, useParams } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import { getProfile, getuserpost, getloggedUser, getUserProfile } from '../hooks/likepost';
 import PostComponent from './postComponent';
 import { createdAt } from '../hooks/useCreatedHook';
