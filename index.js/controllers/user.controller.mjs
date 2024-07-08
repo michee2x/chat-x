@@ -179,7 +179,8 @@ export const searchProfile = async (req, res) => {
     try{
         const {search} = req.body
 
-        const foundUser = await User.find({name:{$regex:search, $options:'i'}}).populate("followers").limit(10)
+        const foundUser = await User.find({$or:[
+{name:{$regex:search, $options:'i'}}, {username:{$regex:search, $options:'i'}}]}).populate("followers").limit(10)
         
 
         if(!foundUser) return res.status(404).json({message:"user not found"})
