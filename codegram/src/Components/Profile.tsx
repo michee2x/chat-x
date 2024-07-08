@@ -25,7 +25,7 @@ const [parPost, setParPost] = useState<any>({})
 
     useEffect(() => {
        if(id){
-       await getUserProfile(id, setUser)
+       getUserProfile(id, setUser)
 }
        if(text !== ''){
         const searchUser = async () => {
