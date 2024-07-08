@@ -109,7 +109,7 @@ console.log(id, comment)
                 </span>{" "}
                 Bookmarks
               </span>
-              <span className="flex pb-2 gap-4 text-md w-full items-center">
+              <span className="flex border-b-2 border-gray-700 pb-2 gap-4 text-md w-full items-center">
                 <span className="flex text-gray-400 gap-1 items-center">
                   <IoMdHeart />
                   {parPost && parPost.likes?.length}
