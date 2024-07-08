@@ -26,7 +26,7 @@ function App() {
                   element={<EditProfile />}
                 />
                 <Route path="/notifications" element={<Notifications />} />
-                <Route path="/profile/:id" element={<Profile />} />
+                <Route path="/profile" element={<Profile />} />
                 <Route path="/bookmark" element={<BookMark />} />
               </Route>
               <Route path="/login" element={<Login />} />
