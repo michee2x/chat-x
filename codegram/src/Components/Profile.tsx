@@ -43,7 +43,7 @@ console.log("thththth", mainUser)
 <>
     <div
       style={{ scrollbarWidth: "thin" }}
-      className={`w-screen ${Object.keys(parPost).length === 0 ? "block" : "hidden"} h-screen bg-black overflow-y-scroll lg:w-full`}
+      className={`w-screen ${Object.keys(parPost).length !== 0 || large ? "hidden" : "block"} h-screen bg-black overflow-y-scroll lg:w-full`}
     >
       <div className="w-full h-16 flex justify-between items-center">
         <div className=" items-center w-full text-gray-300 flex gap-5 h-10">
@@ -266,7 +266,7 @@ console.log("thththth", mainUser)
         </div>
       }
     </div>
-    <div className={`w-screen ${Object.keys(parPost).length === 0 ? "hidden" : "block"} h-screen`}>
+    <div className={`w-screen ${Object.keys(parPost).length === 0 || large ? "hidden" : "block"} h-screen`}>
 <ParPost setParPost={setParPost} parPost={parPost} id={parPost?._id} from={"profile"}/>
 </div>
 
