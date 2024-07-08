@@ -10,6 +10,5 @@ router.post("/searchprofile",protectedRoute, searchProfile)
 router.post("/follow/:id",protectedRoute, follow)
 router.post("/updateProfile",protectedRoute, updateProfile)
 router.get("/suggestedusers",protectedRoute, suggestedUsers)
-router.get("/getUserById/:id",protectedRoute, getUserById)
 
 export default router
