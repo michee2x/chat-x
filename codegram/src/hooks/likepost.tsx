@@ -197,7 +197,7 @@ export const getUserProfile = async (id: any, setUser: any, setPost:any) => {
 
     const data = await res.json();
     console.log("logged in userrrrrrrrrrrr", data)
-    await setUser(data);
+    await setUser(data.message);
     await getuserpost(id, setPost)
   } catch (error) {
     console.log("error in likeUnlike", error);
