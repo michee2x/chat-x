@@ -272,9 +272,9 @@ console.log("thththth", mainUser)
 
 <div className={`transition-all z-20 duration-1000 relative ${large && e.profilepic ? "block h-screen w-screen" : "hidden h-0 w-0"}`}>
 <span className="flex h-12 w-12 absolute top-5 right-5 rounded-full bg-black/10 items-center justify-center text-white" onClick={() => setLarge(false)}><MdCancel size={20}/></span>
-{e.profilepic &&  (
+{mainUser?.profilepic &&  (
                     <img
-                      src={e.profilepic}
+                      src={mainUser?.profilepic}
                       alt=""
                       className="w-full h-full object-contain"
                     />)}
