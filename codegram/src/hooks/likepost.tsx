@@ -187,7 +187,7 @@ export const follow_unfollow_user = async (id: any, setSuggestedUsers: any = [])
   }
 };
 
-export const getUserProfile = async (id: any, setUser: any) => {
+export const getUserProfile = async (id: any, setUser: any, setPost:any) => {
   try {
     const url = `https://chat-x-backend.onrender.com/api/user/userprofile/${id}`;
     const res = await fetch(url, {
@@ -198,6 +198,7 @@ export const getUserProfile = async (id: any, setUser: any) => {
     const data = await res.json();
     console.log("logged in userrrrrrrrrrrr", data)
     await setUser(data);
+    await getuserpost(id, setPost)
   } catch (error) {
     console.log("error in likeUnlike", error);
   }
