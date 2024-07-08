@@ -4,7 +4,7 @@ import { BsPerson} from "react-icons/bs";
 import CommentPost from "./CommentPost";
 import {follow_unfollow_user} from "../hooks/likepost";
 import {createdAt} from "../hooks/useCreatedHook"
-import { IoMdHeart } from "react-icons/io";
+import { IoMdHeart, IoIosChatboxes } from "react-icons/io";
 import { MdBookmark } from "react-icons/md";
 
 const ParPost = ({setParPost,parPost,id, from}:any) => {
@@ -115,6 +115,13 @@ console.log(id, comment)
                   {parPost && parPost.likes?.length}
                 </span>{" "}
                 likes
+              </span>
+<span className="flex pb-2 gap-4 text-md w-full items-center">
+                <span className="flex text-gray-400 gap-1 items-center">
+                  <IoIosChatboxes />
+                  {parPost?.Comments?.length}
+                </span>{" "}
+                {parPost?.Comments?.length === 1 ? "comment" : "comments"}
               </span>
             </div>
 </div>
