@@ -1,7 +1,7 @@
 import {useEffect, useRef, useState} from 'react'
 import {MdArrowBack, MdMenu, MdPerson, MdSearch, MdCancel } from "react-icons/md"
-import { Link } from 'react-router-dom';
-import { getProfile, getuserpost, getloggedUser } from '../hooks/likepost';
+import { Link, useParams } from 'react-router-dom';
+import { getProfile, getuserpost, getloggedUser, getUserById } from '../hooks/likepost';
 import PostComponent from './postComponent';
 import { createdAt } from '../hooks/useCreatedHook';
  import { follow_unfollow_user } from "../hooks/likepost";
@@ -9,6 +9,7 @@ import ParPost from "./Post";
 import { SideBarContext } from "../showSideBar";
 
 const Profile = () => {
+const {id} = useParams()
 const [large, setLarge] = useState(false)
   const {setshowSideBar } = SideBarContext();
 const [parPost, setParPost] = useState<any>({})
@@ -23,6 +24,9 @@ const [parPost, setParPost] = useState<any>({})
   
 
     useEffect(() => {
+       if(id){
+       await getUserById(id, setUser, setPost)
+}
        if(text !== ''){
         const searchUser = async () => {
          await getProfile(text, setUser, setPost);
