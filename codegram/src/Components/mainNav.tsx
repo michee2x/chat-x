@@ -14,7 +14,7 @@ import { SideBarContext } from "../showSideBar";
 import { BsPerson } from "react-icons/bs";
 
 const MainNav = () => {
-  const [user, setUser] = useState<any>([]);
+  const [user, setUser] = useState<any>({});
   const [nav, setNav] = useState(false);
   const {setshowSideBar } = SideBarContext();
 
