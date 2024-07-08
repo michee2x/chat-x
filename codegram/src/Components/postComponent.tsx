@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {Link} from "react-router-dom"
 import { FaBookmark, FaHeart, FaComment, FaPlay } from "react-icons/fa";
 import {BsPerson } from "react-icons/bs";
 import {
