@@ -26,7 +26,7 @@ const MainNav = () => {
     { name: <MdHome />, state: "home", url: "/" },
     { name: <MdPostAdd />, state: "post", url: "/comment" },
     { name: <MdNotifications />, state: "notifications", url: "/notifications" },
-    { name: <MdPerson size={30} />, state: "profile", url: `/profile/${user}` },
+    { name: <MdPerson size={30} />, state: "profile", url: `/profile/${user?._id}` },
     { name: <MdBookmark size={30} />, state: "bookmarks", url: "/bookmark" },
   ]);
 
