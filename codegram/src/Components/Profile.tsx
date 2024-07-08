@@ -277,7 +277,7 @@ console.log("thththth", mainUser)
                       src={e.profilepic}
                       alt=""
                       className="w-full h-full object-contain"
-                    />}
+                    />)}
  </div>
  </> );
 }
