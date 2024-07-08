@@ -10,7 +10,7 @@ export const getUserProfile = async (req, res) => {
 
         if(!userProfile) return res.status(404).json({error:'usernotfound error... pls reAuthenticate'})
 
-console.log("this is the fuckin transformer",userProfile) res.status(200).json({message:userProfile})
+console.log("this is the fuckin transformer",userProfile); res.status(200).json({message:userProfile})
 
     } catch (error) {
         console.log("there was an error in geetuserprofile controller", error)
