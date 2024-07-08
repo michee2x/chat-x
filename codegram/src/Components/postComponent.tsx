@@ -39,7 +39,7 @@ console.log(like)
 e?.user?.username === post[index+1]?.user?.username ? "border-b-0" : "border-b-[.9px]"
 } border-gray-600 mb-1 w-full flex gap-2 bg-black lg:gap-6`}
       >
-        <div className="pl-1 w-auto h-full pt-1">
+        <Link to={`profile/${e.user?.profilepic}`} className="pl-1 w-auto h-full pt-1">
 <div className={`border-[1px] transition-all duration-1000 ${
 e?.user?.username === post[index+1]?.user?.username ? "block h-full" : "hidden h-0"
 } absolute left-[8%] border-gray-700`}></div>
@@ -59,7 +59,7 @@ e?.user?.username === post[index+1]?.user?.username ? "block h-full" : "hidden h
             />
 </span>
           )}
-        </div>
+        </Link>
         <div className="w-full h-auto">
           <main onClick={() => {setParPost(post[index])}} className="w-full pr-3 h-auto flex">
             <div
