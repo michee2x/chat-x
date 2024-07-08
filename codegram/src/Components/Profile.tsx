@@ -270,13 +270,13 @@ console.log("thththth", mainUser)
 <ParPost setParPost={setParPost} parPost={parPost} id={parPost?._id} from={"profile"}/>
 </div>
 
-<div className={`transition-all z-30 duration-1000 relative ${large ? "block h-screen w-screen" : "hidden h-0 w-0"}`}>
+<div className={`transition-all bg-gray-900 z-30 duration-1000 relative ${large ? "block h-screen w-screen" : "hidden h-0 w-0"}`}>
 <span className="flex h-12 w-12 absolute top-5 right-5 rounded-full bg-black/10 items-center justify-center text-white" onClick={() => setLarge(false)}><MdCancel size={20}/></span>
 {mainUser?.profilepic &&  (
                     <img
                       src={mainUser?.profilepic}
                       alt=""
-                      className="w-full h-full object-contain"
+                      className="w-full h-full z-40 object-contain"
                     />)}
  </div>
  </> );
