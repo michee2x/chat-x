@@ -257,7 +257,8 @@ console.log("thththth", mainUser)
                     </div>
                   )}
                   <div className="flex text-gray-300 flex-col">
-                    <b>{e?.name}<i className="pl-5">{e?.username}</i></b>
+                    <b>{e?.name}/b>
+                    <i className="text-sm text-blue-400">{e?.username}</i><
                     <i className="text-sm">{e?.email}</i>
                   </div>
                 </div>
