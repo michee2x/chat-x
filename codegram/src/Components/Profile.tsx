@@ -1,7 +1,7 @@
 import {useEffect, useRef, useState} from 'react'
 import {MdArrowBack, MdMenu, MdPerson, MdSearch, MdCancel } from "react-icons/md"
 import { Link, useParams } from 'react-router-dom';
-import { getProfile, getuserpost, getloggedUser, getUserById } from '../hooks/likepost';
+import { getProfile, getuserpost, getloggedUser, getUserProfile } from '../hooks/likepost';
 import PostComponent from './postComponent';
 import { createdAt } from '../hooks/useCreatedHook';
  import { follow_unfollow_user } from "../hooks/likepost";
@@ -25,7 +25,7 @@ const [parPost, setParPost] = useState<any>({})
 
     useEffect(() => {
        if(id){
-       await getUserById(id, setUser, setPost)
+       await getUserProfile(id, setUser)
 }
        if(text !== ''){
         const searchUser = async () => {
