@@ -55,7 +55,7 @@ const Notifications = () => {
                         className="block rounded-full h-10 w-10"
                       />
                     )}
-                    <div className="text-sm">{`${e?.from?.username === user.username ? "you" : e?.from?.username} liked your post`}</div>
+                    <div className="text-sm">{`${e?.from?.name === user.name ? "you" : e?.from?.name} liked your post`}</div>
                   </div>
                   <div className="w-16 cursor-pointer h-16 grid place-items-center">
                     <MdDelete
