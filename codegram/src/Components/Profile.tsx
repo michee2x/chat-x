@@ -1,5 +1,5 @@
 import {useEffect, useRef, useState} from 'react'
-import {MdArrowBack, MdMenu, MdPerson, MdSearch } from "react-icons/md"
+import {MdArrowBack, MdMenu, MdPerson, MdSearch, MdCancel } from "react-icons/md"
 import { Link } from 'react-router-dom';
 import { getProfile, getuserpost, getloggedUser } from '../hooks/likepost';
 import PostComponent from './postComponent';
@@ -9,6 +9,7 @@ import ParPost from "./Post";
 import { SideBarContext } from "../showSideBar";
 
 const Profile = () => {
+const [large, setLarge] = useState(false)
   const {setshowSideBar } = SideBarContext();
 const [parPost, setParPost] = useState<any>({})
     const [user, setUser] = useState<any>([]);
@@ -127,7 +128,7 @@ console.log("thththth", mainUser)
                     alt=""
                     style={{ bottom: "-3rem" }}
                     className="w-32 ml-2 z-30 absolute border-2 border-white/90  h-32 rounded-full"
-                  />
+                 onClick={() => setLarge(true)} />
                 </div>
               ) : (
                 <span
@@ -268,6 +269,16 @@ console.log("thththth", mainUser)
     <div className={`w-screen ${Object.keys(parPost).length === 0 ? "hidden" : "block"} h-screen`}>
 <ParPost setParPost={setParPost} parPost={parPost} id={parPost?._id} from={"profile"}/>
 </div>
+
+<div className={`transition-all z-20 duration-1000 relative ${large && e.profilepic ? "block h-screen w-screen" : "hidden h-0 w-0"}`}>
+<span className="flex h-12 w-12 absolute top-5 right-5 rounded-full bg-black/10 items-center justify-center text-white" onClick={() => setLarge(false)}><MdCancel size={20}/></span>
+{e.profilepic &&  (
+                    <img
+                      src={e.profilepic}
+                      alt=""
+                      className="w-full h-full object-contain"
+                    />}
+ </div>
  </> );
 }
 
