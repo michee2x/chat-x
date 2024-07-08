@@ -369,26 +369,3 @@ export const bookmark = async (setbookmark:any, setNoBookMark:any) => {
     console.log("this is the error in bookmark component", error);
   }
 };
-export const getUserById = async (
-  id: string,
-  setUser: any = [],
-  setPost:any = []
-) => {
-  try {
-    const url = `https://chat-x-backend.onrender.com/api/user/getUserById/${id}`;
-    const res = await fetch(url, {
-      headers: { "Content-Type": "application/json" },
-      credentials: "include",
-    });
-    if (!res) throw new Error("there was an error...");
-
-    const data = await res.json();
-    const userId = data.foundUser[0]._id;
-    console.log("this is the user profile",data?.foundUser )
-    await setUser(data?.foundUser);
-    await getuserpost(userId, setPost);
-    
-  } catch (error) {
-    console.log("error in likeUnlike", error);
-  }
-};
