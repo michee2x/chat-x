@@ -123,7 +123,7 @@ useEffect(() => {
 
 console.log("hi there this is login user", loggedInUser)
 
-if (!loggedInUser || loggedInUser === undefined) {
+if (!loggedInUser) {
   return <Navigate to={'/login'} />
 }
 
